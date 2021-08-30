@@ -91,6 +91,6 @@
 
 ### TODO
 
-    - Use .PO files for labguage specific contents
+    - Use .PO files for langguage specific contents
 
     - Enjoy !
