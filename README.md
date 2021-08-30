@@ -8,6 +8,10 @@
 
 ![Meeting info](res/bbb_info.png)
 
+![Stp meeting](res/bbb_stop.png)
+
+![Recordings](res/bbb_record.png)
+
 ### NAME
 
        bbbadmin - BBB PHP API Frontend
