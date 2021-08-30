@@ -43,5 +43,5 @@
 
 ### CONFIGURATION
 
-- [admm.conf](bbb_config.php)
+- [bbb_config.php](bbb_config.php)
 
