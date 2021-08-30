@@ -55,7 +55,7 @@
 
     - Rename the folder /var/www/bigbluebutton-api-php for your needs
 
-    - Copy all bbb_*.php files to the new folder
+    - Copy bbb_*.php, *.css and icons/*.ico files to the new folder
 
     - You can use the arrays in bbb_config.php as standalone configuration,
       or you can use a mySql-Database for configuration
