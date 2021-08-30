@@ -53,7 +53,8 @@
 
 ### INSTALLATION
 
-    - Clone the BBB PHP API to /var/www with "git clone https://github.com/bigbluebutton/"
+    - Clone the BBB PHP API to /var/www
+      git clone https://github.com/bigbluebutton//bigbluebutton-api-php/
 
     - Rename the folder /var/www/bigbluebutton-api-php for your needs
 
