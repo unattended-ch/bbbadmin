@@ -75,7 +75,7 @@
 
     - For standalone use configure [bbb_config.php]
 
-    - For database use configure and import the dump from [sql/bbbadmin.sql](sql/bbbadmin.sql)
+    - For database use configure and import the dump from [sql/bbbadmin.sql]
 
 ### CONFIGURATION
 
