@@ -61,10 +61,10 @@
     - Clone the BBB PHP API to your home folder
       git clone https://github.com/bigbluebutton/bigbluebutton-api-php
 
-    - Copy contents of folder src/ to /var/www/yourpage
+    - Copy BBB contents of folder src/ to /var/www/yourpage
       rsync -avr ~/bigbluebutton-api-php/src/* /var/www/yourpage/
 
-    - Copy bbb_*.php, *.css and icons/*.ico files to /var/www/yourpage
+    - Copy bbbadmin *.php, *.css and icons/*.ico files to /var/www/yourpage
       rsync --exclude="*.png" --exclude="*.sql" -avr ~/bbbadmin/* /var/www/yourpage/
 
     - Create a symbolic link to the apache root folder
