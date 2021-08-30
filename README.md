@@ -27,6 +27,8 @@
 
        - Manage all running meetings on the server not only the Greenlight stuff
 
+       - Manage all recordings on the server not only the Greenlight stuff
+
 ### OPTIONS
 
        - List running meeting
@@ -91,6 +93,10 @@
 
 ### TODO
 
+    - Create cron srcipt to start meeting in timely fashion for a spefic time period
+
     - Use .PO files for language specific contents
+
+    - Add database manipulation scripts
 
     - Enjoy !
