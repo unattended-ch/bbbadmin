@@ -89,4 +89,8 @@
 - [sql/bbbadmin.sql](sql/bbbadmin.sql)
 
 
-    Enjoy !
+### TODO
+
+    - Use .PO files for labguage specific contents
+
+    - Enjoy !
