@@ -91,6 +91,6 @@
 
 ### TODO
 
-    - Use .PO files for langguage specific contents
+    - Use .PO files for language specific contents
 
     - Enjoy !
