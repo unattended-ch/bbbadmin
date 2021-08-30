@@ -71,7 +71,7 @@
       ln -s /var/www/html/yourpage /var/www/yourpage
 
     - For configuration you can use the arrays in [bbb_config.php](bbb_config.php) as standalone configuration,
-      or a mySql-Database for configuration [sql/bbbadmin.sql](sql/bbbadmin.sql)
+      or a mySql-Database for configuration [bbbadmin.sql]
 
     - For standalone use configure [bbb_config.php](bbb_config.php)
 
@@ -83,3 +83,4 @@
 
 - [sql/bbbadmin.sql](sql/bbbadmin.sql)
 
+[bbbadmin.sql]: sql/bbbadmin.sql
