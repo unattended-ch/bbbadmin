@@ -4,6 +4,10 @@
 
 ![List meetings](res/bbb_meetings.png)
 
+![Join meeting](res/bbb_join.png)
+
+![Meeting info](res/bbb_info.png)
+
 ### NAME
 
        bbbadmin - BBB PHP API Frontend
