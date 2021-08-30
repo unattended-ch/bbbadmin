@@ -1,6 +1,6 @@
 ### NAME
 
-       bbbadmin - A minimalistic BBB PHP API Frontend
+       bbbadmin - BBB PHP API Frontend
 
 ### DESCRIPTION
 
@@ -44,4 +44,6 @@
 ### CONFIGURATION
 
 - [bbb_config.php](bbb_config.php)
+
+- [sql/bbbadmin.sql](sql/bbbadmin.sql)
 
