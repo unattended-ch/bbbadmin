@@ -55,12 +55,17 @@
 
 ### INSTALLATION
 
-    - Clone the BBB PHP API to your hiôme folder
+    - Clone bbbadmin to your home folder
+      git clone https://github.com/unattended-ch/bbbadmin
+
+    - Clone the BBB PHP API to your home folder
       git clone https://github.com/bigbluebutton/bigbluebutton-api-php
 
     - Copy contents of folder src/ to /var/www/yourpage
+      rsync -avr ~/bigbluebutton-api-php/src/* /var/www/yourpage/
 
     - Copy bbb_*.php, *.css and icons/*.ico files to /var/www/yourpage
+      rsync --exclude="*.png" --exclude="*.sql" -avr ~/bbbadmin/* /var/www/yourpage/
 
     - Create a symbolic link to the apache root folder
       ln -s /var/www/html/yourpage /var/www/yourpage
@@ -68,9 +73,9 @@
     - For configuration you can use the arrays in [bbb_config.php](bbb_config.php) as standalone configuration,
       or a mySql-Database for configuration [sql/bbbadmin.sql](sql/bbbadmin.sql)
 
-    - For standalone use configure bbb_config.php
+    - For standalone use configure [bbb_config.php](bbb_config.php)
 
-    - For database use configure and import the dump from sql/bbbadmin.sql
+    - For database use configure and import the dump from [sql/bbbadmin.sql](sql/bbbadmin.sql)
 
 ### CONFIGURATION
 
