@@ -28,13 +28,15 @@ if ($database == "")
     // Passwords 1=Moderator 2=Attendee
     $access = array(1 => "ModeratorPassword", 2 => "AttendeePassword");
     // Rooms 
-    $rooms[1] = array("name" => "Bastelraum ".$copyright, "id" => "Bastelraum", "acc" => "AttendePassword");
-    $rooms[2] = array("name" => "Startraum ".$copyright, "id" => "Startraum", "acc" => "AttendePassword");
-    $rooms[3] = array("name" => "Gastraum ".$copyright, "id" => "Gastraum", "acc" => "AttendePassword");
+    $rooms[1] = array("name" => "Bastelraum ".$copyright, "id" => "Bastelraum", "acc" => "AttendeePassword");
+    $rooms[2] = array("name" => "Startraum ".$copyright, "id" => "Startraum", "acc" => "AttendeePassword");
+    $rooms[3] = array("name" => "Gastraum ".$copyright, "id" => "Gastraum", "acc" => "AttendeePassword");
     // Load BBB values from Apache environment variable
+    // For every server you must define Apache environment varible BBB_SECRET1 and BBB_SERVER1_BASE_URL
+    //
     if ($serverid == '1')
     {
-        apache_setenv('BBB_SECRET', apache_getenv('BBB_SECRET1'));
+        apache_setenv('BBB_SECRET', apache_getenv(''));
         apache_setenv('BBB_SERVER_BASE_URL', apache_getenv('BBB_SERVER1_BASE_URL'));
         $servername = $server[1];
         $sel1 = 'selected';
@@ -70,7 +72,6 @@ else
             {
                 $newrow = preg_split("/[.]/", $row->name);
                 ${$newrow[0]}[$newrow[1]] = $row->val;
-		//printf(${$newrow[0]}[$newrow[1]].'<br>');
             }
             else
                 ${$row->name} = $row->val;
@@ -80,6 +81,9 @@ else
     }
 
     // Load servers
+    // With mysql database the Apache environment variables are loaded from the database
+    // There is no need to define it in Apache
+    //
     $result = $mysqli->query("SELECT * FROM server");
     if($result)
     {
@@ -91,7 +95,6 @@ else
                 $servername = $row->name;
                 ${'sel'.$row->id} = 'selected';
             }
-            //printf("%s=%s<br>", $row->id, $row->name);
             $server[$row->id] = $row->name;
         }
         // Free result set
@@ -103,7 +106,6 @@ else
     if($result)
     {
         while ($row = $result->fetch_object()){
-            //printf("%s=%s<br>", $row->id, $row->name);
             $rooms[$row->id]['name'] = $row->name.' '.$copyright;
             $rooms[$row->id]['id'] = $row->roomid;
             $rooms[$row->id]['acc'] = $row->access;
@@ -117,7 +119,6 @@ else
     if($result)
     {
         while ($row = $result->fetch_object()){
-            //printf("%s=%s<br>", $row->id, $row->url);
             $logout[$row->id] = str_replace("\$serverid", $serverid, $row->url);
         }
         // Free result set
@@ -129,7 +130,6 @@ else
     if($result)
     {
         while ($row = $result->fetch_object()){
-            //printf("%s=%s<br>", $row->id, $row->url);
             $logos[$row->id] = $row->url;
         }
         // Free result set
