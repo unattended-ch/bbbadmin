@@ -70,12 +70,17 @@
     - Create a symbolic link to the apache root folder
       ln -s /var/www/html/yourpage /var/www/yourpage
 
+    - Install PHP modules php-curl php-mbstring php-xml
+      sudo apt install php-curl php-mbstring php-xml -y
+
     - For configuration you can use the arrays in [bbb_config.php] as standalone configuration,
-      or a mySql-Database for configuration [sql/bbbadmin.sql]
+      or a mySql-Database for configuration [sql/bbbadmin.sql] to build the arrays
 
     - For standalone use configure [bbb_config.php]
+      You must specify BBB_* Apache environment variables for every server
 
     - For database use configure and import the dump from [sql/bbbadmin.sql]
+      There is no need to specify Apache environment variables there are loaded from database
 
 ### CONFIGURATION
 
