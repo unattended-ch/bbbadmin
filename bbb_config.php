@@ -31,8 +31,10 @@ if ($database == "")
     $rooms[1] = array("name" => "Bastelraum ".$copyright, "id" => "Bastelraum", "acc" => "AttendeePassword");
     $rooms[2] = array("name" => "Startraum ".$copyright, "id" => "Startraum", "acc" => "AttendeePassword");
     $rooms[3] = array("name" => "Gastraum ".$copyright, "id" => "Gastraum", "acc" => "AttendeePassword");
+    //
     // Load BBB values from Apache environment variable
-    // For every server you must define Apache environment varible BBB_SECRET1 and BBB_SERVER1_BASE_URL
+    // For every server you must define Apache environment variable BBB_SECRET1 and BBB_SERVER1_BASE_URL
+    // Replace 1 with the index in äserver
     //
     if ($serverid == '1')
     {
