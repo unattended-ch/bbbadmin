@@ -30,7 +30,6 @@ if(isset($_GET['Submit']))
         $listeners = $meeting->listenerCount;
         $videos = $meeting->videoCount;
     }
-    //print_r($response);
 }
 ?>
 <html xmlns="http://www.w3.org/1999/xhtml">

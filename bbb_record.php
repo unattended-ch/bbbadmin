@@ -19,10 +19,8 @@ $bbb = new BigBlueButton();
 $response = $bbb->getRecordings($recordingParams);
 
 if ($response->getReturnCode() == 'SUCCESS') {
-    //printf("%s<br>", $response->getMessage());
     $recording_data = '';
     foreach ($response->getRawXml()->recordings->recording as $recording) {
-        //print_r($recording);
         $meetingID = $recording->meetingID;
         $meetingName = $recording->name;
         $internalID = $recording->recordID;

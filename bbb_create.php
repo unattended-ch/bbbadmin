@@ -7,7 +7,6 @@ use BigBlueButton\Parameters\CreateMeetingParameters;
 
 if(isset($_POST['Submit']))
 {
-    //Show($_POST);
     $bbb = new BigBlueButton();
 
     $meetingName = $_POST['meetingName'];

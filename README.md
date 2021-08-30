@@ -29,13 +29,15 @@
 
        - List running meeting
 
+       - List recordings
+
        - Create meetings
 
        - Join meeting
 
        - Stop meeting
 
-       - Show recordings
+       - Show meeting information
 
 ### FILES
 
