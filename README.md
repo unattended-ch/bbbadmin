@@ -55,15 +55,18 @@
 
 ### INSTALLATION
 
-    - Clone the BBB PHP API to /var/www
+    - Clone the BBB PHP API to your hiôme folder
       git clone https://github.com/bigbluebutton/bigbluebutton-api-php
 
-    - Rename the folder /var/www/bigbluebutton-api-php for your needs
+    - Copy contents of folder src/ to /var/www/yourpage
 
-    - Copy bbb_*.php, *.css and icons/*.ico files to the new folder
+    - Copy bbb_*.php, *.css and icons/*.ico files to /var/www/yourpage
 
-    - You can use the arrays in bbb_config.php as standalone configuration,
-      or you can use a mySql-Database for configuration
+    - Create a symbolic link to the apache root folder
+      ln -s /var/www/html/yourpage /var/www/yourpage
+
+    - For configuration you can use the arrays in [bbb_config.php](bbb_config.php) as standalone configuration,
+      or a mySql-Database for configuration [sql/bbbadmin.sql](sql/bbbadmin.sql)
 
     - For standalone use configure bbb_config.php
 
