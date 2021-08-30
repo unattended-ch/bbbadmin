@@ -1,4 +1,4 @@
-![Home Image](https://raw.githubusercontent.com/wiki/bigbluebutton/bigbluebutton-api-php/images/header.png)
+![Home Image](res/bbb_index.png)
 
 ### NAME
 
