@@ -1,6 +1,8 @@
-![Home Image](res/bbb_index.png)
+![Home page](res/bbb_index.png)
 
-![Home Image](res/bbb_create.png)
+![Create meeting](res/bbb_create.png)
+
+![List meetings](res/bbb_meetings.png)
 
 ### NAME
 
@@ -13,13 +15,13 @@
 
 ### SYNOPSIS
 
-       - Create webpage for administrators to manage BBB via the PHP API
+       - Create webpage for administrators to manage BigBlueButton servers via the BBB PHP API
 
 ### OPTIONS
 
-       - Create meetings
-
        - List running meeting
+
+       - Create meetings
 
        - Join meeting
 

@@ -1,4 +1,5 @@
 <?php
+$version = "0.0.0.1";
 require_once('./BigBlueButton.php');
 require_once('./Core/ApiMethod.php');
 require_once('./Exceptions/BadResponseException.php');
@@ -127,11 +128,11 @@ function LinkFunctions($mode='0', $serverid, $meeting)
         $stop = './bbb_stop.php?meetingID='.$meeting->meetingID.'&moderator_password='.$meeting->moderatorPW.'&serverid='.$serverid;
         $functions = '';
         if (file_exists('./bbb_join.php'))
-            $functions = $functions . '<a href="' . $join . '" title="Join meeting"><img src="./favicon.ico" width="16" height="16"></a> ';
+            $functions = $functions . '<a href="' . $join . '" title="Join meeting"><img src="./icons/favicon.ico" width="16" height="16"></a> ';
         if (file_exists('./bbb_info.php'))
-            $functions = $functions . '<a href="' . $info . '" title="Meeting info"><img src="./about.ico" width="16" height="16"></a> ';
+            $functions = $functions . '<a href="' . $info . '" title="Meeting info"><img src="./icons/about.ico" width="16" height="16"></a> ';
         if (file_exists('./bbb_stop.php'))
-            $functions = $functions . '<a href="' . $stop . '" title="Stop meeting"><img src="./exit.ico" width="16" height="16"></a>';
+            $functions = $functions . '<a href="' . $stop . '" title="Stop meeting"><img src="./icons/exit.ico" width="16" height="16"></a>';
     }
     if ($mode == '0') 
     {
