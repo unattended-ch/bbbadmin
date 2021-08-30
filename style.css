@@ -1,0 +1,97 @@
+html, button, input, select, textarea{
+    font-family: 'Open Sans', sans-serif;
+}
+
+html{
+    background: #adadad;
+    overflow-y: scroll;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    margin: 0 auto;
+	padding-left: 15px;
+	padding-right: 15px;
+	padding-bottom: 15px;
+	font-size: 16px;
+}
+
+a.button {
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+
+    text-decoration: none;
+    color: initial;
+}
+
+select{
+    font-size: 14px;
+}
+
+.meeting {
+    font-size:9px;
+}
+
+input, select{
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+.main{
+    background-color: #bbc4ca;
+    position: relative;
+    box-shadow: 1px 1px 5px #555 inset;
+    border-radius: 5px;
+}
+
+.bigbutton{
+    font-size: 16px;
+}
+
+table {
+    font-size: 16px;
+}
+
+td,th {
+    vertical-align: top;
+    padding: 3px;
+}
+
+pre {
+    font-size: 10px;
+}
+
+#topStats{
+	padding-left: 18px;
+	padding-right: 18px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	margin-bottom: 1px;
+}
+.chartStats{
+	box-shadow: 1px 1px 5px #555;
+	border-radius:5px;
+}
+.chartWrapper{
+	border: solid 1px #c7c7c7;
+	border-radius: 5px;
+	padding: 5px;
+	margin-bottom: 1px;
+	box-shadow: 1px 1px 5px #555 inset;
+}
+.chartLabel{
+	font-size: 1.2em;
+	text-align: center;
+	padding: 2px;
+	box-shadow: 1px 1px 5px #555;
+	border-radius:5px;
+}
+.chartHolder{
+	box-shadow: 1px 1px 5px #555;
+	border-radius:5px;
+	padding: 7px;
+}
