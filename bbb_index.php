@@ -9,8 +9,6 @@
 //********************************************************************
 namespace BigBlueButton;
 
-error_reporting(1);
-date_default_timezone_set('UTC');
 $serverid = $_POST['server_id'];
 if (isset($_GET['server_id'])) {
     $serverid = $_GET['server_id'];

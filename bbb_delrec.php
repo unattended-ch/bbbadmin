@@ -20,7 +20,7 @@ $bbb = new BigBlueButton();
 $response = $bbb->deleteRecordings($recordingParams);
 
 if ($response->getReturnCode() == 'SUCCESS') {
-    Show($response);
+    printf("%s<br>", $response->getMessage());
 }
 else
 {
