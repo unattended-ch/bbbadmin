@@ -1,12 +1,4 @@
 <?php
-//********************************************************************
-//* Description: Load modules from BBB-PHP-API for bbbadmin
-//* Author: Support <github@unattended.ch>
-//* Created at: Tue Aug 31 14:20:47 UTC 2021
-//*
-//* Copyright (c) 2021 Support  All rights reserved.
-//*
-//********************************************************************
 $version = "0.0.0.1";
 require_once('./BigBlueButton.php');
 require_once('./Core/ApiMethod.php');
@@ -45,14 +37,6 @@ require_once('./Responses/UpdateRecordingsResponse.php');
 require_once('./Util/UrlBuilder.php');
 require_once('./bbb_config.php');
 
-//----------------------------------------------------------------------
-// Function    : RandomString [len]
-// Created at  : Tue Aug 31 15:31:05 UTC 2021
-// Description : Generate radom string
-// Parameters  : [len] = Length of string
-// Variables   : 
-// Return      : Random password
-//----------------------------------------------------------------------
 function RandomString($len='25')
 {
     $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
@@ -63,15 +47,6 @@ function RandomString($len='25')
     return $randstring;
 }
 
-//----------------------------------------------------------------------
-// Function    : ServerSelect
-// Created at  : Tue Aug 31 15:32:50 UTC 2021
-// Description : Create server select list
-// Parameters  : $sel1 = Server 1 selected
-//               $sel2 = Server 2 selected
-// Variables   : 
-// Return      : Select list for html
-//----------------------------------------------------------------------
 function ServerSelect($sel1='', $sel2='')
 {
     $serverselect = '<form><select name="server_id" id="server_id" size="1" onchange="this.form.submit()">';
@@ -88,14 +63,6 @@ function ServerSelect($sel1='', $sel2='')
     return $serverselect;
 }
 
-//----------------------------------------------------------------------
-// Function    : ServerRoomId
-// Created at  : Tue Aug 31 15:32:58 UTC 2021
-// Description : Load meeting room id select list
-// Parameters  : none
-// Variables   : 
-// Return      : Select list for html
-//----------------------------------------------------------------------
 function ServerRoomId()
 {
     $UIDD = md5(uniqid(rand(), true));
@@ -110,14 +77,6 @@ function ServerRoomId()
     return $roomselect;
 }
 
-//----------------------------------------------------------------------
-// Function    : ServerRoomName
-// Created at  : Tue Aug 31 15:33:05 UTC 2021
-// Description : Load meeting room name select list
-// Parameters  : noen
-// Variables   : 
-// Return      : Select list for html
-//----------------------------------------------------------------------
 function ServerRoomName()
 {
     $roomselect = '<select name="meetingNameSel" id="meetingNameSel" class="meeting" onchange="setMetName()">';
@@ -128,14 +87,6 @@ function ServerRoomName()
     return $roomselect;
 }
 
-//----------------------------------------------------------------------
-// Function    : ServerRoomAccess
-// Created at  : Tue Aug 31 15:33:10 UTC 2021
-// Description : Load attendee password selct list
-// Parameters  : none
-// Variables   : 
-// Return      : Select list for html
-//----------------------------------------------------------------------
 function ServerRoomAccess()
 {
     $roomselect = '<select name="meetingAccSel" id="meetingAccSel" class="meeting" onchange="setMetAcc()">';
@@ -146,14 +97,6 @@ function ServerRoomAccess()
     return $roomselect;
 }
 
-//----------------------------------------------------------------------
-// Function    : ReturnURL
-// Created at  : Tue Aug 31 15:33:18 UTC 2021
-// Description : Load returnURls select list
-// Parameters  : none
-// Variables   : 
-// Return      : 
-//----------------------------------------------------------------------
 function ReturnURL()
 {
     $urlselect = '<select name="urlLogoutSel" id="urlLogoutSel" class="meeting" onchange="setMetLogout()">';
@@ -165,14 +108,6 @@ function ReturnURL()
     return $urlselect;
 }
 
-//----------------------------------------------------------------------
-// Function    : RoomLogos
-// Created at  : Tue Aug 31 15:33:26 UTC 2021
-// Description : Load room logos selct list
-// Parameters  : none
-// Variables   : 
-// Return      : Select list for html
-//----------------------------------------------------------------------
 function RoomLogos()
 {
     $urlselect = '<select name="logonameSel" id="logonameSel" class="meeting" onchange="setMetLogo()">';
@@ -184,16 +119,6 @@ function RoomLogos()
     return $urlselect;
 }
 
-//----------------------------------------------------------------------
-// Function    : LinkFunctions($mode='0', $serverid, $meeting)
-// Created at  : Tue Aug 31 15:33:31 UTC 2021
-// Description : Create function link fro html
-// Parameters  : $mode = 0=Standard Buttons 1=Function buttons
-//               $serverid = Server ID
-//               $meeting = Array with meeting information
-// Variables   : 
-// Return      : 
-//----------------------------------------------------------------------
 function LinkFunctions($mode='0', $serverid, $meeting)
 {
     if ($mode == '1') 
@@ -221,14 +146,6 @@ function LinkFunctions($mode='0', $serverid, $meeting)
     return $functions;
 }
 
-//----------------------------------------------------------------------
-// Function    : Show [array]
-// Created at  : Tue Aug 31 15:33:39 UTC 2021
-// Description : Display array informations
-// Parameters  : [array] Array to display
-// Variables   : $GLOBALS['debug'] Only display in debug mode
-// Return      : none
-//----------------------------------------------------------------------
 function Show($array)
 {
     if ($GLOBALS['debug'] == '1')

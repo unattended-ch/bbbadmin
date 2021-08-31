@@ -1,12 +1,4 @@
 <?php
-//********************************************************************
-//* Description: Stop meeting
-//* Author: Support <github@unattended.ch>
-//* Created at: Tue Aug 31 14:21:26 UTC 2021
-//*
-//* Copyright (c) 2021 Support  All rights reserved.
-//*
-//********************************************************************
 namespace BigBlueButton;
 $serverid = $_GET['serverid'];
 require_once('./bbb_load.php');
@@ -57,7 +49,7 @@ else
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <title>Stop meeting [<?php echo $servername; ?>]</title>
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
     <div id="topStats">

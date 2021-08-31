@@ -1,12 +1,4 @@
 <?php
-//********************************************************************
-//* Description: Delete recording
-//* Author: Support <github@unattended.ch>
-//* Created at: Tue Aug 31 14:18:58 UTC 2021
-//*
-//* Copyright (c) 2021 Support  All rights reserved.
-//*
-//********************************************************************
 namespace BigBlueButton;
 $serverid = $_GET['serverid'];
 $recordid = $_GET['recordid'];
@@ -20,7 +12,7 @@ $bbb = new BigBlueButton();
 $response = $bbb->deleteRecordings($recordingParams);
 
 if ($response->getReturnCode() == 'SUCCESS') {
-    printf("%s<br>", $response->getMessage());
+    Show($response);
 }
 else
 {

@@ -1,14 +1,8 @@
 <?php
-//********************************************************************
-//* Description: Main page for bbbadmin
-//* Author: Support <github@unattended.ch>
-//* Created at: Tue Aug 31 14:19:10 UTC 2021
-//*
-//* Copyright (c) 2021 Support  All rights reserved.
-//*
-//********************************************************************
 namespace BigBlueButton;
 
+error_reporting(1);
+date_default_timezone_set('UTC');
 $serverid = $_POST['server_id'];
 if (isset($_GET['server_id'])) {
     $serverid = $_GET['server_id'];
@@ -33,7 +27,7 @@ finally
 <html>
 <head>
     <title>BBB Admin <?php printf($copyright); ?></title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
     <meta http-equiv="refresh" content="<?php printf($GLOBALS['refresh']); ?>">
 </head>
 <body>
