@@ -1,10 +1,10 @@
 <?php
 //********************************************************************
 //* Description: Configuration file for bbbadmin
-//* Author: Support <github@unattended.ch>
+//* Author: Automatix <github@unattended.ch>
 //* Created at: Tue Aug 31 14:15:10 UTC 2021
 //*
-//* Copyright (c) 2021 Support  All rights reserved.
+//* Copyright (c) 2021 Automatix  All rights reserved.
 //*
 //********************************************************************
 global $debug;
