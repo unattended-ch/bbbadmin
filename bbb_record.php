@@ -36,7 +36,7 @@ if ($response->getReturnCode() == 'SUCCESS') {
         $participants = $recording->participants;
         $recurl = $recording->playback->format->url;
         $functions = '<a href="'.$recurl.'" title="View recording"><img src="./icons/explorer.ico" width="16" height="16"></a>';
-        $functions = $functions . '<a href="./bbb_delrec.php?recordid='.$internalID.'" title="Delete recording"><img src="./icons/exit.ico" width="16" height="16"></a>';
+        $functions = $functions . '<a href="./bbb_delrec.php?serverid='.$serverid.'&recordid='.$internalID.'" title="Delete recording"><img src="./icons/exit.ico" width="16" height="16"></a>';
         $recording_data = $recording_data . '<td>'.$meetingName.'</td><td>'.$createDate.'</td><td>'.$functions.'</td><tr>';
     }
     if ($recording_data == '')
