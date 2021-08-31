@@ -95,8 +95,10 @@
 
     - Create cron srcipt to start meeting in timely fashion for a spefic time period
 
+    - Download location for .MP4 meeting recording files
+
     - Use .PO files for language specific contents
 
     - Add database manipulation scripts
 
-    - Enjoy !
+    - Enjoy

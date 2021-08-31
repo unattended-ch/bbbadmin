@@ -1,4 +1,12 @@
 <?php
+//********************************************************************
+//* Description: Load modules for bbbadmin
+//* Author: Support <github@unattended.ch>
+//* Created at: Tue Aug 31 14:20:47 UTC 2021
+//*
+//* Copyright (c) 2021 Support  All rights reserved.
+//*
+//********************************************************************
 $version = "0.0.0.1";
 require_once('./BigBlueButton.php');
 require_once('./Core/ApiMethod.php');

@@ -1,4 +1,12 @@
 <?php
+//********************************************************************
+//* Description: Join meeting
+//* Author: Support <github@unattended.ch>
+//* Created at: Tue Aug 31 14:20:31 UTC 2021
+//*
+//* Copyright (c) 2021 Support  All rights reserved.
+//*
+//********************************************************************
 namespace BigBlueButton;
 $serverid = $_GET['serverid'];
 require_once('./bbb_load.php');

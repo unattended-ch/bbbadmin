@@ -1,4 +1,12 @@
 <?php
+//********************************************************************
+//* Description: List recordings
+//* Author: Support <github@unattended.ch>
+//* Created at: Tue Aug 31 14:21:06 UTC 2021
+//*
+//* Copyright (c) 2021 Support  All rights reserved.
+//*
+//********************************************************************
 namespace BigBlueButton;
 if (isset($_GET['server_id'])) {
     $serverid = $_GET['server_id'];

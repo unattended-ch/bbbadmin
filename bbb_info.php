@@ -1,4 +1,12 @@
 <?php
+//********************************************************************
+//* Description: Display meeting information
+//* Author: Support <github@unattended.ch>
+//* Created at: Tue Aug 31 14:19:59 UTC 2021
+//*
+//* Copyright (c) 2021 Support  All rights reserved.
+//*
+//********************************************************************
 namespace BigBlueButton;
 $serverid = $_GET['serverid'];
 require_once('./bbb_load.php');

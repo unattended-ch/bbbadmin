@@ -1,4 +1,12 @@
 <?php
+//********************************************************************
+//* Description: Main page for bbbadmin
+//* Author: Support <github@unattended.ch>
+//* Created at: Tue Aug 31 14:19:10 UTC 2021
+//*
+//* Copyright (c) 2021 Support  All rights reserved.
+//*
+//********************************************************************
 namespace BigBlueButton;
 
 error_reporting(1);
