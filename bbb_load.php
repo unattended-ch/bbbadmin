@@ -1,4 +1,12 @@
 <?php
+//********************************************************************
+//* Description: Load modules and functions for bbbadmin
+//* Author: Automatix <github@unattended.ch>
+//* Created at: Tue Aug 31 16:02:22 UTC 2021
+//*
+//* Copyright (c) 2021 Automatix  All rights reserved.
+//*
+//********************************************************************
 $version = "0.0.0.1";
 require_once('./BigBlueButton.php');
 require_once('./Core/ApiMethod.php');

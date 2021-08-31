@@ -1,4 +1,12 @@
 <?php
+//********************************************************************
+//* Description: Index page of bbbadmin
+//* Author: Automatix <github@unattended.ch>
+//* Created at: Tue Aug 31 16:01:24 UTC 2021
+//*
+//* Copyright (c) 2021 Automatix  All rights reserved.
+//*
+//********************************************************************
 namespace BigBlueButton;
 
 error_reporting(1);

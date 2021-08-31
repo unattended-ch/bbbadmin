@@ -1,4 +1,12 @@
 <?php
+//********************************************************************
+//* Description: List recordings on server
+//* Author: Automatix <github@unattended.ch>
+//* Created at: Tue Aug 31 16:02:44 UTC 2021
+//*
+//* Copyright (c) 2021 Automatix  All rights reserved.
+//*
+//********************************************************************
 namespace BigBlueButton;
 if (isset($_GET['server_id'])) {
     $serverid = $_GET['server_id'];

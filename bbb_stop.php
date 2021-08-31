@@ -1,4 +1,12 @@
 <?php
+//********************************************************************
+//* Description: Stop meeting
+//* Author: Automatix <github@unattended.ch>
+//* Created at: Tue Aug 31 16:03:00 UTC 2021
+//*
+//* Copyright (c) 2021 Automatix  All rights reserved.
+//*
+//********************************************************************
 namespace BigBlueButton;
 $serverid = $_GET['serverid'];
 require_once('./bbb_load.php');
