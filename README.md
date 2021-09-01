@@ -75,6 +75,7 @@
    bbb_record.php|Show recordings on server
    bbb_delrec.php|Delete recordings on server
    bbb_stop.php|Stop meeting on server
+   sql/bbbadmin.sql|SQL dump for bbbadmin database
 
 ## CONFIGURATION FILES
 
