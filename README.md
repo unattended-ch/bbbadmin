@@ -77,13 +77,14 @@
       or a mySql-Database for configuration [sql/bbbadmin.sql] to build the arrays
 
     - For standalone use configure [bbb_config.php]
+      Set $database="" to disable database
       You must specify BBB_* Apache environment variables for every server
 
     - For database configure and import the dump from [sql/bbbadmin.sql]
       There is no need to specify Apache environment variables
 
     - Or use our script for installation 
-![bbbadmin_install.sh](res/bbbadmin_install.sh)
+- [bbbadmin_install.sh](res/bbbadmin_install.sh)
 
 ### CONFIGURATION
 
