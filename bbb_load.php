@@ -46,12 +46,12 @@ require_once('./Util/UrlBuilder.php');
 require_once('./bbb_config.php');
 
 //----------------------------------------------------------------------
-// Function    : 
+// Function    : RandomString($len='25')
 // Created at  : Tue Aug 31 16:05:50 UTC 2021
-// Description : 
-// Parameters  : 
+// Description : Create random string
+// Parameters  : $len = Length of string (default=25)
 // Variables   : 
-// Return      : 
+// Return      : Random string
 //----------------------------------------------------------------------
 function RandomString($len='25')
 {
@@ -64,12 +64,13 @@ function RandomString($len='25')
 }
 
 //----------------------------------------------------------------------
-// Function    : 
+// Function    : ServerSelect($sel1='', $sel2='')
 // Created at  : Tue Aug 31 16:05:55 UTC 2021
-// Description : 
-// Parameters  : 
+// Description : Create server select list for html
+// Parameters  : $sel1 = 
+//               $sel2 = 
 // Variables   : 
-// Return      : 
+// Return      : Select list
 //----------------------------------------------------------------------
 function ServerSelect($sel1='', $sel2='')
 {
@@ -88,12 +89,12 @@ function ServerSelect($sel1='', $sel2='')
 }
 
 //----------------------------------------------------------------------
-// Function    : 
+// Function    : ServerRoomId()
 // Created at  : Tue Aug 31 16:06:01 UTC 2021
-// Description : 
-// Parameters  : 
+// Description : Create meeting ID select list for html
+// Parameters  : none
 // Variables   : 
-// Return      : 
+// Return      : Select list
 //----------------------------------------------------------------------
 function ServerRoomId()
 {
@@ -110,12 +111,12 @@ function ServerRoomId()
 }
 
 //----------------------------------------------------------------------
-// Function    : 
+// Function    : ServerRoomName()
 // Created at  : Tue Aug 31 16:06:07 UTC 2021
-// Description : 
-// Parameters  : 
+// Description : Create meeting name select list for html
+// Parameters  : none
 // Variables   : 
-// Return      : 
+// Return      : Select list
 //----------------------------------------------------------------------
 function ServerRoomName()
 {
@@ -128,12 +129,12 @@ function ServerRoomName()
 }
 
 //----------------------------------------------------------------------
-// Function    : 
+// Function    : ServerRoomAccess()
 // Created at  : Tue Aug 31 16:06:12 UTC 2021
-// Description : 
-// Parameters  : 
+// Description : Create meeting attendee password select list for html
+// Parameters  : none
 // Variables   : 
-// Return      : 
+// Return      : Select list
 //----------------------------------------------------------------------
 function ServerRoomAccess()
 {
@@ -146,12 +147,12 @@ function ServerRoomAccess()
 }
 
 //----------------------------------------------------------------------
-// Function    : 
+// Function    : ReturnURL()
 // Created at  : Tue Aug 31 16:06:18 UTC 2021
-// Description : 
-// Parameters  : 
+// Description : Create meeting return url select list for html
+// Parameters  : none
 // Variables   : 
-// Return      : 
+// Return      : Select list
 //----------------------------------------------------------------------
 function ReturnURL()
 {
@@ -165,12 +166,12 @@ function ReturnURL()
 }
 
 //----------------------------------------------------------------------
-// Function    : 
+// Function    : RoomLogos()
 // Created at  : Tue Aug 31 16:06:24 UTC 2021
-// Description : 
-// Parameters  : 
+// Description : Create meeting logo url select list for html
+// Parameters  : none
 // Variables   : 
-// Return      : 
+// Return      : Select list
 //----------------------------------------------------------------------
 function RoomLogos()
 {
@@ -184,12 +185,14 @@ function RoomLogos()
 }
 
 //----------------------------------------------------------------------
-// Function    : 
+// Function    : LinkFunctions($mode='0', $serverid, $meeting)
 // Created at  : Tue Aug 31 16:06:30 UTC 2021
 // Description : 
-// Parameters  : 
+// Parameters  : $mode = 0=default buttons 1=Function buttons
+//               $serverid = Server id
+//               $meeting = Meeting informations
 // Variables   : 
-// Return      : 
+// Return      : Button list
 //----------------------------------------------------------------------
 function LinkFunctions($mode='0', $serverid, $meeting)
 {
@@ -219,12 +222,12 @@ function LinkFunctions($mode='0', $serverid, $meeting)
 }
 
 //----------------------------------------------------------------------
-// Function    : 
+// Function    : Show($array)
 // Created at  : Tue Aug 31 16:06:37 UTC 2021
-// Description : 
-// Parameters  : 
+// Description : Display array in html
+// Parameters  : $array = Array to display
 // Variables   : 
-// Return      : 
+// Return      : none
 //----------------------------------------------------------------------
 function Show($array)
 {
