@@ -69,28 +69,39 @@
        bbb_delrec.php                        Delete recordings on server
        bbb_stop.php                          Stop meeting on server
 
+### PREREQUISITES
+
+1. Install PHP modules php-curl php-mbstring php-xml
+   ```sh
+   sudo apt install php-curl php-mbstring php-xml -y
+   ```
+
 ### INSTALLATION
 
-    - Clone bbbadmin to your home folder
-      git clone https://github.com/unattended-ch/bbbadmin
-
-    - Clone the BBB PHP API to your home folder
-      git clone https://github.com/bigbluebutton/bigbluebutton-api-php
-
-    - Copy BBB contents of folder src/ to /var/www/yourpage
-      sudo rsync -avr ~/bigbluebutton-api-php/src/* /var/www/yourpage/
-
-    - Copy bbbadmin *.php, *.css and icons/*.ico files to /var/www/yourpage
-      sudo rsync --exclude="res/*" --exclude="*.sql" -avr ~/bbbadmin/* /var/www/yourpage/
-
-    - Create a symbolic link to the apache root folder
-      sudo ln -s /var/www/yourpage /var/www/html/yourpage
-
-    - Setup owner of yourpage
-      sudo chown -R www-data.www-data /var/www/yourpage
-
-    - Install PHP modules php-curl php-mbstring php-xml
-      sudo apt install php-curl php-mbstring php-xml -y
+1. Clone bbbadmin to your home folder
+   ```sh
+   git clone https://github.com/unattended-ch/bbbadmin ~/bbbadmin
+   ```
+2. Clone the BBB PHP API to your home folder
+   ```sh
+   git clone https://github.com/bigbluebutton/bigbluebutton-api-php ~/bigbluebutton-api-php
+   ```
+3. Copy BBB contents of folder src/ to /var/www/yourpage
+   ```sh
+   sudo rsync -avr ~/bigbluebutton-api-php/src/* /var/www/yourpage/
+   ```
+4. Copy bbbadmin *.php, *.css and icons/*.ico files to /var/www/yourpage
+   ```sh
+   sudo rsync --exclude="res/*" --exclude="*.sql" -avr ~/bbbadmin/* /var/www/yourpage/
+   ```
+5. Create a symbolic link to the apache root folder
+   ```sh
+   sudo ln -s /var/www/yourpage /var/www/html/yourpage
+   ```
+6. Set owner of yourpage to www-data
+   ```sh
+   sudo chown -R www-data.www-data /var/www/yourpage
+   ```
 
     - For configuration you can use the arrays in [bbb_config.php] as standalone configuration,
       or a mySql-Database for configuration [sql/bbbadmin.sql] to build the arrays
