@@ -3,7 +3,7 @@
 [![PHP 7.3](https://img.shields.io/badge/php-7.3-f93.svg?style=flat-square)](https://php.net/)
 [![PHP 7.4](https://img.shields.io/badge/php-7.4-9c9.svg?style=flat-square)](https://php.net/)
 [![PHP 7.4](https://img.shields.io/badge/php-8.0-9c9.svg?style=flat-square)](https://php.net/)
-[#### [BigBlueButton Homepage]][bbb]
+#### [BigBlueButton Homepage][bbb]
 
 
 <!-- TABLE OF CONTENTS -->
