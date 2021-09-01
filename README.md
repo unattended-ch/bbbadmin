@@ -5,7 +5,7 @@
 [![PHP 7.3](https://img.shields.io/badge/php-7.3-f93.svg?style=flat-square)](https://php.net/)
 [![PHP 7.4](https://img.shields.io/badge/php-7.4-9c9.svg?style=flat-square)](https://php.net/)
 [![PHP 7.4](https://img.shields.io/badge/php-8.0-9c9.svg?style=flat-square)](https://php.net/)
-#### [BigBlueButton Homepage][bbb]
+#### [BigBlueButton Homepage][bbb] [BigBlueButton PHP API][bbbapi]
 
 
 <!-- TABLE OF CONTENTS -->
@@ -139,7 +139,7 @@
 
 ### INSTALLATION FILES
 
-- [bbbadmin_install.sh](res/bbbadmin_install.sh) Installation script
+- [bbbadmin_install.sh](res/bbbadmin_install.sh) Installation script [bbbadmin_install.sh]
 
 ### PAGES
 
@@ -166,4 +166,5 @@
    * Enjoy
 
 [bbbadmin_install.sh]: res/bbbadmin_install.sh
-[bbb]: http://bigbluebutton.org/
+[bbb]: https://bigbluebutton.org/
+[bbbapi]: https://github.com/bigbluebutton/bigbluebutton-api-php
