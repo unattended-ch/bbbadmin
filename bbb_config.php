@@ -44,7 +44,7 @@ if ($database == "")
     //
     if ($serverid == '1')
     {
-        apache_setenv('BBB_SECRET', apache_getenv(''));
+        apache_setenv('BBB_SECRET', apache_getenv('BBB_SECRET1'));
         apache_setenv('BBB_SERVER_BASE_URL', apache_getenv('BBB_SERVER1_BASE_URL'));
         $servername = $server[1];
         $sel1 = 'selected';
