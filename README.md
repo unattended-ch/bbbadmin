@@ -14,7 +14,7 @@
 
 ### NAME
 
-       bbbadmin - [BigBlueButton](http://bigbluebutton.org/) Admin Frontend
+       bbbadmin - [BigBlueButton][bbb] Admin Frontend
 
 ### DESCRIPTION
 
@@ -106,5 +106,4 @@
     - Enjoy
 
 [bbbadmin_install.sh]: ./res/bbbadmin_install.sh
-[bbb]: http://bigbluebutton.org
-
+[bbb]: http://bigbluebutton.org/
