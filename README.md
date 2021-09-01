@@ -43,6 +43,10 @@
 
        - Show meeting information
 
+       - Show recordings
+
+       - Delete recordings
+
 ### FILES
 
        bbb_config.php                        Configuration file for application
@@ -86,6 +90,8 @@
 
     - For database configure and import the dump from [sql/bbbadmin.sql]
       There is no need to specify Apache environment variables
+
+- [bbbadmin_install.sh](res/bbbadmin_install.sh)
 
 ### CONFIGURATION
 
