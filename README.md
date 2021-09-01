@@ -5,9 +5,7 @@
 [![PHP 7.3](https://img.shields.io/badge/php-7.3-f93.svg?style=flat-square)](https://php.net/)
 [![PHP 7.4](https://img.shields.io/badge/php-7.4-9c9.svg?style=flat-square)](https://php.net/)
 [![PHP 7.4](https://img.shields.io/badge/php-8.0-9c9.svg?style=flat-square)](https://php.net/)
-#### [[BigBlueButton Homepage][bbb]] [[BigBlueButton PHP API][bbbapi]]
-
-[[See also Discussion of bbbadmin][bbbadmin_discuss]]
+#### [[BigBlueButton Homepage][bbb]] [[BigBlueButton PHP API][bbbapi]] [[bbbadmin Discussion][bbbadmin_discuss]]
 
 <!-- TABLE OF CONTENTS -->
 <details open="open">
@@ -174,6 +172,6 @@
 [bbbadmin_install.sh]: res/bbbadmin_install.sh
 [bbbadmin.sql]: sql/bbbadmin.sql
 [bbb_config.php]: bbb_config.php
-[bbbadmin_discuss]: https://github.com/unattended-ch/discuss
+[bbbadmin_discuss]: https://github.com/unattended-ch/discussion
 [bbb]: https://bigbluebutton.org/
 [bbbapi]: https://github.com/bigbluebutton/bigbluebutton-api-php
