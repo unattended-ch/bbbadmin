@@ -27,7 +27,8 @@
         <li><a href="#options">Options</a></li>
         <li><a href="#files">Files</a></li>
         <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
+        <li><a href="#installation admin frontend>Installation Admin Frontend</a></li>
+        <li><a href="#installation user frontend">Installation User Frontend</a></li>
         <li><a href="#configuration">Configuration</a></li>
       </ul>
     </li>
@@ -48,6 +49,7 @@
 ## SYNOPSIS
 
    * 	Create webpage for administrators to manage BigBlueButton servers via the BBB PHP API
+   * 	Create webpage for users only to join BigBlueButton server
    * 	Manage all running meetings on the server
    * 	Manage all recordings on the server
 
@@ -75,6 +77,7 @@
    bbb_record.php|Show recordings on server
    bbb_delrec.php|Delete recordings on server
    bbb_stop.php|Stop meeting on server
+   bbb_user.php|Join user to meeting
    sql/bbbadmin.sql|SQL dump for bbbadmin database
 
 ## CONFIGURATION FILES
@@ -85,7 +88,9 @@
 
 ## INSTALLATION FILE
 
-- Installation script [bbbadmin_install.sh]
+- Admin Frontend installation script [bbbadmin_install.sh]
+
+- User Frontend installation script [bbbuser_install.sh]
 
 ## PREREQUISITES
 
@@ -94,7 +99,7 @@
    sudo apt install php-curl php-mbstring php-xml -y
    ```
 
-## INSTALLATION
+## INSTALLATION ADMIN FRONTEND
 
 1. Clone bbbadmin to your home folder
    ```sh
@@ -147,6 +152,44 @@
    - There is no need to specify Apache environment variables
 
 
+## INSTALLATION USER FRONTEND
+
+1. Clone bbbadmin to your home folder
+   ```sh
+   git clone https://github.com/unattended-ch/bbbadmin ~/bbbadmin
+   ```
+2. Clone the BBB PHP API to your home folder
+   ```sh
+   git clone https://github.com/bigbluebutton/bigbluebutton-api-php ~/bigbluebutton-api-php
+   ```
+3. Copy BBB contents of folder src/ to /var/www/youruserpage
+   ```sh
+   sudo rsync -avr ~/bigbluebutton-api-php/src/* /var/www/youruserpage/
+   ```
+4. Copy bbbadmin *.php, *.css and icons/*.ico files to /var/www/youruserpage
+   ```sh
+   sudo rsync --exclude="res/*" --exclude="*.sql" -avr ~/bbbadmin/* /var/www/youruserpage/
+   sudo rm -f /var/www/youruserpage/bbb_create.php
+   sudo rm -f /var/www/youruserpage/bbb_delrec.php
+   sudo rm -f /var/www/youruserpage/bbb_index.php
+   sudo rm -f /var/www/youruserpage/bbb_info.php
+   sudo rm -f /var/www/youruserpage/bbb_join.php
+   sudo rm -f /var/www/youruserpage/bbb_record.php
+   sudo rm -f /var/www/youruserpage/bbb_stop.php
+   ```
+5. Create a symbolic link to the apache root folder
+   ```sh
+   sudo ln -s /var/www/yourpage /var/www/html/youruserpage
+   ```
+6. Set owner of youruserpage to www-data
+   ```sh
+   sudo chown -R www-data.www-data /var/www/youruserpage
+   ```
+7. User can now join the meeting with serverid and meetingID
+   ```
+   https://server.domain.com/bbbuser/bbb_user.php?serverid=X&meetingID=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+   ```
+
 ## PAGES
 
    ![Home page](res/bbb_index.png)
@@ -167,11 +210,11 @@
 
    * Create cron srcipt to start meeting in timely fashion for a spefic time period
    * Download location for .MP4 meeting recording files
-   * Use .PO files for language specific contents
    * Add database manipulation scripts
    * Enjoy
 
 [bbbadmin_install.sh]: res/bbbadmin_install.sh
+[bbbuser_install.sh]: res/bbbuser_install.sh
 [bbbadmin.sql]: sql/bbbadmin.sql
 [bbb_config.php]: bbb_config.php
 [bbbadmin_discuss]: https://github.com/unattended-ch/bbbadmin/discussions
