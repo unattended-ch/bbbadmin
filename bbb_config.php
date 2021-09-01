@@ -19,6 +19,8 @@ $database = "";
 if ($database == "")
 {
     // Configuration without database
+    //
+    // Debug mode
     // 0=Off 1=On
     $debug = 1;
     // Time in seconds for refresh
@@ -67,9 +69,10 @@ else
     // mySql script can be found in [./sql/bbbadmin.sql]
     //
     mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
+    // mysqli('servername', 'username', 'password', 'database')
     $mysqli = new mysqli("localhost", "bbbadmin", "bbbadmin_password", "bbbadmin");
     if ($mysqli->connect_errno)
-        die("Verbindung fehlgeschlagen: " . $mysqli->connect_error);
+        die("Connection failed: " . $mysqli->connect_error);
     $mysqli->set_charset("utf8");
 
     // Load configuration
