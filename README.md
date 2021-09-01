@@ -1,17 +1,3 @@
-![Home page](res/bbb_index.png)
-
-![Create meeting](res/bbb_create.png)
-
-![List meetings](res/bbb_meetings.png)
-
-![Join meeting](res/bbb_join.png)
-
-![Meeting info](res/bbb_info.png)
-
-![Stp meeting](res/bbb_stop.png)
-
-![Recordings](res/bbb_record.png)
-
 ### NAME
 
        bbbadmin - [BigBlueButton][bbb] Admin Frontend
@@ -104,6 +90,21 @@
     - Add database manipulation scripts
 
     - Enjoy
+
+![Home page](res/bbb_index.png)
+
+![Create meeting](res/bbb_create.png)
+
+![List meetings](res/bbb_meetings.png)
+
+![Join meeting](res/bbb_join.png)
+
+![Meeting info](res/bbb_info.png)
+
+![Stp meeting](res/bbb_stop.png)
+
+![Recordings](res/bbb_record.png)
+
 
 [bbbadmin_install.sh]: ./res/bbbadmin_install.sh
 [bbb]: http://bigbluebutton.org/
