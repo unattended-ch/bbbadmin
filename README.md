@@ -43,9 +43,9 @@
 
 ### SYNOPSIS
 
-   * Create webpage for administrators to manage BigBlueButton servers via the BBB PHP API
-   * Manage all running meetings on the server
-   * Manage all recordings on the server
+   * 	Create webpage for administrators to manage BigBlueButton servers via the BBB PHP API
+   * 	Manage all running meetings on the server
+   * 	Manage all recordings on the server
 
 ### OPTIONS
 
