@@ -112,7 +112,7 @@
    or a mySql-Database for configuration [sql/bbbadmin.sql] to build the arrays
 
    7.1. For standalone use configure [bbb_config.php]
-   - [bbb_config.php](bbb_config.php)
+   - Edit [bbb_config.php]
      ```
        database=""
      ```
@@ -124,7 +124,11 @@
        SetEnv BBB_SERVER2_BASE_URL https://server2.domain.com/bigbluebutton/
      ```
    7.2. For database configure and import the dump from [sql/bbbadmin.sql]
-   - [sql/bbbadmin.sql](sql/bbbadmin.sql)
+   - Edit [bbbadmin.sql]
+     ```
+       mcedit ~/bbbadmin/sql/bbbadmin.sql
+     ```
+   - Import database to mysql
      ```
        mysql -u username -p bbbadmin < ~/bbbadmin/sql/bbbadmin.sql
      ```
@@ -133,9 +137,9 @@
 
 ### CONFIGURATION FILES
 
-- [bbb_config.php](bbb_config.php)
+- Configuration file [bbb_config.php]
 
-- [sql/bbbadmin.sql](sql/bbbadmin.sql)
+- SQL dump [bbbadmin.sql]
 
 ### INSTALLATION FILES
 
@@ -166,5 +170,7 @@
    * Enjoy
 
 [bbbadmin_install.sh]: res/bbbadmin_install.sh
+[bbbadmin.sql]: sql/bbbadmin.sql
+[bbb_config.php]: bbb_config.php
 [bbb]: https://bigbluebutton.org/
 [bbbapi]: https://github.com/bigbluebutton/bigbluebutton-api-php
