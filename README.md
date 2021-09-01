@@ -14,7 +14,7 @@
 
 ### NAME
 
-       bbbadmin - BBB Admin Frontend
+       bbbadmin - [BigBlueButton](http://bigbluebutton.org/) Admin Frontend
 
 ### DESCRIPTION
 
