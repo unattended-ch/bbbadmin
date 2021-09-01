@@ -13,7 +13,7 @@
   <summary><h2 style="display: inline-block">Table of Contents</h2></summary>
   <ol>
     <li>
-      <a href="#about">About The Project</a>
+      <a href="#">About bbbadmin</a>
       <ul>
         <li><a href="#php">Built with PHP</a></li>
       </ul>
