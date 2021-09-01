@@ -5,8 +5,8 @@ DST=~
 
 pushd $DST
     # Clone needed repositorys
-    git clone https://github.com/unattended-ch/bbbadmin
-    git clone https://github.com/bigbluebutton/bigbluebutton-api-php
+    git clone https://github.com/unattended-ch/bbbadmin $DST/bbbadmin
+    git clone https://github.com/bigbluebutton/bigbluebutton-api-php $DST/bigbluebutton-api-php
     # Copy BBB-API to /var/www
     sudo rsync -avr ~/bigbluebutton-api-php/src/* $WWW/
     # Copy bbbadmin to /var/www
