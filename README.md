@@ -92,7 +92,7 @@
       There is no need to specify Apache environment variables
 
     - Or use our script for installation
-      [bbbadmin_install.sh](res/bbbadmin_install.sh)
+- [bbbadmin_install.sh](res/bbbadmin_install.sh)
 
 ### CONFIGURATION
 
