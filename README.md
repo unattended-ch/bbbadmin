@@ -24,27 +24,18 @@
 ### SYNOPSIS
 
        - Create webpage for administrators to manage BigBlueButton servers via the BBB PHP API
-
        - Manage all running meetings on the server
-
        - Manage all recordings on the server
 
 ### OPTIONS
 
        - List running meeting
-
        - List recordings
-
        - Create meetings
-
        - Join meeting
-
        - Stop meeting
-
        - Show meeting information
-
        - Show recordings
-
        - Delete recordings
 
 ### FILES
@@ -91,8 +82,8 @@
     - For database configure and import the dump from [sql/bbbadmin.sql]
       There is no need to specify Apache environment variables
 
-    - Or use our script for installation
-- [bbbadmin_install.sh](res/bbbadmin_install.sh)
+    - Or use our script for installation 
+![bbbadmin_install.sh](res/bbbadmin_install.sh)
 
 ### CONFIGURATION
 
