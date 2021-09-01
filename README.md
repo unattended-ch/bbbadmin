@@ -25,12 +25,12 @@
       <a href="#Synopsis">Synopsis</a>
       <ul>
         <li><a href="#options">Options</a></li>
+        <li><a href="#files">Files</a></li>
         <li><a href="#prerequisites">Prerequisites</a></li>
         <li><a href="#installation">Installation</a></li>
         <li><a href="#configuration">Configuration</a></li>
       </ul>
     </li>
-    <li><a href="#files">Files</a></li>
     <li><a href="#pages">Pages</a></li>
     <li><a href="#todo">Todo</a></li>
   </ol>
