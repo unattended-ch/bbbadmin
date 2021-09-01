@@ -39,11 +39,11 @@
 
 ### NAME
 
-##### - bbbadmin - BigBlueButton Admin Frontend
+##### &nbsp;&nbsp;&nbsp;&nbsp;bbbadmin - BigBlueButton Admin Frontend
 
 ### DESCRIPTION
 
-##### -  bbbadmin is a minimalistic BBB PHP API Frontend
+##### &nbsp;&nbsp;&nbsp;&nbsp;bbbadmin is a minimalistic BBB PHP API Frontend
 
 ### SYNOPSIS
 
