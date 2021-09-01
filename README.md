@@ -14,7 +14,7 @@
 
 ### NAME
 
-       bbbadmin - BBB PHP API Frontend
+       bbbadmin - BBB Admin Frontend
 
 ### DESCRIPTION
 
