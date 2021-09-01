@@ -65,6 +65,9 @@
 
 ### FILES
 
+   bbb_config.php|Configuration file for application
+   bbb_load.php|Loading needed addons and additional scripts
+
        - bbb_config.php                        Configuration file for application
        - bbb_load.php                          Loading needed addons and additional scripts
        - bbb_index.php                         Index page for application
