@@ -185,7 +185,33 @@
    ```sh
    sudo chown -R www-data.www-data /var/www/youruserpage
    ```
-7. User can now join the meeting with serverid and meetingID
+7. For configuration you can use the arrays in [bbb_config.php] as standalone configuration
+   or a mySql-Database for configuration [bbbadmin.sql] to build the arrays
+
+   7.1. For standalone use configure [bbb_config.php]
+   - Edit [bbb_config.php]
+     ```
+       database=""
+     ```
+   - You must specify BBB_* Apache environment variables for every server
+     ```
+       SetEnv BBB_SECRET1 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+       SetEnv BBB_SERVER1_BASE_URL https://server1.domain.com/bigbluebutton/
+       SetEnv BBB_SECRET2 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+       SetEnv BBB_SERVER2_BASE_URL https://server2.domain.com/bigbluebutton/
+     ```
+   7.2. For database configure and import the dump from [bbbadmin.sql]
+   - Edit [bbbadmin.sql]
+     ```
+       mcedit ~/bbbadmin/sql/bbbadmin.sql
+     ```
+   - Import database to mysql
+     ```
+       mysql -u username -p bbbadmin < ~/bbbadmin/sql/bbbadmin.sql
+     ```
+   - There is no need to specify Apache environment variables
+
+8. User can now join the meeting with serverid and meetingID
    ```
    https://server.domain.com/bbbuser/bbb_user.php?serverid=X&meetingID=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
    ```
