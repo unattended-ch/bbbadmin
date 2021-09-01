@@ -64,9 +64,9 @@
 
 ### FILES
 
-&nbsp;&nbsp;&nbsp;&nbsp;   Filename|Description
-&nbsp;&nbsp;&nbsp;&nbsp;   --------|-----------
-&nbsp;&nbsp;&nbsp;&nbsp;   bbb_config.php|Configuration file for application
+   Filename|Description
+   --------|-----------
+   bbb_config.php|Configuration file for application
    bbb_load.php|Loading needed addons and additional scripts
    bbb_index.php|Index page for application
    bbb_create.php|Create meeting on server
