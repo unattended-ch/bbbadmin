@@ -83,7 +83,7 @@
 
 - SQL dump [bbbadmin.sql]
 
-## INSTALLATION FILES
+## INSTALLATION FILE
 
 - Installation script [bbbadmin_install.sh]
 
