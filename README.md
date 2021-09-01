@@ -37,21 +37,21 @@
 </details>
 
 
-### NAME
+## NAME
 
 #### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bbbadmin - BigBlueButton Admin Frontend
 
-### DESCRIPTION
+## DESCRIPTION
 
 #### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bbbadmin is a minimalistic BBB PHP API Frontend
 
-### SYNOPSIS
+## SYNOPSIS
 
    * 	Create webpage for administrators to manage BigBlueButton servers via the BBB PHP API
    * 	Manage all running meetings on the server
    * 	Manage all recordings on the server
 
-### OPTIONS
+## OPTIONS
 
    * List running meeting
    * List recordings
@@ -62,7 +62,7 @@
    * Show recordings
    * Delete recordings
 
-### FILES
+## FILES
 
    Filename|Description
    --------|-----------
@@ -76,14 +76,14 @@
    bbb_delrec.php|Delete recordings on server
    bbb_stop.php|Stop meeting on server
 
-### PREREQUISITES
+## PREREQUISITES
 
 1. Install PHP modules php-curl php-mbstring php-xml
    ```sh
    sudo apt install php-curl php-mbstring php-xml -y
    ```
 
-### INSTALLATION
+## INSTALLATION
 
 1. Clone bbbadmin to your home folder
    ```sh
@@ -136,17 +136,17 @@
    - There is no need to specify Apache environment variables
 
 
-### CONFIGURATION FILES
+## CONFIGURATION FILES
 
 - Configuration file [bbb_config.php]
 
 - SQL dump [bbbadmin.sql]
 
-### INSTALLATION FILES
+## INSTALLATION FILES
 
 - Installation script [bbbadmin_install.sh]
 
-### PAGES
+## PAGES
 
    ![Home page](res/bbb_index.png)
 
@@ -162,7 +162,7 @@
 
    ![Recordings](res/bbb_record.png)
 
-### TODO
+## TODO
 
    * Create cron srcipt to start meeting in timely fashion for a spefic time period
    * Download location for .MP4 meeting recording files
