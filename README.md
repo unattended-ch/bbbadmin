@@ -64,13 +64,16 @@
       git clone https://github.com/bigbluebutton/bigbluebutton-api-php
 
     - Copy BBB contents of folder src/ to /var/www/yourpage
-      rsync -avr ~/bigbluebutton-api-php/src/* /var/www/yourpage/
+      sudo rsync -avr ~/bigbluebutton-api-php/src/* /var/www/yourpage/
 
     - Copy bbbadmin *.php, *.css and icons/*.ico files to /var/www/yourpage
-      rsync --exclude="*.png" --exclude="*.sql" -avr ~/bbbadmin/* /var/www/yourpage/
+      sudo rsync --exclude="res/*" --exclude="*.sql" -avr ~/bbbadmin/* /var/www/yourpage/
 
     - Create a symbolic link to the apache root folder
-      ln -s /var/www/html/yourpage /var/www/yourpage
+      sudo ln -s /var/www/yourpage /var/www/html/yourpage
+
+    - Setup owner of yourpage
+      sudo chown -R www-data.www-data /var/www/yourpage
 
     - Install PHP modules php-curl php-mbstring php-xml
       sudo apt install php-curl php-mbstring php-xml -y

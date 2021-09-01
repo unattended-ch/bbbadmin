@@ -15,7 +15,7 @@ global $logout;
 global $access;
 global $refresh;
 
-$database = "1";
+$database = "0";
 if ($database == "")
 {
     // Configuration without database
