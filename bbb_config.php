@@ -75,7 +75,7 @@ else
     // mysqli('servername', 'username', 'password', 'database')
     $mysqli = new mysqli("localhost", "bbbadmin", "bbbadmin_password", "bbbadmin");
     if ($mysqli->connect_errno)
-        die("Connection failed: " . $mysqli->connect_error);
+        die('Connection failed: ' . $mysqli->connect_error);
     $mysqli->set_charset("utf8");
 
     // Load configuration

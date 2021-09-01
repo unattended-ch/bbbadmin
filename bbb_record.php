@@ -35,8 +35,8 @@ if ($response->getReturnCode() == 'SUCCESS') {
         $createDate = gmdate("Y-m-d H:i:s", (int)($recording->startTime/1000));
         $participants = $recording->participants;
         $recurl = $recording->playback->format->url;
-        $functions = '<a href="'.$recurl.'" title="View recording"><img src="./icons/explorer.ico" width="16" height="16"></a>';
-        $functions = $functions . '<a href="./bbb_delrec.php?serverid='.$serverid.'&recordid='.$internalID.'" title="Delete recording"><img src="./icons/exit.ico" width="16" height="16"></a>';
+        $functions = '<a href="'.$recurl.'" title="'.lang('VIEWRECORDING').'"><img src="./icons/explorer.ico" width="16" height="16"></a>';
+        $functions = $functions . '<a href="./bbb_delrec.php?serverid='.$serverid.'&recordid='.$internalID.'" title="'.lang('DELETERECORDING').'"><img src="./icons/exit.ico" width="16" height="16"></a>';
         $recording_data = $recording_data . '<td>'.$meetingName.'</td><td>'.$createDate.'</td><td>'.$functions.'</td><tr>';
     }
     if ($recording_data == '')
@@ -50,7 +50,7 @@ else
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Recordings [<?php echo $servername; ?>]</title>
+    <title><?php echo lang('RECORDINGS'); ?> [<?php echo $servername; ?>]</title>
     <meta http-equiv="refresh" content="<?php printf($GLOBALS['refresh']); ?>">
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -58,12 +58,12 @@ else
 <div id="topStats">
 	<table cellspacing="0" cellpadding="0" class="main"><tr><td>
 		<div class="chartWrapper">
-			<div class="chartLabel">Recordings<?php echo $server ?></div>
+			<div class="chartLabel"><?php echo lang('RECORDINGS'); ?><?php echo $server ?></div>
 			<div class="chartHolder">
-			    <table class="chartHolder" border="1"><tr><th>Meeting Name</th><th>Record Date</th><th>Functions</th></tr><tr>
+			    <table class="chartHolder" border="1"><tr><th><?php echo lang('MEETINGNAME'); ?></th><th><?php echo lang('RECORDDATE'); ?></th><th><?php echo lang('FUNCTIONS'); ?></th></tr><tr>
 				<?php printf($recording_data); ?>
 			    </tr></table>
-			    <br><center><form action="javascript:history.back()"><input type="submit" value="Back" class="bigbutton"/></form></center>
+			    <br><center><form action="javascript:history.back()"><input type="submit" value="<?php echo lang('BACK'); ?>" class="bigbutton"/></form></center>
 			</div>
 		</div>
 	</td>

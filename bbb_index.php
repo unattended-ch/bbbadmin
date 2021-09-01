@@ -40,9 +40,9 @@ finally
 <div id="topStats">
 	<center><table class="main"><tr><td>
 		<div class="chartWrapper">
-			<div class="chartLabel">Meetings<?php echo $server ?></div>
+			<div class="chartLabel"><?php echo lang('MEETINGS'); ?><?php echo $server ?></div>
 			<div class="chartHolder">
-			    <table class="chartHolder" border="1"><tr><th>Username</th><th>Room name</th><th>Meeting ID</th><th>Start date</th><th>Users</th><th>Functions</th></tr>
+			    <table class="chartHolder" border="1"><tr><th><?php echo lang('USERNAME'); ?></th><th><?php echo lang('MEETINGNAME'); ?></th><th><?php echo lang('MEETINGID'); ?></th><th><?php echo lang('STARTDATE'); ?></th><th><?php echo lang('USERS'); ?></th><th><?php echo lang('FUNCTIONS'); ?></th></tr>
 <?php
 			    if (isset($response)) {
 			    if ($response->getReturnCode() == 'SUCCESS') {

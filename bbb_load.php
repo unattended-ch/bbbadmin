@@ -209,11 +209,11 @@ function LinkFunctions($mode='0', $serverid, $meeting)
         $stop = './bbb_stop.php?meetingID='.$meeting->meetingID.'&moderator_password='.$meeting->moderatorPW.'&serverid='.$serverid;
         $functions = '';
         if (file_exists('./bbb_join.php'))
-            $functions = $functions . '<a href="' . $join . '" title="Join meeting"><img src="./icons/favicon.ico" width="16" height="16"></a> ';
+            $functions = $functions . '<a href="' . $join . '" title="'.lang('JOINMEETING').'"><img src="./icons/favicon.ico" width="16" height="16"></a> ';
         if (file_exists('./bbb_info.php'))
-            $functions = $functions . '<a href="' . $info . '" title="Meeting info"><img src="./icons/about.ico" width="16" height="16"></a> ';
+            $functions = $functions . '<a href="' . $info . '" title="'.lang('MEETINGINFO').'"><img src="./icons/about.ico" width="16" height="16"></a> ';
         if (file_exists('./bbb_stop.php'))
-            $functions = $functions . '<a href="' . $stop . '" title="Stop meeting"><img src="./icons/exit.ico" width="16" height="16"></a>';
+            $functions = $functions . '<a href="' . $stop . '" title="'.lang('STOPMEETING').'"><img src="./icons/exit.ico" width="16" height="16"></a>';
     }
     if ($mode == '0') 
     {
@@ -221,11 +221,11 @@ function LinkFunctions($mode='0', $serverid, $meeting)
         $recs = './bbb_record.php?&serverid='.$serverid;
         $joinlinks = './join_links.txt';
         if (file_exists('./bbb_create.php'))
-            $functions = '<a href="'.$create.'" class="button"><button class="bigbutton">Create meeting</button></a>';
+            $functions = '<a href="'.$create.'" class="button"><button class="bigbutton">'.lang('CREATEMEETING').'</button></a>';
         if (file_exists('./bbb_record.php'))
-            $functions = $functions . ' <a href="'.$recs.'"><button class="bigbutton">Recordings</button></a>';
+            $functions = $functions . ' <a href="'.$recs.'"><button class="bigbutton">'.lang('RECORDINGS').'</button></a>';
         if (file_exists('./join_links.txt'))
-            $functions = $functions . ' <a href="'.$joinlinks.'"><button class="bigbutton">Join URLs</button></a>';
+            $functions = $functions . ' <a href="'.$joinlinks.'"><button class="bigbutton">'.lang('JOINURLS').'</button></a>';
     }
     return $functions;
 }
@@ -254,7 +254,6 @@ function Show($array)
 //----------------------------------------------------------------------
 function LoadMeeting($response, $meetingid)
 {
-    print_r($response,true);
     if (isset($response)) {
         if ($response->getReturnCode() == 'SUCCESS')
         {

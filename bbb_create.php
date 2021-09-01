@@ -81,7 +81,7 @@ else
     <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <title>Create meeting [<?php echo $servername; ?>]</title>
+        <title><?php echo lang('CREATEMEETING'); ?> [<?php echo $servername; ?>]</title>
         <link rel="stylesheet" href="css/style.css">
     </head>
     <body onload="setMetName(); setMetID(); setMetLogout(); setMetLogo();">
@@ -119,40 +119,40 @@ else
     <div id="topStats">
 	<center><table class="main"><tr><td>
 		<div class="chartWrapper">
-			<div class="chartLabel"><?php lang(CREATEMEETING); ?></div>
+			<div class="chartLabel"><?php echo lang('CREATEMEETING'); ?></div>
 			<div class="chartHolder">
 			    <form action="" method="POST" enctype="multipart/form-data"><table><tr>
 		                <td><label for="servername" id="srv_id_label">Server </label></td>
 		                <td><input type="text" name="servername" id="servername" value="<?php echo $servername?>" size="30" readonly></td></tr><tr>
-		                <td><br><label for="meetingName" id="app_name_label">Meeting Name </label></td>
+		                <td><br><label for="meetingName" id="app_name_label"><?php echo lang('MEETINGNAME'); ?></label></td>
 		                <td><?php printf(ServerRoomName())?><br>
 		                <input type="text" name="meetingName" id="meetingName" size="35"></td></tr><tr>
-		                <td><br><label for="meetingID" id="app_id_label">Meeting ID </label></td>
+		                <td><br><label for="meetingID" id="app_id_label"><?php echo lang('MEETINGID'); ?></label></td>
 		                <td><?php printf(ServerRoomId())?><br>
 		                <input type="text" name="meetingID" id="meetingID" size="35"></td></tr><tr>
-		                <td><label for="moderator_password" id="mod_pass_label">Moderator password </label></td>
+		                <td><label for="moderator_password" id="mod_pass_label"><?php echo lang('MODERATORPW'); ?></label></td>
 		                <td><input type="text" name="moderator_password" id="moderator_password" value="<?php echo RandomString()?>" size="30"><input type="button" value="Default password" onclick="setModPass()"></td></tr><tr>
-		                <td><br><label for="attendee_password" id="mod_pass_label">Attendee password </label></td>
+		                <td><br><label for="attendee_password" id="mod_pass_label"><?php echo lang('ATTENDEEPW'); ?></label></td>
 		                <td><?php printf(ServerRoomAccess())?><br>
 		                <input type="text" name="attendee_password" id="attendee_password" value="<?php echo RandomString()?>" size="30"><input type="button" value="Default password" onclick="setAttPass()"></td></tr><tr>
-		                <td><label for="duration" id="mod_dur_label" >Duration minutes</label></td>
+		                <td><label for="duration" id="mod_dur_label" ><?php echo lang('DURATION'); ?></label></td>
 		                <td><input type="text" name="duration" id="duration" value="0"></td></tr><tr>
-		                <td><br><label for="urlLogout" id="mod_pass_label"  >Logout URL </label></td>
+		                <td><br><label for="urlLogout" id="mod_pass_label"  ><?php echo lang('LOGOUTURL'); ?></label></td>
 		                <td><?php printf(ReturnURL())?><br>
 		                <input type="text" name="urlLogout" id="urlLogout" size="35"></td></tr><tr>
-		                <td><label for="filename">Presentation PDF</label>
+		                <td><label for="filename"><?php echo lang('PRESENTATION'); ?></label>
 		                <td><input type="file" id="filename" name="filename" accept=".pdf"></td></tr><tr>
-		                <td><br><label for="logoname">Logo URL</label>
+		                <td><br><label for="logoname"><?php echo lang('LOGOURL'); ?></label>
 		                <td><?php printf(RoomLogos())?><br>
 		                <input type="text" id="logoname" name="logoname" size="35"></td></tr><tr>
-		                <td><label for="muteonstart">Mute audio on start </label></td>
+		                <td><label for="muteonstart"><?php echo lang('MUTEONSTART'); ?></label></td>
 		                <td><input type="checkbox" id="muteonstart" name="muteonstart" value="yes" checked></td></tr><tr>
-		                <td><label for="recording">Recording </label></td>
+		                <td><label for="recording"><?php echo lang('RECORDING'); ?></label></td>
 		                <td><input type="checkbox" id="recording" name="recording" value="yes"></td></tr><tr>
-		                <td><label for="exporturl">Export join URL </label></td>
+		                <td><label for="exporturl"><?php echo lang('EXPORTJOIN'); ?></label></td>
 		                <td><input type="checkbox" id="exporturl" name="exporturl" value="yes"></td></tr>
 		                </table>
-		        	<br><center><input type="submit" name="Submit" value="Create meeting" class="bigbutton"> <input type="button" class="bigbutton" value="Back" onclick="javascript:history.back()"></center>
+		        	<br><center><input type="submit" name="Submit" value="<?php echo lang('CREATEMEETING'); ?>" class="bigbutton"> <input type="button" class="bigbutton" value="<?php echo lang('BACK'); ?>" onclick="javascript:history.back()"></center>
 	    	    	    </form>
 	            </div>
     		</div>

@@ -43,7 +43,7 @@ if(isset($_GET['Submit']))
         $url = $bbb->getJoinMeetingURL($joinMeetingParams);
         header( "Location: $url" );
     } else {
-        printf('ERROR : No username specified !');
+        printf(lang('NOUSER'));
     }
 }
 else if(isset($_POST['Submit']))
@@ -56,7 +56,7 @@ else if(isset($_POST['Submit']))
         $url = $bbb->getJoinMeetingURL($joinMeetingParams);
         header( "Location: $url" );
     } else {
-        printf('ERROR : No username specified !');
+        printf(lang('NOUSER'));
     }
 }
 else
@@ -66,22 +66,22 @@ else
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <title>Join [<?php echo $servername; ?>]</title>
+        <title><?php echo lang('JOINMEETING'); ?></title>
         <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
     <div id="topStats">
 	<center><table class="main"><tr><td>
 		<div class="chartWrapper">
-			<div class="chartLabel">Join meeting</div>
+			<div class="chartLabel"><?php echo lang('JOINMEETING'); ?></div>
 			<div class="chartHolder">
 			    <table><tr><form action=""  method="POST"><table><tr>
-		                <td><label for="meetingName" id="app_id_label"  >Meeting </label></td>
+		                <td><label for="meetingName" id="app_id_label"  ><?php echo lang('MEETING'); ?></label></td>
 		                <td><input type="text" name="meetingName" id="meetingName" size="50" value="<?php echo $meetingName ?>"></td></tr><tr>
-		                <td><label for="userName" id="app_name_label"  >Username </label></td>
+		                <td><label for="userName" id="app_name_label"  ><?php echo lang('USERNAME'); ?></label></td>
 		                <td><input type="text" name="userName" id="userName" size="30"></td></tr><tr>
 	                        </table>
-		                <br><center><input type="submit" name="Submit" value="Join meeting" class="bigbutton"> <input type="button" value="Back" onclick="javascript:history.back()" class="bigbutton"></center><br>
+		                <br><center><input type="submit" name="Submit" value="<?php echo lang('JOINMEETING'); ?>" class="bigbutton"> <input type="button" value="<?php echo lang('BACK'); ?>" onclick="javascript:history.back()" class="bigbutton"></center><br>
 		            </form>
 			    </tr></table>
 			</div>

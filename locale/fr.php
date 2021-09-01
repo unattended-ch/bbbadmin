@@ -1,6 +1,6 @@
 <?php
 //********************************************************************
-//* Description: English language file
+//* Description: French language file
 //* Author: Automatix <github@unattended.ch>
 //* Created at: Wed Sep  1 19:12:37 UTC 2021
 //*
