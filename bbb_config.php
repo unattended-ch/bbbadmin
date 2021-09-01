@@ -21,7 +21,7 @@ if ($database == "")
     // Configuration without database
     // 0=Off 1=On
     $debug = 1;
-    // Time in seconds
+    // Time in seconds for refresh
     $refresh = 30;
     // copyright
     $copyright = "© 2021 unattended.ch";
@@ -32,16 +32,18 @@ if ($database == "")
     // Logo URLs
     $logos  = array(1 => "https://room.domain.com/favicon.ico", 2 => "https://room2.domain.com/favicon.ico");
     // Passwords 1=Moderator 2=Attendee
+    // This is the default when no room password is defined
     $access = array(1 => "ModeratorPassword", 2 => "AttendeePassword");
     // Rooms 
+    // name = Name of room with copyright
+    // id   = Room id for BBB
+    // acc  = Attendee password
     $rooms[1] = array("name" => "Bastelraum ".$copyright, "id" => "Bastelraum", "acc" => "AttendeePassword");
     $rooms[2] = array("name" => "Startraum ".$copyright, "id" => "Startraum", "acc" => "AttendeePassword");
     $rooms[3] = array("name" => "Gastraum ".$copyright, "id" => "Gastraum", "acc" => "AttendeePassword");
-    //
     // Load BBB values from Apache environment variable
     // For every server you must define Apache environment variable BBB_SECRET1 and BBB_SERVER1_BASE_URL
     // Replace 1 with the index in äserver
-    //
     if ($serverid == '1')
     {
         apache_setenv('BBB_SECRET', apache_getenv('BBB_SECRET1'));
