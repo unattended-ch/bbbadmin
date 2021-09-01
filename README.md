@@ -217,20 +217,29 @@
    ```
 
 ## PAGES
-
+   - bbb_index.php
    ![Home page](res/bbb_index.png)
 
+   - bbb_create.php
    ![Create meeting](res/bbb_create.png)
 
+   - bbb_index.php
    ![List meetings](res/bbb_meetings.png)
 
+   - bbb_join.php
    ![Join meeting](res/bbb_join.png)
 
+   - bbb_info.php
    ![Meeting info](res/bbb_info.png)
 
+   - bbb_stop.php
    ![Stp meeting](res/bbb_stop.png)
 
+   - bbb_record.php
    ![Recordings](res/bbb_record.png)
+
+   - bbb_user.php
+   ![Users](res/bbb_user.png)
 
 ## TODO
 
