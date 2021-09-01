@@ -45,6 +45,14 @@ require_once('./Responses/UpdateRecordingsResponse.php');
 require_once('./Util/UrlBuilder.php');
 require_once('./bbb_config.php');
 
+//----------------------------------------------------------------------
+// Function    : 
+// Created at  : Tue Aug 31 16:05:50 UTC 2021
+// Description : 
+// Parameters  : 
+// Variables   : 
+// Return      : 
+//----------------------------------------------------------------------
 function RandomString($len='25')
 {
     $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
@@ -55,6 +63,14 @@ function RandomString($len='25')
     return $randstring;
 }
 
+//----------------------------------------------------------------------
+// Function    : 
+// Created at  : Tue Aug 31 16:05:55 UTC 2021
+// Description : 
+// Parameters  : 
+// Variables   : 
+// Return      : 
+//----------------------------------------------------------------------
 function ServerSelect($sel1='', $sel2='')
 {
     $serverselect = '<form><select name="server_id" id="server_id" size="1" onchange="this.form.submit()">';
@@ -71,6 +87,14 @@ function ServerSelect($sel1='', $sel2='')
     return $serverselect;
 }
 
+//----------------------------------------------------------------------
+// Function    : 
+// Created at  : Tue Aug 31 16:06:01 UTC 2021
+// Description : 
+// Parameters  : 
+// Variables   : 
+// Return      : 
+//----------------------------------------------------------------------
 function ServerRoomId()
 {
     $UIDD = md5(uniqid(rand(), true));
@@ -85,6 +109,14 @@ function ServerRoomId()
     return $roomselect;
 }
 
+//----------------------------------------------------------------------
+// Function    : 
+// Created at  : Tue Aug 31 16:06:07 UTC 2021
+// Description : 
+// Parameters  : 
+// Variables   : 
+// Return      : 
+//----------------------------------------------------------------------
 function ServerRoomName()
 {
     $roomselect = '<select name="meetingNameSel" id="meetingNameSel" class="meeting" onchange="setMetName()">';
@@ -95,6 +127,14 @@ function ServerRoomName()
     return $roomselect;
 }
 
+//----------------------------------------------------------------------
+// Function    : 
+// Created at  : Tue Aug 31 16:06:12 UTC 2021
+// Description : 
+// Parameters  : 
+// Variables   : 
+// Return      : 
+//----------------------------------------------------------------------
 function ServerRoomAccess()
 {
     $roomselect = '<select name="meetingAccSel" id="meetingAccSel" class="meeting" onchange="setMetAcc()">';
@@ -105,6 +145,14 @@ function ServerRoomAccess()
     return $roomselect;
 }
 
+//----------------------------------------------------------------------
+// Function    : 
+// Created at  : Tue Aug 31 16:06:18 UTC 2021
+// Description : 
+// Parameters  : 
+// Variables   : 
+// Return      : 
+//----------------------------------------------------------------------
 function ReturnURL()
 {
     $urlselect = '<select name="urlLogoutSel" id="urlLogoutSel" class="meeting" onchange="setMetLogout()">';
@@ -116,6 +164,14 @@ function ReturnURL()
     return $urlselect;
 }
 
+//----------------------------------------------------------------------
+// Function    : 
+// Created at  : Tue Aug 31 16:06:24 UTC 2021
+// Description : 
+// Parameters  : 
+// Variables   : 
+// Return      : 
+//----------------------------------------------------------------------
 function RoomLogos()
 {
     $urlselect = '<select name="logonameSel" id="logonameSel" class="meeting" onchange="setMetLogo()">';
@@ -127,6 +183,14 @@ function RoomLogos()
     return $urlselect;
 }
 
+//----------------------------------------------------------------------
+// Function    : 
+// Created at  : Tue Aug 31 16:06:30 UTC 2021
+// Description : 
+// Parameters  : 
+// Variables   : 
+// Return      : 
+//----------------------------------------------------------------------
 function LinkFunctions($mode='0', $serverid, $meeting)
 {
     if ($mode == '1') 
@@ -154,6 +218,14 @@ function LinkFunctions($mode='0', $serverid, $meeting)
     return $functions;
 }
 
+//----------------------------------------------------------------------
+// Function    : 
+// Created at  : Tue Aug 31 16:06:37 UTC 2021
+// Description : 
+// Parameters  : 
+// Variables   : 
+// Return      : 
+//----------------------------------------------------------------------
 function Show($array)
 {
     if ($GLOBALS['debug'] == '1')
