@@ -64,7 +64,7 @@
     - Clone bbbadmin to your home folder
       git clone https://github.com/unattended-ch/bbbadmin
 
-    - Clone the BBB PHP API to your home folder
+    - Clone the BBB PHP API to your home folder [bbb]
       git clone https://github.com/bigbluebutton/bigbluebutton-api-php
 
     - Copy BBB contents of folder src/ to /var/www/yourpage
@@ -113,4 +113,6 @@
 
     - Enjoy
 
-[bbbadmin_install.sh]: res/bbbadmin_install.sh
+[bbbadmin_install.sh]: ./res/bbbadmin_install.sh
+[bbb]: http://bigbluebutton.org
+
