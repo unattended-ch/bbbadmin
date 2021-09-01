@@ -4,6 +4,8 @@
 [![PHP 7.4](https://img.shields.io/badge/php-7.4-9c9.svg?style=flat-square)](https://php.net/)
 [![PHP 7.4](https://img.shields.io/badge/php-8.0-9c9.svg?style=flat-square)](https://php.net/)
 
+[BigBlueButton][bbb]
+
 <!-- TABLE OF CONTENTS -->
 <details open="open">
   <summary><h2 style="display: inline-block">Table of Contents</h2></summary>
@@ -154,16 +156,11 @@
 
 ### TODO
 
-    - Create cron srcipt to start meeting in timely fashion for a spefic time period
+   * Create cron srcipt to start meeting in timely fashion for a spefic time period
+   * Download location for .MP4 meeting recording files
+   * Use .PO files for language specific contents
+   * Add database manipulation scripts
+   * Enjoy
 
-    - Download location for .MP4 meeting recording files
-
-    - Use .PO files for language specific contents
-
-    - Add database manipulation scripts
-
-    - Enjoy
-
-
-[bbbadmin_install.sh]: ./res/bbbadmin_install.sh
+[bbbadmin_install.sh]: res/bbbadmin_install.sh
 [bbb]: http://bigbluebutton.org/
