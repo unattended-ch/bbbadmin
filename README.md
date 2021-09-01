@@ -25,9 +25,9 @@
 
        - Create webpage for administrators to manage BigBlueButton servers via the BBB PHP API
 
-       - Manage all running meetings on the server not only the Greenlight stuff
+       - Manage all running meetings on the server
 
-       - Manage all recordings on the server not only the Greenlight stuff
+       - Manage all recordings on the server
 
 ### OPTIONS
 
@@ -81,8 +81,8 @@
     - For standalone use configure [bbb_config.php]
       You must specify BBB_* Apache environment variables for every server
 
-    - For database use configure and import the dump from [sql/bbbadmin.sql]
-      There is no need to specify Apache environment variables there are loaded from database
+    - For database configure and import the dump from [sql/bbbadmin.sql]
+      There is no need to specify Apache environment variables
 
 ### CONFIGURATION
 
