@@ -110,21 +110,20 @@
    - You must specify BBB_* Apache environment variables for every server
    - [bbb_config.php](bbb_config.php)
 
-
-
 9. For database configure and import the dump from [sql/bbbadmin.sql]
    - There is no need to specify Apache environment variables
    - [sql/bbbadmin.sql](sql/bbbadmin.sql)
 
 
-
-10. [bbbadmin_install.sh](res/bbbadmin_install.sh) Installation script
-
-### CONFIGURATION
+### CONFIGURATION FILES
 
 - [bbb_config.php](bbb_config.php)
 
 - [sql/bbbadmin.sql](sql/bbbadmin.sql)
+
+### INSTALLATION FILES
+
+- [bbbadmin_install.sh](res/bbbadmin_install.sh) Installation script
 
 ### PAGES
 
