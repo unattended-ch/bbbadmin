@@ -114,6 +114,7 @@
    - There is no need to specify Apache environment variables
    - [sql/bbbadmin.sql](sql/bbbadmin.sql)
 
+
 8. [bbbadmin_install.sh](res/bbbadmin_install.sh) Installation script
 
 ### CONFIGURATION
