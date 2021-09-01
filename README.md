@@ -1,3 +1,5 @@
+# BigBlueButton Admin Frontend
+
 [![PHP 7.1](https://img.shields.io/badge/php-7.1-f33.svg?style=flat-square)](https://php.net/)
 [![PHP 7.2](https://img.shields.io/badge/php-7.2-f33.svg?style=flat-square)](https://php.net/)
 [![PHP 7.3](https://img.shields.io/badge/php-7.3-f93.svg?style=flat-square)](https://php.net/)
@@ -11,9 +13,9 @@
   <summary><h2 style="display: inline-block">Table of Contents</h2></summary>
   <ol>
     <li>
-      <a href="#">About The Project</a>
+      <a href="#about">About The Project</a>
       <ul>
-        <li><a href="#">Built With PHP</a></li>
+        <li><a href="#php">Built with PHP</a></li>
       </ul>
     </li>
     <li>
