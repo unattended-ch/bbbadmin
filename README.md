@@ -120,6 +120,7 @@
 9. For database configure and import the dump from [sql/bbbadmin.sql]
    - [sql/bbbadmin.sql](sql/bbbadmin.sql)
    ```
+   mysql -u username -p bbbadmin < ~/bbbadmin/sql/bbbadmin.sql
    ```
    - There is no need to specify Apache environment variables
 
