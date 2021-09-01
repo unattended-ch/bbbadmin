@@ -3,13 +3,15 @@
   <summary><h2 style="display: inline-block">Table of Contents</h2></summary>
   <ol>
     <li>
-      <a href="#name">About The Project</a>
+      <a href="#">About The Project</a>
       <ul>
         <li><a href="#built-with">Built With PHP</a></li>
       </ul>
     </li>
     <li>
       <a href="#description">Description</a>
+    </li>
+    <li>
       <a href="#Synopsis">Synopsis</a>
       <ul>
         <li><a href="#installation">Installation</a></li>
