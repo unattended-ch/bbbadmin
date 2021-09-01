@@ -4,7 +4,6 @@
 [![PHP 7.4](https://img.shields.io/badge/php-7.4-9c9.svg?style=flat-square)](https://php.net/)
 [![PHP 7.4](https://img.shields.io/badge/php-8.0-9c9.svg?style=flat-square)](https://php.net/)
 
-[BigBlueButton][bbb]
 
 <!-- TABLE OF CONTENTS -->
 <details open="open">
@@ -33,6 +32,8 @@
     <li><a href="#todo">Todo</a></li>
   </ol>
 </details>
+
+[BigBlueButton][bbb]
 
 ### NAME
 
