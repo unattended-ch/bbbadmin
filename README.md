@@ -1,6 +1,6 @@
 ### NAME
 
-       bbbadmin - [BigBlueButton][bbb] Admin Frontend
+       bbbadmin - BigBlueButton Admin Frontend
 
 ### DESCRIPTION
 
