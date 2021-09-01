@@ -1,3 +1,28 @@
+<!-- TABLE OF CONTENTS -->
+<details open="open">
+  <summary><h2 style="display: inline-block">Table of Contents</h2></summary>
+  <ol>
+    <li>
+      <a href="#name">About The Project</a>
+      <ul>
+        <li><a href="#built-with">Built With PHP</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#description">Description</a>
+      <a href="#Synopsis">Synopsis</a>
+      <ul>
+        <li><a href="#installation">Installation</a></li>
+        <li><a href="#configuration">Configuration</a></li>
+      </ul>
+    </li>
+    <li><a href="#options">Options</a></li>
+    <li><a href="#files">Files</a></li>
+    <li><a href="#pages">Pages</a></li>
+    <li><a href="#todo">Todo</a></li>
+  </ol>
+</details>
+
 ### NAME
 
        bbbadmin - BigBlueButton Admin Frontend
