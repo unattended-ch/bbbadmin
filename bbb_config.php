@@ -14,6 +14,9 @@ global $rooms;
 global $logout;
 global $access;
 global $refresh;
+global $language;
+
+$language='de';
 
 $database = "";
 if ($database == "")

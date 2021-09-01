@@ -119,7 +119,7 @@ else
     <div id="topStats">
 	<center><table class="main"><tr><td>
 		<div class="chartWrapper">
-			<div class="chartLabel">Create Meeting</div>
+			<div class="chartLabel"><?php lang(CREATEMEETING); ?></div>
 			<div class="chartHolder">
 			    <form action="" method="POST" enctype="multipart/form-data"><table><tr>
 		                <td><label for="servername" id="srv_id_label">Server </label></td>

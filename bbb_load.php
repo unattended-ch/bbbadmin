@@ -7,7 +7,7 @@
 //* Copyright (c) 2021 Automatix  All rights reserved.
 //*
 //********************************************************************
-$version = "0.0.0.1";
+$version = "0.0.0.2";
 require_once('./BigBlueButton.php');
 require_once('./Core/ApiMethod.php');
 require_once('./Exceptions/BadResponseException.php');
@@ -44,6 +44,12 @@ require_once('./Responses/SetConfigXMLResponse.php');
 require_once('./Responses/UpdateRecordingsResponse.php');
 require_once('./Util/UrlBuilder.php');
 require_once('./bbb_config.php');
+if (!isset($language))
+    $language='en';
+if (file_exists('./locale/'.$language.'.php'))
+    require_once('./locale/'.$language.'.php');
+else
+    require_once('./locale/en.php');
 
 //----------------------------------------------------------------------
 // Function    : RandomString($len='25')
@@ -236,4 +242,35 @@ function Show($array)
 {
     if ($GLOBALS['debug'] == '1')
         printf('<pre>%s</pre>', print_r($array,true));
+}
+
+//----------------------------------------------------------------------
+// Function    : LoadMeeting($meetingid)
+// Created at  : Wed Sep  1 19:44:55 UTC 2021
+// Description : Search meeting ID and load informations
+// Parameters  : $meetingid = BBB meeting ID
+// Variables   : 
+// Return      : $meeting array or empty if not found
+//----------------------------------------------------------------------
+function LoadMeeting($response, $meetingid)
+{
+    print_r($response,true);
+    if (isset($response)) {
+        if ($response->getReturnCode() == 'SUCCESS')
+        {
+            if(!empty($response->getRawXml()->meetings->meeting))
+            {
+                foreach ($response->getRawXml()->meetings->meeting as $meeting)
+                {
+                    if ($meeting->meetingID == $meetingid)
+                    {
+                        return($meeting);
+                    }
+                }
+            }
+        }
+        else
+            return($response->getMessage());
+    }
+    return('');
 }

@@ -23,8 +23,7 @@ try {
         $bbb = new BigBlueButton();
     }
 catch (Exception $e) {
-	printf('ERROR: %s',$e->getMessage());
-	exit(99);
+        die('ERROR: %s'.$e->getMessage());
     }
 finally
     {
