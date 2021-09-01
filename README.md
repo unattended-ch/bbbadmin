@@ -108,19 +108,19 @@
    7.1. For standalone use configure [bbb_config.php]
    - [bbb_config.php](bbb_config.php)
    ```
-   database=""
+       database=""
    ```
    - You must specify BBB_* Apache environment variables for every server
    ```
-   SetEnv BBB_SECRET1 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-   SetEnv BBB_SERVER1_BASE_URL https://server1.domain.com/bigbluebutton/
-   SetEnv BBB_SECRET2 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-   SetEnv BBB_SERVER2_BASE_URL https://server2.domain.com/bigbluebutton/
+       SetEnv BBB_SECRET1 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+       SetEnv BBB_SERVER1_BASE_URL https://server1.domain.com/bigbluebutton/
+       SetEnv BBB_SECRET2 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+       SetEnv BBB_SERVER2_BASE_URL https://server2.domain.com/bigbluebutton/
    ```
    7.2. For database configure and import the dump from [sql/bbbadmin.sql]
    - [sql/bbbadmin.sql](sql/bbbadmin.sql)
    ```
-   mysql -u username -p bbbadmin < ~/bbbadmin/sql/bbbadmin.sql
+       mysql -u username -p bbbadmin < ~/bbbadmin/sql/bbbadmin.sql
    ```
    - There is no need to specify Apache environment variables
 
