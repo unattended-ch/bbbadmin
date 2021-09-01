@@ -20,6 +20,7 @@
     <li>
       <a href="#Synopsis">Synopsis</a>
       <ul>
+        <li><a href="#prerequisites">Prerequisites</a></li>
         <li><a href="#installation">Installation</a></li>
         <li><a href="#configuration">Configuration</a></li>
       </ul>
