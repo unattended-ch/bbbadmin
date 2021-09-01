@@ -172,6 +172,6 @@
 [bbbadmin_install.sh]: res/bbbadmin_install.sh
 [bbbadmin.sql]: sql/bbbadmin.sql
 [bbb_config.php]: bbb_config.php
-[bbbadmin_discuss]: https://github.com/unattended-ch/discussion
+[bbbadmin_discuss]: https://github.com/unattended-ch/discussions
 [bbb]: https://bigbluebutton.org/
 [bbbapi]: https://github.com/bigbluebutton/bigbluebutton-api-php
