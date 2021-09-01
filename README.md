@@ -64,20 +64,18 @@
    * Delete recordings
 
 ### FILES
+
    Filename|Description
    --------|-----------
    bbb_config.php|Configuration file for application
    bbb_load.php|Loading needed addons and additional scripts
-
-       - bbb_config.php                        Configuration file for application
-       - bbb_load.php                          Loading needed addons and additional scripts
-       - bbb_index.php                         Index page for application
-       - bbb_create.php                        Create meeting on server
-       - bbb_join.php                          Join meeting on server
-       - bbb_info.php                          Display meeting informations
-       - bbb_record.php                        Show recordings on server
-       - bbb_delrec.php                        Delete recordings on server
-       - bbb_stop.php                          Stop meeting on server
+   bbb_index.php|Index page for application
+   bbb_create.php|Create meeting on server
+   bbb_join.php|Join meeting on server
+   bbb_info.php|Display meeting informations
+   bbb_record.php|Show recordings on server
+   bbb_delrec.php|Delete recordings on server
+   bbb_stop.php|Stop meeting on server
 
 ### PREREQUISITES
 
