@@ -78,6 +78,7 @@
 
 - [sql/bbbadmin.sql](sql/bbbadmin.sql)
 
+### Pages
 
 ![Home page](res/bbb_index.png)
 
