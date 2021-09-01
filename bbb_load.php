@@ -219,7 +219,7 @@ function LinkFunctions($mode='0', $serverid, $meeting)
         if (file_exists('./bbb_record.php'))
             $functions = $functions . ' <a href="'.$recs.'"><button class="bigbutton">Recordings</button></a>';
         if (file_exists('./join_links.txt'))
-            $functions = $functions . ' <a href="'.$joinlinks.'"><button class="bigbutton">Join links</button></a>';
+            $functions = $functions . ' <a href="'.$joinlinks.'"><button class="bigbutton">Join URLs</button></a>';
     }
     return $functions;
 }
