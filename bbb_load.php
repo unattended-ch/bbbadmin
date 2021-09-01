@@ -213,10 +213,13 @@ function LinkFunctions($mode='0', $serverid, $meeting)
     {
         $create = './bbb_create.php?serverid='.$serverid;
         $recs = './bbb_record.php?&serverid='.$serverid;
+        $joinlinks = './join_links.txt';
         if (file_exists('./bbb_create.php'))
             $functions = '<a href="'.$create.'" class="button"><button class="bigbutton">Create meeting</button></a>';
         if (file_exists('./bbb_record.php'))
             $functions = $functions . ' <a href="'.$recs.'"><button class="bigbutton">Recordings</button></a>';
+        if (file_exists('./join_links.txt'))
+            $functions = $functions . ' <a href="'.$joinlinks.'"><button class="bigbutton">Join links</button></a>';
     }
     return $functions;
 }

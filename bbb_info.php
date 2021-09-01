@@ -74,13 +74,13 @@ if(isset($_GET['Submit']))
 				<td><label for="video_count" id="mod_pass_label"  >Videos </label></td>
 				<td><input type="text" name="video_count" id="video_count" size="50" value="<?php echo $videos; ?>"></td></tr><tr>
 <?php
-    $option = '';
-    $i = 0;
-    foreach ($meeting->attendees->attendee as $attendee) {
-        $i++;
-        $option = $option . '<option>'.$i.'. '.$attendee->fullName.' as '.$attendee->role.'</option>';
-    }
-    printf('<td>Users</td><td><select name="Users" size="5" style="width:315px;">'.$option.'</select></td></tr><tr>');
+			        $option = '';
+			        $i = 0;
+			        foreach ($meeting->attendees->attendee as $attendee) {
+			            $i++;
+			            $option = $option . '<option>'.$i.'. '.$attendee->fullName.' as '.$attendee->role.'</option>';
+			        }
+			        printf('<td>Users</td><td><select name="Users" size="5" style="width:315px;">'.$option.'</select></td></tr><tr>');
 ?>
 			    </tr></table>
 			    <br><center><form action="javascript:history.back()"><input type="submit" value="Back" class="bigbutton"/></form></center>
