@@ -64,7 +64,8 @@
    * Delete recordings
 
 ### FILES
-
+   Filename|Description
+   --------|-----------
    bbb_config.php|Configuration file for application
    bbb_load.php|Loading needed addons and additional scripts
 
