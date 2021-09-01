@@ -105,7 +105,7 @@
 7. For configuration you can use the arrays in [bbb_config.php] as standalone configuration
    or a mySql-Database for configuration [sql/bbbadmin.sql] to build the arrays
 
-8. For standalone use configure [bbb_config.php]
+7.1. For standalone use configure [bbb_config.php]
    - [bbb_config.php](bbb_config.php)
    ```
    database=""
@@ -117,7 +117,7 @@
    SetEnv BBB_SECRET2 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
    SetEnv BBB_SERVER2_BASE_URL https://server2.domain.com/bigbluebutton/
    ```
-9. For database configure and import the dump from [sql/bbbadmin.sql]
+7.2. For database configure and import the dump from [sql/bbbadmin.sql]
    - [sql/bbbadmin.sql](sql/bbbadmin.sql)
    ```
    mysql -u username -p bbbadmin < ~/bbbadmin/sql/bbbadmin.sql
