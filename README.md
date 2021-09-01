@@ -124,7 +124,7 @@
        SetEnv BBB_SECRET2 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
        SetEnv BBB_SERVER2_BASE_URL https://server2.domain.com/bigbluebutton/
      ```
-   7.2. For database configure and import the dump from [sql/bbbadmin.sql]
+   7.2. For database configure and import the dump from [bbbadmin.sql]
    - Edit [bbbadmin.sql]
      ```
        mcedit ~/bbbadmin/sql/bbbadmin.sql
