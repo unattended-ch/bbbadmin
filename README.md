@@ -76,6 +76,16 @@
    bbb_delrec.php|Delete recordings on server
    bbb_stop.php|Stop meeting on server
 
+## CONFIGURATION FILES
+
+- Configuration file [bbb_config.php]
+
+- SQL dump [bbbadmin.sql]
+
+## INSTALLATION FILES
+
+- Installation script [bbbadmin_install.sh]
+
 ## PREREQUISITES
 
 1. Install PHP modules php-curl php-mbstring php-xml
@@ -135,16 +145,6 @@
      ```
    - There is no need to specify Apache environment variables
 
-
-## CONFIGURATION FILES
-
-- Configuration file [bbb_config.php]
-
-- SQL dump [bbbadmin.sql]
-
-## INSTALLATION FILES
-
-- Installation script [bbbadmin_install.sh]
 
 ## PAGES
 
