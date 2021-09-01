@@ -91,9 +91,8 @@
     - For database configure and import the dump from [sql/bbbadmin.sql]
       There is no need to specify Apache environment variables
 
-    - Or use script [bbbadmin_install.sh] for installation
+    - Or use script [bbbadmin_install.sh](res/bbbadmin_install.sh) for installation
 
-[bbbadmin_install.sh](res/bbbadmin_install.sh)
 
 ### CONFIGURATION
 
