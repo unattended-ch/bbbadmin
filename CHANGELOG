@@ -2,3 +2,4 @@
 0.0.0.2		01.09.2021	Language support added for en,de
 				bbb_user.php for User only join
 0.0.0.3		02.09.2021	Password protection with .htaccess and .htpasswd
+				For bbb_user.php [class]Big added to .css

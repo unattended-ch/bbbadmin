@@ -29,9 +29,9 @@
         <li><a href="#prerequisites">Prerequisites</a></li>
         <li><a href="#installation-scripts">Installation Scripts</a></li>
         <li><a href="#installation-admin-frontend">Installation Admin Frontend</a></li>
+        <li><a href="#htpasswd">Access security with .htpasswd</a></li>
         <li><a href="#installation-user-frontend">Installation User Frontend</a></li>
         <li><a href="#configuration">Configuration</a></li>
-        <li><a href="#htpasswd">Access security with .htpasswd</a></li>
         <li><a href="#language-support">Language support</a></li>
       </ul>
     </li>
@@ -185,12 +185,14 @@
         sudo cp -v ~/bbbadmin/res/.htaccess /var/www/youpage/
    ```
    8.3 Edit the path of password file in [.htaccess], always use document root
-   ```
+   ```sh
+     sudo mcedit /var/www/html/yourpage/.htaccess
+     
      AuthUserFile "/var/www/html/yourpage/.htpasswd"
    ```
-   8.4 Add user to [.htpasswd]
+   8.4 Add user to .htpasswd
    ```sh
-        sudo htpasswd -c /var/www/youpage/.htpasswd support
+        sudo htpasswd -c /var/www/youpage/.htpasswd [username]
    ```
    8.5 Restart apache server
    ```sh
