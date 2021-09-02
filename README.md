@@ -347,9 +347,8 @@
    6. Add database manipulation scripts (for now we use webmin for this...)
    7. Create cron srcipt to start meeting in timely fashion for a specific time period (we need this really ?)
 
-   - You can participate in our [Discussion forum][discuss]
-   
-   - Or you can send an [issue report][issues]
+   - You can take part in the [discussion][discuss]
+   - Or you can send us [issue reports][issues]
 
    [goto TOK](#tok)
 
