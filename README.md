@@ -317,8 +317,9 @@
    6. Add database manipulation scripts (for now we use webmin for this...)
    7. Create cron srcipt to start meeting in timely fashion for a specific time period (we need this really ?)
 
-   You can participate in our [Discussion forum][discuss]
-   Or you can send an [issue report][issues]
+   - You can participate in our [Discussion forum][discuss]
+   
+   - Or you can send an [issue report][issues]
 
 [bbbadmin_install.sh]: res/bbbadmin_install.sh
 [bbbuser_install.sh]: res/bbbuser_install.sh
