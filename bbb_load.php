@@ -218,7 +218,7 @@ function LinkFunctions($mode='0', $serverid, $meeting)
     if ($mode == '0') 
     {
         $create = './bbb_create.php?serverid='.$serverid;
-        $recs = './bbb_record.php?&serverid='.$serverid;
+        $recs = './bbb_record.php?server_id='.$serverid;
         $joinlinks = './join_links.txt';
         if (file_exists('./bbb_create.php'))
             $functions = '<a href="'.$create.'" class="button"><button class="bigbutton">'.lang('CREATEMEETING').'</button></a>';

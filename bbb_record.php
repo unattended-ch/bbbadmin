@@ -8,21 +8,21 @@
 //*
 //********************************************************************
 namespace BigBlueButton;
+if (isset($_POST['server_id'])) {
+    $serverid = $_POST['server_id'];
+}
 if (isset($_GET['server_id'])) {
     $serverid = $_GET['server_id'];
 }
 if (isset($_GET['serverid'])) {
     $serverid = $_GET['serverid'];
 }
-if (isset($_POST['server_id'])) {
-    $serverid = $_POST['server_id'];
-}
 require_once('./bbb_load.php');
 use BigBlueButton\BigBlueButton;
 use BigBlueButton\Parameters\GetRecordingsParameters;
 
 $server = ServerSelect($sel1, $sel2);
-$returl = 'bbb_index.php?serverid='.$serverid;
+$returl = './bbb_index.php?sid='.$serverid;
 
 $recordingParams = new GetRecordingsParameters();
 $bbb = new BigBlueButton();

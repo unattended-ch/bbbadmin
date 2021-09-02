@@ -254,7 +254,7 @@
 
 ## TODO
 
-   * Create cron srcipt to start meeting in timely fashion for a spefic time period
+   * Create cron srcipt to start meeting in timely fashion for a specific time period
    * Create download location for .MP4 meeting recording files in BBB
    * Add database manipulation scripts, for now we use webmin for this
    * Enjoy
