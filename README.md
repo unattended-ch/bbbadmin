@@ -33,7 +33,7 @@
         <li><a href="#language-support">Language support</a></li>
       </ul>
     </li>
-    <li><a href="#pages">Pages</a></li>
+    <li><a href="#screenshots">Screenshots</a></li>
     <li><a href="#todo">Todo</a></li>
   </ol>
 </details>
@@ -223,7 +223,7 @@
    https://server.domain.com/bbbuser/bbb_user.php?serverid=X&meetingID=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
    ```
 
-## PAGES
+## SCREENSHOTS
    - bbb_index.php
    ![Home page](res/bbb_index.png)
 
