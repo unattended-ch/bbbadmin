@@ -5,3 +5,4 @@
 				For bbb_user.php [class]Big added to .css
 				bbb_user.php set $debug='0' and remove all messages
 				Link export and display functions removed (new bbb_user.php)
+				bbb_user.php will be renamed to index.php on install
