@@ -65,12 +65,12 @@ if(isset($_POST['Submit']))
         printf("%s<br>", $response->getMessage());
     }
 
-    $url = './bbb_join.php?meetingID='.$meetingID;
+    $url = './bbb_join.php?sid='.$serverid';
+    $url = $url . 'meetingID='.$meetingID;
     $url = $url . '&userName=Automatix';
     $url = $url . '&moderator_password='.$moderator_password;
     $url = $url . '&attendee_password='.$attendee_password;
     $url = $url . '&exportURL='.$exportURL;
-    $url = $url . '&serverid='.$serverid;
     $url = $url . '&Submit=send';
     echo '<br><a href="'.$url.'">"'.$url.'</a>';
     header( "Location: $url" );

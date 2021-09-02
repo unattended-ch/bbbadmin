@@ -26,6 +26,7 @@
         <li><a href="#installation-admin-frontend">Installation Admin Frontend</a></li>
         <li><a href="#htpasswd">Access security with .htpasswd</a></li>
         <li><a href="#installation-user-frontend">Installation User Frontend</a></li>
+        <li><a href="#htpasswd">Access security with .htpasswd</a></li>
         <li><a href="#configuration">Configuration</a></li>
         <li><a href="#language-support">Language support</a></li>
       </ul></li>
@@ -263,11 +264,12 @@
    - There is no need to specify Apache environment variables
 
 <a name="userurl"></a>
-8. User can now join the meeting with serverid and meetingID
+8. User can now join the meeting with the following parameters (sid and mID is needed the rest is optional) :
+   ?sid=serverid&mID=meetingID[&usr=Username][&join=1]
    ```
-     https://server.domain.com/bbbuser/bbb_user.php?sid=X&mID=XXXXXXXXXXXXXXXXXX&usr=Username
+     https://server.domain.com/bbbuser/bbb_user.php?sid=X&mID=XXXXXXXXXXXXXXXXXX[&usr=Username][&join=1]
    or
-     https://server.domain.com?sid=X&mID=XXXXXXXXXXXXXXXXXX&usr=Username
+     https://server.domain.com?sid=X&mID=XXXXXXXXXXXXXXXXXX[&usr=Username][&join=1]
    ```
 
 ## STYLING
@@ -312,6 +314,7 @@
    * Create cron srcipt to start meeting in timely fashion for a specific time period
    * Create download location for .MP4 meeting recording files in BBB
    * Add database manipulation scripts, for now we use webmin for this
+   * Display 1st page of presentation as background on users join page
    * Enjoy
 
 [bbbadmin_install.sh]: res/bbbadmin_install.sh

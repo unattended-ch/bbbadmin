@@ -16,7 +16,8 @@ if (isset($_GET['mID']))
     $meetingID = $_GET['mID'];
 if (isset($_GET['usr']))
     $userName = $_GET['usr'];
-$debug = "0";
+if (isset($_GET['join']))
+    $joinDirekt = $_GET['join'];
 require_once('./bbb_load.php');
 use BigBlueButton\BigBlueButton;
 use BigBlueButton\Parameters\JoinMeetingParameters;
@@ -26,8 +27,7 @@ try {
         $bbb = new BigBlueButton();
     }
 catch (Exception $e) {
-        //die('ERROR: %s'.$e->getMessage());
-        // die() silently for user
+        // Tell nothing and stop
         die();
     }
 finally
@@ -37,15 +37,14 @@ finally
     }
 
 if ($meeting == '') {
-    //die('Meeting ID ['.$meetingID.'] not found on server ['.$serverid.'] !');
-    // die() silently for user
+    // Tell nothing and stop
     die();
 }
 if (!is_object($meeting)) {
-    //die('ERROR: '.Show($meeting));
-    // die() silently for user
+    // Tell nothing and stop
     die();
 }
+
 if(isset($_GET['Submit']))
 {
     if ($userName !== '')
@@ -73,6 +72,7 @@ else if(isset($_POST['Submit']))
 }
 else
 {
+    // Yep meeting exists !
     $meetingName = $meeting->meetingName;
 ?>
 <html xmlns="http://www.w3.org/1999/xhtml">

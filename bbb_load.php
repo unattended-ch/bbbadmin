@@ -7,7 +7,7 @@
 //* Copyright (c) 2021 Automatix  All rights reserved.
 //*
 //********************************************************************
-$version = "0.0.0.2";
+$version = "0.0.0.3";
 require_once('./BigBlueButton.php');
 require_once('./Core/ApiMethod.php');
 require_once('./Exceptions/BadResponseException.php');
@@ -204,9 +204,9 @@ function LinkFunctions($mode='0', $serverid, $meeting)
 {
     if ($mode == '1') 
     {
-        $join = './bbb_join.php?meetingID='.$meeting->meetingID.'&meetingName='.$meeting->meetingName.'&moderator_password='.$meeting->moderatorPW.'&attendee_password='.$meeting->attendeePW.'&serverid='.$serverid;
-        $info = './bbb_info.php?meetingID='.$meeting->meetingID.'&moderator_password='.$meeting->moderatorPW.'&serverid='.$serverid.'&Submit=1';
-        $stop = './bbb_stop.php?meetingID='.$meeting->meetingID.'&moderator_password='.$meeting->moderatorPW.'&serverid='.$serverid;
+        $join = './bbb_join.php?sid='.$serverid.'&meetingID='.$meeting->meetingID.'&meetingName='.$meeting->meetingName.'&moderator_password='.$meeting->moderatorPW.'&attendee_password='.$meeting->attendeePW;
+        $info = './bbb_info.php?sid='.$serverid.'&meetingID='.$meeting->meetingID.'&moderator_password='.$meeting->moderatorPW.'&Submit=1';
+        $stop = './bbb_stop.php?sid='.$serverid.'&meetingID='.$meeting->meetingID.'&moderator_password='.$meeting->moderatorPW;
         $functions = '';
         if (file_exists('./bbb_join.php'))
             $functions = $functions . '<a href="' . $join . '" title="'.lang('JOINMEETING').'"><img src="./icons/favicon.ico" width="16" height="16"></a> ';
