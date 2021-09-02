@@ -240,6 +240,9 @@
    ```sh
      sudo rsync --exclude="res/*" --exclude="*.sql" -avr ~/bbbadmin/* /var/www/youruserpage/
      sudo mv -v /var/www/youruserpage/bbb_user.php /var/www/youruserpage/index.php
+   ```
+5. Remove not needed files
+   ```sh
      sudo rm -f /var/www/youruserpage/bbb_create.php
      sudo rm -f /var/www/youruserpage/bbb_delrec.php
      sudo rm -f /var/www/youruserpage/bbb_index.php
@@ -248,16 +251,16 @@
      sudo rm -f /var/www/youruserpage/bbb_record.php
      sudo rm -f /var/www/youruserpage/bbb_stop.php
    ```
-5. Create a symbolic link to the apache root folder
+6. Create a symbolic link to the apache root folder
    ```sh
      sudo ln -s /var/www/yourpage /var/www/html/youruserpage
    ```
-6. Set owner of youruserpage to www-data
+7. Set owner of youruserpage to www-data
    ```sh
      sudo chown -R www-data.www-data /var/www/youruserpage
    ```
-7. For configuration you can use the arrays in [bbb_config.php] as standalone configuration or a mySql-Database for configuration [bbbadmin.sql] to build the arrays
-   7.1. For standalone use configure [bbb_config.php]
+8. For configuration you can use the arrays in [bbb_config.php] as standalone configuration or a mySql-Database for configuration [bbbadmin.sql] to build the arrays
+   8.1. For standalone use configure [bbb_config.php]
    - Edit [bbb_config.php]
      ```
        database=""
@@ -269,7 +272,7 @@
        SetEnv BBB_SECRET2 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
        SetEnv BBB_SERVER2_BASE_URL https://server2.domain.com/bigbluebutton/
      ```
-   7.2. For database configure and import the dump from [bbbadmin.sql]
+   8.2. For database configure and import the dump from [bbbadmin.sql]
    - Edit [bbbadmin.sql]
      ```
        mcedit ~/bbbadmin/sql/bbbadmin.sql
@@ -281,7 +284,7 @@
    - There is no need to specify Apache environment variables
      ```
      ```
-8. User can now join the meeting with the following parameters (sid and mID is needed the rest is optional) :
+9. User can now join the meeting with the following parameters (sid and mID is needed the rest is optional) :
    <a name="userurl"></a>
    ```
      https://server.domain.com/bbbuser/bbb_user.php?sid=X&mID=XXXXXXXXXXXXXXXXXX[&usr=Username][&join=1]
