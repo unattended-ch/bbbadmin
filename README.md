@@ -25,7 +25,7 @@
       <a href="#synopsis">Synopsis</a>
       <ul>
         <li><a href="#options">Options</a></li>
-        <li><a href="#files">Files</a></li>
+        <li><a href="#php-files">Files</a></li>
         <li><a href="#prerequisites">Prerequisites</a></li>
         <li><a href="#installation-scripts">Installation Scripts</a></li>
         <li><a href="#installation-admin-frontend">Installation Admin Frontend</a></li>
@@ -66,7 +66,7 @@
    * Show recordings
    * Delete recordings
 
-## FILES
+## PHP FILES
 
    Filename|Description
    --------|-----------
