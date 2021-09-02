@@ -382,10 +382,9 @@
 
    1. Enjoy
    2. Display 1st page of presentation as background on users join page (would be nice, and i am be willing)
-   3. Workaround for provider servers without apache_setenv() support for index.php (Uuuhhh..., but like above)
-   4. Create download location for .MP4 meeting recording files in BBB (a lot of scripts, but i [need help][discuss]...)
-   5. Add database manipulation scripts (for now we use [webmin][webmin] for this...)
-   6. Create cron srcipt to start meeting in timely fashion for a specific time period (we need this really ?)
+   3. Create download location for .MP4 meeting recording files in BBB (a lot of scripts, but i [need help][discuss]...)
+   4. Add database manipulation scripts (for now we use [webmin][webmin] for this...)
+   5. Create cron srcipt to start meeting in timely fashion for a specific time period (we need this really ?)
 
    - You can take part in the [discussion][discuss]
    - Or you can send us [issue reports][issues]
