@@ -96,7 +96,7 @@
 
 - See [locale/][bbb_locale] for translated .PHP files
 
-## INSTALLATION FILE
+## INSTALLATION FILES
 
 - Admin Frontend installation script [bbbadmin_install.sh]
 

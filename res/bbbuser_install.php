@@ -1,5 +1,5 @@
 #!/bin/bash
-WEB=bbbadmin
+WEB=bbbuser
 WWW=/var/www/$WEB
 DST=~
 
