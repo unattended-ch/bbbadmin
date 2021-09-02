@@ -27,7 +27,7 @@
         <li><a href="#options">Options</a></li>
         <li><a href="#files">Files</a></li>
         <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation-scripts">Installation scripts</a></li>
+        <li><a href="#installation-scripts">Installation Scripts</a></li>
         <li><a href="#installation-admin-frontend">Installation Admin Frontend</a></li>
         <li><a href="#installation-user-frontend">Installation User Frontend</a></li>
         <li><a href="#configuration">Configuration</a></li>
