@@ -82,7 +82,7 @@
    bbb_user.php|Join user to meeting
    sql/bbbadmin.sql|SQL dump for bbbadmin database
 
-## CONFIGURATION SCRIPTS
+## CONFIGURATION FILES
 
 - Configuration file [bbb_config.php]
 
@@ -97,7 +97,7 @@
 
 - See [locale/][bbb_locale] for translated .PHP files
 
-## INSTALLATION FILES
+## INSTALLATION SCRIPTS
 
 - Admin Frontend installation script [bbbadmin_install.sh]
 
