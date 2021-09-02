@@ -22,7 +22,8 @@ use BigBlueButton\BigBlueButton;
 use BigBlueButton\Parameters\GetRecordingsParameters;
 
 $server = ServerSelect($sel1, $sel2);
-$returl = './bbb_index.php?sid='.$serverid;
+//$returl = './bbb_index.php?sid='.$serverid;
+$returl = 'javascript:history.back();';
 
 $recordingParams = new GetRecordingsParameters();
 $bbb = new BigBlueButton();
