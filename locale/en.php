@@ -45,7 +45,9 @@ function lang($phrase)
         'DISPLAYONLY' => 'Display only URL',
         'SERVER' => 'Server',
         'BACK' => 'Back',
+        'NOMEETINGS' => 'No running meetings found !',
         'NOUSER' => 'ERROR : No username specified !',
+        'NOSERVER' => 'Server not found !',
         'CONNECTIONFAILED' => 'Connection failed: '
     );
     return $lang[$phrase];

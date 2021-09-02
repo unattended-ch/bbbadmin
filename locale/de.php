@@ -45,7 +45,9 @@ function lang($phrase)
         'DISPLAYONLY' => 'Nur URL anzeigen',
         'SERVER' => 'Server',
         'BACK' => 'Zurück',
+        'NOMEETINGS' => 'Keine laufenden Sitzungen gefunden !',
         'NOUSER' => 'FEHLER : Kein Benutzername angegeben !',
+        'NOSERVER' => 'Server nicht gefunden !',
         'CONNECTIONFAILED' => 'Verbindungsfehler: '
     );
     return $lang[$phrase];

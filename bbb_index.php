@@ -52,7 +52,7 @@ finally
 				    }
 			        }
 				else
-				    printf('<tr><td colspan="6" style="text-align:center;">No running meetings found !</td></tr>');
+				    printf('<tr><td colspan="6" style="text-align:center;">'.lang('NOMEETINGS').'</td></tr>');
 			    }
 			    else
 			    {
@@ -60,7 +60,7 @@ finally
 			    }
 			    }
 			    else
-				printf("<br><center>%s</center><br>", 'Server not found !');
+				printf("<br><center>%s</center><br>", lang('NOSERVER'));
 ?>
 			    </tr></table class="chartHolder">
 			    <?php printf("<br><center>%s</center><br>", LinkFunctions('0', $serverid, $meeting)); ?>
