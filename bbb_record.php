@@ -33,11 +33,12 @@ if ($response->getReturnCode() == 'SUCCESS') {
         $meetingName = $recording->name;
         $internalID = $recording->recordID;
         $createDate = gmdate("Y-m-d H:i:s", (int)($recording->startTime/1000));
+        $duration = gmdate("H:i:s", (int)(($recording->endTime/1000) - ($recording->startTime/1000)));
         $participants = $recording->participants;
         $recurl = $recording->playback->format->url;
         $functions = '<a href="'.$recurl.'" title="'.lang('VIEWRECORDING').'"><img src="./icons/explorer.ico" width="16" height="16"></a>';
         $functions = $functions . '<a href="./bbb_delrec.php?serverid='.$serverid.'&recordid='.$internalID.'" title="'.lang('DELETERECORDING').'"><img src="./icons/exit.ico" width="16" height="16"></a>';
-        $recording_data = $recording_data . '<td>'.$meetingName.'</td><td>'.$createDate.'</td><td>'.$functions.'</td><tr>';
+        $recording_data = $recording_data . '<td>'.$meetingName.'</td><td>'.$createDate.'</td><td>'.$duration.'</td><td>'.$functions.'</td><tr>';
     }
     if ($recording_data == '')
         $recording_data = '<td colspan="3" style="text-align:center;">No recordings found !</td>';
@@ -60,7 +61,7 @@ else
 		<div class="chartWrapper">
 			<div class="chartLabel"><?php echo lang('RECORDINGS'); ?><?php echo $server ?></div>
 			<div class="chartHolder">
-			    <table class="chartHolder" border="1"><tr><th><?php echo lang('MEETINGNAME'); ?></th><th><?php echo lang('RECORDDATE'); ?></th><th><?php echo lang('FUNCTIONS'); ?></th></tr><tr>
+			    <table class="chartHolder" border="1"><tr><th><?php echo lang('MEETINGNAME'); ?></th><th><?php echo lang('RECORDDATE'); ?></th><th><?php echo lang('DURATION'); ?></th><th><?php echo lang('FUNCTIONS'); ?></th></tr><tr>
 				<?php printf($recording_data); ?>
 			    </tr></table>
 			    <br><center><form action="javascript:history.back()"><input type="submit" value="<?php echo lang('BACK'); ?>" class="bigbutton"/></form></center>

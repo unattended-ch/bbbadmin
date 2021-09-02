@@ -135,7 +135,7 @@ else
 		                <td><br><label for="attendee_password" id="mod_pass_label"><?php echo lang('ATTENDEEPW'); ?></label></td>
 		                <td><?php printf(ServerRoomAccess())?><br>
 		                <input type="text" name="attendee_password" id="attendee_password" value="<?php echo RandomString()?>" size="30"><input type="button" value="Default password" onclick="setAttPass()"></td></tr><tr>
-		                <td><label for="duration" id="mod_dur_label" ><?php echo lang('DURATION'); ?></label></td>
+		                <td><label for="duration" id="mod_dur_label" ><?php echo lang('DURATIONMIN'); ?></label></td>
 		                <td><input type="text" name="duration" id="duration" value="0"></td></tr><tr>
 		                <td><br><label for="urlLogout" id="mod_pass_label"  ><?php echo lang('LOGOUTURL'); ?></label></td>
 		                <td><?php printf(ReturnURL())?><br>
