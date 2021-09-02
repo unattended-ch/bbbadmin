@@ -308,13 +308,13 @@
 <a name="todo"></a>
 ## TODO
 
-   * Create cron srcipt to start meeting in timely fashion for a specific time period (needed ?)
-   * Create download location for .MP4 meeting recording files in BBB (a lot of scripts, but...)
-   * Add database manipulation scripts (for now we use webmin for this)
-   * Display 1st page of presentation as background on users join page (would be nice)
-   * Workaround for provider servers without apache_setenv() support for bbb_user.php (Uuuhhh...)
-   * Renaming bbb_user.php to index.php only on user page (Nedded...)
-   * Enjoy
+   1. Enjoy
+   2. Renaming bbb_user.php to index.php only on user page (Needed..., and like above)
+   3. Display 1st page of presentation as background on users join page (would be nice, but i am willing...)
+   4. Workaround for provider servers without apache_setenv() support for bbb_user.php (Uuuhhh..., but like above)
+   5. Create download location for .MP4 meeting recording files in BBB (a lot of scripts, but i need help...)
+   6. Add database manipulation scripts (for now we use webmin for this...)
+   7. Create cron srcipt to start meeting in timely fashion for a specific time period (need this really ?)
 
 [bbbadmin_install.sh]: res/bbbadmin_install.sh
 [bbbuser_install.sh]: res/bbbuser_install.sh
