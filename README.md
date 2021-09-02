@@ -31,6 +31,7 @@
         <li><a href="#installation-admin-frontend">Installation Admin Frontend</a></li>
         <li><a href="#installation-user-frontend">Installation User Frontend</a></li>
         <li><a href="#configuration">Configuration</a></li>
+        <li><a href="#htpasswd">Access security with .htpasswd</a></li>
         <li><a href="#language-support">Language support</a></li>
       </ul>
     </li>
