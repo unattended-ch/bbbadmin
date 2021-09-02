@@ -182,7 +182,7 @@
    ```
    8.2 Copy .htacces file to your webpage
    ```sh
-        sudo cp -v ~/bbbadmin/res/.htaccess /var/www/youpage/
+     sudo cp -v ~/bbbadmin/res/.htaccess /var/www/youpage/
    ```
    8.3 Edit the path of password file in [.htaccess], always use document root
    ```sh
