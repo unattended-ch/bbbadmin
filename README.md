@@ -12,18 +12,13 @@
 <details open="open">
   <summary><h2 style="display: inline-block">TABLE OF CONTENTS</h2></summary>
   <ol>
-    <li>
-      <a href="#">About bbbadmin</a>
+    <li><a href="#">About bbbadmin</a>
       <ul>
         <li><a href="#php">Built with PHP</a></li>
       </ul>
     </li>
-    <li>
-      <a href="#description">Description</a>
-    </li>
-    <li>
-      <a href="#synopsis">Synopsis</a>
-      <ul>
+    <li><a href="#description">Description</a></li>
+    <li><a href="#synopsis">Synopsis</a><ul>
         <li><a href="#options">Options</a></li>
         <li><a href="#php-files">Files</a></li>
         <li><a href="#prerequisites">Prerequisites</a></li>
@@ -33,9 +28,16 @@
         <li><a href="#installation-user-frontend">Installation User Frontend</a></li>
         <li><a href="#configuration">Configuration</a></li>
         <li><a href="#language-support">Language support</a></li>
-      </ul>
-    </li>
-    <li><a href="#screenshots">Screenshots</a></li>
+      </ul></li>
+    <li><a href="#screenshots">Screenshots</a><ul>
+        <li><a href="#bbb_index.png">bbb_index.php</a></li>
+        <li><a href="#bbb_creat>bbb_create.php></li>
+        <li><a href="#bbb_join.png">bbb_join.php</a></li>
+        <li><a href="#bbb_info.png">bbb_info.php</a></li>
+        <li><a href="#bbb_record.png">bbb_record.php</a></li>
+        <li><a href="#bbb_user.png">bbb_user.php</a></li>
+        <li><a href="#bbb_index.png">bbb_index.php</a></li>
+    </ul></li>
     <li><a href="#todo">Todo</a></li>
   </ol>
 </details>
@@ -264,27 +266,34 @@
    ```
 
 ## SCREENSHOTS
+<a name="bbb_index.png</a>
    - bbb_index.php
    ![Home page](res/bbb_index.png)
-
-   - bbb_create.php
-   ![Create meeting](res/bbb_create.png)
 
    - bbb_index.php
    ![List meetings](res/bbb_meetings.png)
 
+<a name="bbb_create.png</a>
+   - bbb_create.php
+   ![Create meeting](res/bbb_create.png)
+
+<a name="bbb_join.png</a>
    - bbb_join.php
    ![Join meeting](res/bbb_join.png)
 
+<a name="bbb_info.png/a>
    - bbb_info.php
    ![Meeting info](res/bbb_info.png)
 
+<a name="bbb_stop.png"></a>
    - bbb_stop.php
    ![Stp meeting](res/bbb_stop.png)
 
+<a name="bbb_record.png"></a>
    - bbb_record.php
    ![Recordings](res/bbb_record.png)
 
+<a name="bbb_user.png"></a>
    - bbb_user.php
    ![Users](res/bbb_user.png)
 
