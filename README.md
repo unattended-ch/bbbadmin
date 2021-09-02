@@ -266,22 +266,22 @@
    ```
 
 ## SCREENSHOTS
-<a name="bbb_index.png</a>
+<a name="bbb_index.png"></a>
    - bbb_index.php
    ![Home page](res/bbb_index.png)
 
    - bbb_index.php
    ![List meetings](res/bbb_meetings.png)
 
-<a name="bbb_create.png</a>
+<a name="bbb_create.png"></a>
    - bbb_create.php
    ![Create meeting](res/bbb_create.png)
 
-<a name="bbb_join.png</a>
+<a name="bbb_join.png"></a>
    - bbb_join.php
    ![Join meeting](res/bbb_join.png)
 
-<a name="bbb_info.png/a>
+<a name="bbb_info.png"></a>
    - bbb_info.php
    ![Meeting info](res/bbb_info.png)
 
