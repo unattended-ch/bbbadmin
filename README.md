@@ -117,11 +117,11 @@
 
 ## INSTALLATION ADMIN FRONTEND
 
-#### 1. Clone bbbadmin to your home folder
+###### 1. Clone bbbadmin to your home folder
    ```sh
    git clone https://github.com/unattended-ch/bbbadmin ~/bbbadmin
    ```
-#### 2. Clone the BBB PHP API to your home folder
+###### 2. Clone the BBB PHP API to your home folder
    ```sh
    git clone https://github.com/bigbluebutton/bigbluebutton-api-php ~/bigbluebutton-api-php
    ```
