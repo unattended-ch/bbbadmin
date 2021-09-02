@@ -89,7 +89,9 @@
 
 ## LANGUAGE SUPPORT
 
-- See [res/locale][bbb_lang] for translation
+- See [res/locale/][bbb_lang] for .PO translation files
+
+- See [locale/][bbb_locale] for translated .PHP files
 
 ## INSTALLATION FILE
 
@@ -258,6 +260,7 @@
 [bbbadmin.sql]: sql/bbbadmin.sql
 [bbb_config.php]: bbb_config.php
 [bbb_lang]: res/locale/
+[bbb_locale]: locale/
 [bbbadmin_discuss]: https://github.com/unattended-ch/bbbadmin/discussions
 [bbb]: https://bigbluebutton.org/
 [bbbapi]: https://github.com/bigbluebutton/bigbluebutton-api-php
