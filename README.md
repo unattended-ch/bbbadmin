@@ -344,7 +344,7 @@
 ## TODO
 
    1. Enjoy
-   2. Display 1st page of presentation as background on users join page (would be nice, and like above)
+   2. Display 1st page of presentation as background on users join page (would be nice, and i am be willing)
    3. Workaround for provider servers without apache_setenv() support for index.php (Uuuhhh..., but like above)
    4. Create download location for .MP4 meeting recording files in BBB (a lot of scripts, but i need help...)
    5. Add database manipulation scripts (for now we use webmin for this...)
