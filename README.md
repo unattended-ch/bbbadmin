@@ -285,8 +285,8 @@
    - There is no need to specify Apache environment variables
      ```
      ```
+<a name="workaround"></a>
 9. Workaround for servers with no apapche_set() and apache_getenv() support
-   <a name="workaround"></a>
    9.1 Edit users [index.php](bbb_user.php)
      ```
         $bbb = new BigBlueButton();
