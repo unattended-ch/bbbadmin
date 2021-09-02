@@ -21,24 +21,18 @@ if(isset($_GET['Submit']))
 {
     $bbb = new BigBlueButton();
 
-    $exportLinks = false;
     $userName = $_GET['userName'];
     $meetingID = $_GET['meetingID'];
     $moderator_password = $_GET['moderator_password'];
     $attendee_password = $_GET['attendee_password'];
-    $exportLinks = $_GET['exportURL'];
 
     if ($userName !== '') {
         $joinMeetingParams = new JoinMeetingParameters($meetingID, $userName, $moderator_password);
         $joinMeetingParams->setRedirect(true);
         $url = $bbb->getJoinMeetingURL($joinMeetingParams);
-        if ($exportLinks == 'yes') {
-            file_put_contents('./join_links.txt', $url.PHP_EOL, FILE_APPEND | LOCK_EX);
-        } else {
-            printf("Join meeting [%s] [%s]<br>", $meetingName, $meetingID);
-            printf('<br><a href="'.$url.'" target="_blank">'.$url.'</a>');
-            printf('<script type="text/javascript">window.open( "%s" )</script>', $url);
-        }
+        printf("Join meeting [%s] [%s]<br>", $meetingName, $meetingID);
+        printf('<br><a href="'.$url.'" target="_blank">'.$url.'</a>');
+        printf('<script type="text/javascript">window.open( "%s" )</script>', $url);
         $returl = "./bbb_index.php?sid=".$serverid;
         printf('<script type="text/javascript">location.replace("%s")</script>', $returl);
     } else {
@@ -49,13 +43,11 @@ else if(isset($_POST['Submit']))
 {
     $bbb = new BigBlueButton();
 
-    $exportLinks = false;
     $userName = $_POST['userName'];
     $meetingID = $_POST['meetingID'];
     $asmoderator = $_POST['asmoderator'];
     $displayonly = $_POST['displayonly'];
     $join_password = $attendee_password;
-    $exportLinks = $_POST['exportURL'];
     if ($asmoderator == 'yes') {
         $join_password = $moderator_password;
     }
@@ -63,10 +55,7 @@ else if(isset($_POST['Submit']))
         $joinMeetingParams = new JoinMeetingParameters($meetingID, $userName, $join_password);
         $joinMeetingParams->setRedirect(true);
         $url = $bbb->getJoinMeetingURL($joinMeetingParams);
-        if ($exportLinks == 'yes') {
-            file_put_contents('./join_links.txt', $url.PHP_EOL, FILE_APPEND | LOCK_EX);
-        }
-        if ($displayonly == 'yes' || $exportLinks == 'yes') {
+        if ($displayonly == 'yes') {
             printf('<br><a href="'.$url.'" target="_blank">'.$url.'</a>');
         } else {
             printf("Join meeting [%s] [%s]<br>", $userName, $meetingID);
@@ -102,8 +91,6 @@ else
 		                <td><input type="text" name="userName" id="userName" size="30"></td></tr><tr>
 		                <td><label for="asmoderator"><?php echo lang('MODERATOR'); ?></label></td>
 		                <td><input type="checkbox" id="asmoderator" name="asmoderator" value="yes"></td></tr><tr>
-		                <td><label for="exportURL"><?php echo lang('EXPORTJOIN'); ?></label></td>
-		                <td><input type="checkbox" id="exportURL" name="exportURL" value="yes"></td></tr>
 		                <td><label for="displayonly"><?php echo lang('DISPLAYONLY'); ?></label></td>
 		                <td><input type="checkbox" id="displayonly" name="displayonly" value="yes"></td></tr>
 	                        </table>

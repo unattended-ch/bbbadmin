@@ -149,8 +149,6 @@ else
 		                <td><input type="checkbox" id="muteonstart" name="muteonstart" value="yes" checked></td></tr><tr>
 		                <td><label for="recording"><?php echo lang('RECORDING'); ?></label></td>
 		                <td><input type="checkbox" id="recording" name="recording" value="yes"></td></tr><tr>
-		                <td><label for="exporturl"><?php echo lang('EXPORTJOIN'); ?></label></td>
-		                <td><input type="checkbox" id="exporturl" name="exporturl" value="yes"></td></tr>
 		                </table>
 		        	<br><center><input type="submit" name="Submit" value="<?php echo lang('CREATEMEETING'); ?>" class="bigbutton"> <input type="button" class="bigbutton" value="<?php echo lang('BACK'); ?>" onclick="javascript:history.back()"></center>
 	    	    	    </form>

@@ -4,3 +4,4 @@
 0.0.0.3		02.09.2021	Password protection with .htaccess and .htpasswd
 				For bbb_user.php [class]Big added to .css
 				bbb_user.php set $debug='0' and remove all messages
+				Link export and display funk tions removed (new bbb_user.php)
