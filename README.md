@@ -381,11 +381,12 @@
 ## TODO
 
    1. Enjoy
-   2. Display 1st page of presentation as background on users join page (would be nice, and i am willing)
-   3. Support for bootstrap.css (would be nice, and its like above)
-   3. Create download location for .MP4 meeting recording files in BBB (a lot of scripts, but i [need help][discuss]...)
-   4. Add database manipulation scripts (for now we use [webmin][webmin] for this...)
-   5. Create cron srcipt to start meeting in timely fashion for a specific time period (we need this really ?)
+   2. Create debian apt package bbbadmin.deb and bbbuser.deb (soon as possible...)
+   3. Display 1st page of presentation as background on users join page (would be nice...and i am willing)
+   4. Support for bootstrap.css (would be nice...and its like above)
+   5. Create download location for .MP4 meeting recording files in BBB (a lot of scripts...but i [need help][discuss])
+   6. Add database manipulation scripts (for now we use [webmin][webmin] for this...)
+   7. Create cron srcipt to start meeting in timely fashion for a specific time period (we need this really ?)
 
    - You can take part in the [discussion][discuss]
    - Or you can send us [issue reports][issues]
