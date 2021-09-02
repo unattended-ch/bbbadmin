@@ -279,8 +279,8 @@
    - There is no need to specify Apache environment variables
      ```
      ```
-<a name="userurl"></a>
 8. User can now join the meeting with the following parameters (sid and mID is needed the rest is optional) :
+   <a name="userurl"></a>
    ```
      https://server.domain.com/bbbuser/bbb_user.php?sid=X&mID=XXXXXXXXXXXXXXXXXX[&usr=Username][&join=1]
    or
