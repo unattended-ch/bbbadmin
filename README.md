@@ -322,7 +322,7 @@
    
    - Or you can send an [issue report][issues]
 
-   [goto TOK][tok]
+   [goto TOK](#tok)
 
 [bbbadmin_install.sh]: res/bbbadmin_install.sh
 [bbbuser_install.sh]: res/bbbuser_install.sh
