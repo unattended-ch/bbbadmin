@@ -29,6 +29,7 @@
         <li><a href="#configuration">Configuration</a></li>
         <li><a href="#language-support">Language support</a></li>
       </ul></li>
+    <li><a href="#styling">Change page style using CSS</a></li>
     <li><a href="#screenshots">Screenshots</a><ul>
         <li><a href="#bbb_index.png">bbb_index.php</a></li>
         <li><a href="#bbb_creat>bbb_create.php></li>
@@ -265,6 +266,10 @@
      https://server.domain.com/bbbuser/bbb_user.php?sid=X&mID=XXXXXXXXXXXXXXXXXX&usr=Username
    ```
 
+## STYLING
+
+- CSS file [style.css]
+
 ## SCREENSHOTS
 <a name="bbb_index.png"></a>
    - bbb_index.php
@@ -315,3 +320,4 @@
 [bbb]: https://bigbluebutton.org/
 [bbbapi]: https://github.com/bigbluebutton/bigbluebutton-api-php
 [.htaccess]: res/.htaccess
+[style.css]: css/style.css

@@ -3,7 +3,7 @@ html, button, input, select, textarea{
 }
 
 html{
-    background: #adadad;
+    <!-- background: #adadad; -->
     overflow-y: scroll;
 }
 
@@ -12,10 +12,10 @@ body{
     flex-direction: column;
     max-width: 100%;
     margin: 0 auto;
-	padding-left: 15px;
-	padding-right: 15px;
-	padding-bottom: 15px;
-	font-size: 16px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 15px;
+    font-size: 16px;
 }
 
 a.button {
@@ -56,6 +56,19 @@ table {
     font-size: 16px;
 }
 
+.mainbig {
+    background-color: #bbc4ca;
+    position: relative;
+    box-shadow: 1px 1px 5px #555 inset;
+    border-radius: 5px;
+    font-size: 22px;
+}
+
+.inputbig
+{
+    font-size: 25px;
+}
+
 td,th {
     vertical-align: top;
     padding: 3px;
@@ -66,32 +79,58 @@ pre {
 }
 
 #topStats{
-	padding-left: 18px;
-	padding-right: 18px;
-	padding-top: 5px;
-	padding-bottom: 5px;
-	margin-bottom: 1px;
+    padding-left: 18px;
+    padding-right: 18px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-bottom: 1px;
+}
+#topUsers{
+    font-size: 25px;
+    margin: auto;
+    padding-left: 18px;
+    padding-right: 18px;
+    padding-top: 2px;
+    padding-bottom: 5px;
+    margin-bottom: 1px;
+    display: block;
+    margin-top: 10%;
+    margin-left: auto;
+    margin-right: auto;
 }
 .chartStats{
-	box-shadow: 1px 1px 5px #555;
-	border-radius:5px;
+    box-shadow: 1px 1px 5px #555;
+    border-radius:5px;
 }
 .chartWrapper{
-	border: solid 1px #c7c7c7;
-	border-radius: 5px;
-	padding: 5px;
-	margin-bottom: 1px;
-	box-shadow: 1px 1px 5px #555 inset;
+    border: solid 1px #c7c7c7;
+    border-radius: 5px;
+    padding: 5px;
+    margin-bottom: 1px;
+    box-shadow: 1px 1px 5px #555 inset;
 }
 .chartLabel{
-	font-size: 1.2em;
-	text-align: center;
-	padding: 2px;
-	box-shadow: 1px 1px 5px #555;
-	border-radius:5px;
+    font-size: 1.2em;
+    text-align: center;
+    padding: 2px;
+    box-shadow: 1px 1px 5px #555;
+    border-radius:5px;
 }
 .chartHolder{
-	box-shadow: 1px 1px 5px #555;
-	border-radius:5px;
-	padding: 7px;
+    box-shadow: 1px 1px 5px #555;
+    border-radius:5px;
+    padding: 7px;
+}
+.chartLabelBig{
+    font-size: 2.2em;
+    text-align: center;
+    padding: 2px;
+    box-shadow: 1px 1px 5px #555;
+    border-radius:5px;
+}
+.chartHolderBig{
+    font-size: 2.2em;
+    box-shadow: 1px 1px 5px #555;
+    border-radius:5px;
+    padding: 7px;
 }

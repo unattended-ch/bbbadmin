@@ -8,8 +8,8 @@
 //*
 //********************************************************************
 namespace BigBlueButton;
-$serverid = $_GET['serverid'];
-$recordid = $_GET['recordid'];
+$serverid = $_GET['sid'];
+$recordid = $_GET['rid'];
 require_once('./bbb_load.php');
 use BigBlueButton\BigBlueButton;
 use BigBlueButton\Parameters\DeleteRecordingsParameters;

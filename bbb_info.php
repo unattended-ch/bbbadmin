@@ -8,7 +8,7 @@
 //*
 //********************************************************************
 namespace BigBlueButton;
-$serverid = $_GET['serverid'];
+$serverid = $_GET['sid'];
 require_once('./bbb_load.php');
 use BigBlueButton\BigBlueButton;
 use BigBlueButton\Parameters\GetMeetingInfoParameters;

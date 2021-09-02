@@ -11,6 +11,9 @@ namespace BigBlueButton;
 if (isset($_POST['server_id'])) {
     $serverid = $_POST['server_id'];
 }
+if (isset($_GET['sid'])) {
+    $serverid = $_GET['sid'];
+}
 if (isset($_GET['server_id'])) {
     $serverid = $_GET['server_id'];
 }
@@ -40,7 +43,7 @@ if ($response->getReturnCode() == 'SUCCESS') {
         $participants = $recording->participants;
         $recurl = $recording->playback->format->url;
         $functions = '<a href="'.$recurl.'" title="'.lang('VIEWRECORDING').'"><img src="./icons/explorer.ico" width="16" height="16"></a>';
-        $functions = $functions . '<a href="./bbb_delrec.php?serverid='.$serverid.'&recordid='.$internalID.'" title="'.lang('DELETERECORDING').'"><img src="./icons/exit.ico" width="16" height="16"></a>';
+        $functions = $functions . '<a href="./bbb_delrec.php?sid='.$serverid.'&rid='.$internalID.'" title="'.lang('DELETERECORDING').'"><img src="./icons/exit.ico" width="16" height="16"></a>';
         $recording_data = $recording_data . '<td>'.$meetingName.'</td><td>'.$createDate.'</td><td>'.$duration.'</td><td>'.$functions.'</td><tr>';
     }
     if ($recording_data == '')

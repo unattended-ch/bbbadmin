@@ -6,12 +6,17 @@
 //*
 //* Copyright (c) 2021 Automatix  All rights reserved.
 //*
+//* Usercall : http://server.dom?sid=N&mID=XXXXXXXXXXX&usr=Test
+//*
 //********************************************************************
 namespace BigBlueButton;
-$serverid = $_GET['serverid'];
-$meetingID = $_GET['meetingID'];
-if (isset($_GET['userName']))
-    $userName = $_GET['userName'];
+if (isset($_GET['sid']))
+    $serverid = $_GET['sid'];
+if (isset($_GET['mID']))
+    $meetingID = $_GET['mID'];
+if (isset($_GET['usr']))
+    $userName = $_GET['usr'];
+$debug = "0";
 require_once('./bbb_load.php');
 use BigBlueButton\BigBlueButton;
 use BigBlueButton\Parameters\JoinMeetingParameters;
@@ -21,7 +26,9 @@ try {
         $bbb = new BigBlueButton();
     }
 catch (Exception $e) {
-        die('ERROR: %s'.$e->getMessage());
+        //die('ERROR: %s'.$e->getMessage());
+        // die() silently for user
+        die();
     }
 finally
     {
@@ -29,11 +36,16 @@ finally
         $meeting = LoadMeeting($response, $meetingID);
     }
 
-if ($meeting == '')
-    die('Meeting ID ['.$meetingID.'] not found on server ['.$serverid.'] !');
-if (!is_object($meeting))
-    die('ERROR: '.Show($meeting));
-
+if ($meeting == '') {
+    //die('Meeting ID ['.$meetingID.'] not found on server ['.$serverid.'] !');
+    // die() silently for user
+    die();
+}
+if (!is_object($meeting)) {
+    //die('ERROR: '.Show($meeting));
+    // die() silently for user
+    die();
+}
 if(isset($_GET['Submit']))
 {
     if ($userName !== '')
@@ -70,18 +82,18 @@ else
         <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
-    <div id="topStats">
-	<center><table class="main"><tr><td>
+    <div id="topUsers">
+	<center><table class="mainbig"><tr><td>
 		<div class="chartWrapper">
-			<div class="chartLabel"><?php echo lang('JOINMEETING'); ?></div>
-			<div class="chartHolder">
-			    <table><tr><form action=""  method="POST"><table><tr>
+			<div class="chartLabelBig"><?php echo lang('JOINMEETING'); ?></div>
+			<div class="chartHolderBig">
+			    <table class="mainbig"><tr><form action=""  method="POST"><table class="mainbig"><tr>
 		                <td><label for="meetingName" id="app_id_label"  ><?php echo lang('MEETING'); ?></label></td>
-		                <td><input type="text" name="meetingName" id="meetingName" size="50" value="<?php echo $meetingName ?>"></td></tr><tr>
+		                <td><input class="mainbig" type="text" name="meetingName" id="meetingName" size="40" value="<?php echo $meetingName ?>"></td></tr><tr>
 		                <td><label for="userName" id="app_name_label"  ><?php echo lang('USERNAME'); ?></label></td>
-		                <td><input type="text" name="userName" id="userName" size="30"></td></tr><tr>
+		                <td><input class="inputbig" type="text" name="userName" id="userName" size="30" value="<?php echo $userName ?>"></td></tr><tr>
 	                        </table>
-		                <br><center><input type="submit" name="Submit" value="<?php echo lang('JOINMEETING'); ?>" class="bigbutton"> <input type="button" value="<?php echo lang('BACK'); ?>" onclick="javascript:history.back()" class="bigbutton"></center><br>
+		                <br><center><input class="inputbig" type="submit" name="Submit" value="<?php echo lang('JOINMEETING'); ?>"></center><br>
 		            </form>
 			    </tr></table>
 			</div>
