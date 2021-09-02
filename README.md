@@ -239,6 +239,7 @@
 4. Copy bbbadmin *.php, *.css and icons/*.ico files to /var/www/youruserpage
    ```sh
      sudo rsync --exclude="res/*" --exclude="*.sql" -avr ~/bbbadmin/* /var/www/youruserpage/
+     sudo mv -v /var/www/youruserpage/bbb_user.php /var/www/youruserpage/index.php
      sudo rm -f /var/www/youruserpage/bbb_create.php
      sudo rm -f /var/www/youruserpage/bbb_delrec.php
      sudo rm -f /var/www/youruserpage/bbb_index.php
@@ -340,12 +341,11 @@
 ## TODO
 
    1. Enjoy
-   2. Renaming bbb_user.php to index.php only on user page (Needed..., but i am willing...)
-   3. Display 1st page of presentation as background on users join page (would be nice, and like above)
-   4. Workaround for provider servers without apache_setenv() support for index.php (Uuuhhh..., but like above)
-   5. Create download location for .MP4 meeting recording files in BBB (a lot of scripts, but i need help...)
-   6. Add database manipulation scripts (for now we use webmin for this...)
-   7. Create cron srcipt to start meeting in timely fashion for a specific time period (we need this really ?)
+   2. Display 1st page of presentation as background on users join page (would be nice, and like above)
+   3. Workaround for provider servers without apache_setenv() support for index.php (Uuuhhh..., but like above)
+   4. Create download location for .MP4 meeting recording files in BBB (a lot of scripts, but i need help...)
+   5. Add database manipulation scripts (for now we use webmin for this...)
+   6. Create cron srcipt to start meeting in timely fashion for a specific time period (we need this really ?)
 
    - You can take part in the [discussion][discuss]
    - Or you can send us [issue reports][issues]
