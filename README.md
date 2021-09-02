@@ -237,9 +237,7 @@
    ```sh
      sudo chown -R www-data.www-data /var/www/youruserpage
    ```
-7. For configuration you can use the arrays in [bbb_config.php] as standalone configuration
-   or a mySql-Database for configuration [bbbadmin.sql] to build the arrays
-
+7. For configuration you can use the arrays in [bbb_config.php] as standalone configuration or a mySql-Database for configuration [bbbadmin.sql] to build the arrays
    7.1. For standalone use configure [bbb_config.php]
    - Edit [bbb_config.php]
      ```
