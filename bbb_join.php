@@ -39,7 +39,7 @@ if(isset($_GET['Submit']))
             printf('<br><a href="'.$url.'" target="_blank">'.$url.'</a>');
             printf('<script type="text/javascript">window.open( "%s" )</script>', $url);
         }
-        $returl = "./bbb_index.php?server_id=".$serverid;
+        $returl = "./bbb_index.php?sid=".$serverid;
         printf('<script type="text/javascript">location.replace("%s")</script>', $returl);
     } else {
         printf('ERROR : No username specified !');
@@ -72,7 +72,7 @@ else if(isset($_POST['Submit']))
             printf("Join meeting [%s] [%s]<br>", $userName, $meetingID);
             printf('<script type="text/javascript">window.open( "%s" )</script>', $url);
         }
-        $returl = "./bbb_index.php?server_id=".$serverid;
+        $returl = "./bbb_index.php?sid=".$serverid;
         printf('<script type="text/javascript">location.replace("%s")</script>', $returl);
     } else {
         printf('ERROR : No username specified !');

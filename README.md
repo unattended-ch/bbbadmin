@@ -268,7 +268,7 @@
 
 ## STYLING
 
-- CSS file [style.css]
+- Change your page style with the CSS file [style.css]
 
 ## SCREENSHOTS
 <a name="bbb_index.png"></a>

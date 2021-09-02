@@ -8,17 +8,11 @@
 //*
 //********************************************************************
 namespace BigBlueButton;
-if (isset($_POST['server_id'])) {
-    $serverid = $_POST['server_id'];
+if (isset($_POST['sid'])) {
+    $serverid = $_POST['sid'];
 }
 if (isset($_GET['sid'])) {
     $serverid = $_GET['sid'];
-}
-if (isset($_GET['server_id'])) {
-    $serverid = $_GET['server_id'];
-}
-if (isset($_GET['serverid'])) {
-    $serverid = $_GET['serverid'];
 }
 require_once('./bbb_load.php');
 use BigBlueButton\BigBlueButton;

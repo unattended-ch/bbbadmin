@@ -80,7 +80,7 @@ function RandomString($len='25')
 //----------------------------------------------------------------------
 function ServerSelect($sel1='', $sel2='')
 {
-    $serverselect = '<form><select name="server_id" id="server_id" size="1" onchange="this.form.submit()">';
+    $serverselect = '<form><select name="sid" id="sid" size="1" onchange="this.form.submit()">';
     $i = 1;
     foreach($GLOBALS['server'] as $serv) {
         if ($i == 1) 
