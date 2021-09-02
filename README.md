@@ -8,6 +8,7 @@
 #### [[BigBlueButton Homepage][bbb]] [[BigBlueButton PHP API][bbbapi]]
 #### [[Discussion][bbbadmin_discuss]] [[Changelog][changelog]]
 
+<a name="tok"></a>
 <!-- TABLE OF CONTENTS -->
 <details open="open">
   <summary><h2 style="display: inline-block">TABLE OF CONTENTS</h2></summary>
@@ -320,6 +321,8 @@
    - You can participate in our [Discussion forum][discuss]
    
    - Or you can send an [issue report][issues]
+
+   [goto TOK][tok]
 
 [bbbadmin_install.sh]: res/bbbadmin_install.sh
 [bbbuser_install.sh]: res/bbbuser_install.sh
