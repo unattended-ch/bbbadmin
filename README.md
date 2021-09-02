@@ -29,6 +29,7 @@
         <li><a href="#htpasswd">Admin access security with .htpasswd</a></li>
         <li><a href="#installation-user-frontend">Installation User Frontend</a></li>
         <li><a href="#htpasswd">User access security with .htpasswd</a></li>
+        <li><a href="#workaround">Workaround for hostings without apache_setenv()</a></li>
         <li><a href="#configuration-files">Configuration files</a></li>
         <li><a href="#language-support">Language support</a></li>
       </ul></li>
@@ -284,8 +285,44 @@
    - There is no need to specify Apache environment variables
      ```
      ```
-9. User can now join the meeting with the following parameters (sid and mID is needed the rest is optional) :
-   <a name="userurl"></a>
+9. Workaround for servers with no apapche_set() and apache_getenv() support
+   <a name="workaround"></a>
+   9.1 Edit users [index.php](bbb_user.php)
+     ```
+        $bbb = new BigBlueButton();
+    replace it with
+        $bbb = new BigBlueButton($bbb_url, $bbbsalt);
+
+     ```
+   9.2 Edit [bbb_config.php]
+     ```
+        apache_setenv('BBB_SECRET', apache_getenv('BBB_SECRET1'));
+        apache_setenv('BBB_SERVER_BASE_URL', apache_getenv('BBB_SERVER1_BASE_URL'));
+      replace it with
+        //apache_setenv('BBB_SECRET', apache_getenv('BBB_SECRET1'));
+        //apache_setenv('BBB_SERVER_BASE_URL', apache_getenv('BBB_SERVER1_BASE_URL'));
+        $bbb_url  = 'https://domain1.com/bigbluebutton/';
+        $bbb_salt = 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
+      and
+        apache_setenv('BBB_SECRET', apache_getenv('BBB_SECRET1'));
+        apache_setenv('BBB_SERVER_BASE_URL', apache_getenv('BBB_SERVER1_BASE_URL'));
+      replace it with
+        //apache_setenv('BBB_SECRET', apache_getenv('BBB_SECRET2'));
+        //apache_setenv('BBB_SERVER_BASE_URL', apache_getenv('BBB_SERVER2_BASE_URL'));
+        $bbb_url  = 'https://domain2.com/bigbluebutton/';
+        $bbb_salt = 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
+     ```
+   9.3 Edit [BigBlueButton.php]
+     ```
+        $this->securitySecret   = $secret ?: getenv('BBB_SECRET') ?: getenv('BBB_SECURITY_SALT');
+        $this->bbbServerBaseUrl = $baseUrl ?: getenv('BBB_SERVER_BASE_URL');
+      replace it with
+        //$this->securitySecret   = $secret ?: getenv('BBB_SECRET') ?: getenv('BBB_SECURITY_SALT');
+        //$this->bbbServerBaseUrl = $baseUrl ?: getenv('BBB_SERVER_BASE_URL');
+      to get parameters from command line
+
+     ```
+10. User can now join the meeting with the following parameters (sid and mID is needed the rest is optional) :
    ```
      https://server.domain.com/bbbuser/bbb_user.php?sid=X&mID=XXXXXXXXXXXXXXXXXX[&usr=Username][&join=1]
    or

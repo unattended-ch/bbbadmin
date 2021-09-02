@@ -38,11 +38,6 @@ if(isset($_POST['Submit']))
         $createMeetingParams->setMuteOnStart(true);
     }
 
-    $exportURL = false;
-    if ($_POST['exporturl'] == 'yes') {
-        $exportURL = true;
-    }
-
     if ($pdffile['name'] !== '') {
         $createMeetingParams->addPresentation($pdffile['name'], file_get_contents($pdffile['tmp_name']));
     }
@@ -65,12 +60,11 @@ if(isset($_POST['Submit']))
         printf("%s<br>", $response->getMessage());
     }
 
-    $url = './bbb_join.php?sid='.$serverid';
-    $url = $url . 'meetingID='.$meetingID;
+    $url = './bbb_join.php?sid='.$serverid;
+    $url = $url . '&meetingID='.$meetingID;
     $url = $url . '&userName=Automatix';
     $url = $url . '&moderator_password='.$moderator_password;
     $url = $url . '&attendee_password='.$attendee_password;
-    $url = $url . '&exportURL='.$exportURL;
     $url = $url . '&Submit=send';
     echo '<br><a href="'.$url.'">"'.$url.'</a>';
     header( "Location: $url" );
