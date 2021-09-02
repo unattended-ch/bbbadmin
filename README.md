@@ -263,7 +263,6 @@
 
 <a name="userurl"></a>
 8. User can now join the meeting with the following parameters (sid and mID is needed the rest is optional) :
-   ?sid=serverid&mID=meetingID[&usr=Username][&join=1]
    ```
      https://server.domain.com/bbbuser/bbb_user.php?sid=X&mID=XXXXXXXXXXXXXXXXXX[&usr=Username][&join=1]
    or
