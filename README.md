@@ -89,7 +89,10 @@
 
 ## LANGUAGE SUPPORT
 
+- Change $language= in [bbb_config.php] to your language shortcode
+
 - See [res/locale/][bbb_lang] for .PO translation files
+  and translation scripts
 
 - See [locale/][bbb_locale] for translated .PHP files
 
