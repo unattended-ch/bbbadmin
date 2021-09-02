@@ -63,6 +63,8 @@
    * 	Manage all recordings on the server
    * 	Provide central user join page for meetings
 
+   [goto TOK](#tok)
+
 ## OPTIONS
 
    * List running meeting
@@ -73,6 +75,8 @@
    * Show meeting information
    * Show recordings
    * Delete recordings
+
+   [goto TOK](#tok)
 
 ## PHP FILES
 
@@ -90,6 +94,8 @@
    bbb_user.php|Join user to meeting
    sql/bbbadmin.sql|SQL dump for bbbadmin database
 
+   [goto TOK](#tok)
+
 ## CONFIGURATION FILES
 
 - Configuration file [bbb_config.php]
@@ -100,6 +106,8 @@
 
 - Access password file [.htpasswd]
 
+   [goto TOK](#tok)
+
 ## LANGUAGE SUPPORT
 
 - Change [$language='en'] in [bbb_config.php] to your language shortcode
@@ -109,11 +117,15 @@
 
 - See [locale/][bbb_locale] for translated .PHP files
 
+   [goto TOK](#tok)
+
 ## INSTALLATION SCRIPTS
 
 - Admin Frontend installation script [bbbadmin_install.sh]
 
 - User Frontend installation script [bbbuser_install.sh]
+
+   [goto TOK](#tok)
 
 ## PREREQUISITES
 
@@ -280,6 +292,8 @@
 ## STYLING
 
 - Change your page style with the CSS file [style.css]
+
+   [goto TOK](#tok)
 
 ## SCREENSHOTS
 <a name="bbb_index.png"></a>
