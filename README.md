@@ -29,7 +29,7 @@
         <li><a href="#htpasswd">Admin access security with .htpasswd</a></li>
         <li><a href="#installation-user-frontend">Installation User Frontend</a></li>
         <li><a href="#htpasswd">User access security with .htpasswd</a></li>
-        <li><a href="#configuration">Configuration</a></li>
+        <li><a href="#configuration-files">Configuration files</a></li>
         <li><a href="#language-support">Language support</a></li>
       </ul></li>
     <li><a href="#userurl">User URL for joining meeting</a></li>
