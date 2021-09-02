@@ -165,6 +165,8 @@
        mysql -u username -p bbbadmin < ~/bbbadmin/sql/bbbadmin.sql
      ```
    - There is no need to specify Apache environment variables
+     ```
+     ```
 8. Enable access security over .htpasswd file as a basic protection
 
    8.1 Add th following to the default apache configuration
