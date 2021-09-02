@@ -6,7 +6,7 @@
 [![PHP 7.4](https://img.shields.io/badge/php-7.4-9c9.svg?style=flat-square)](https://php.net/)
 [![PHP 7.4](https://img.shields.io/badge/php-8.0-9c9.svg?style=flat-square)](https://php.net/)
 #### [[BigBlueButton Homepage][bbb]] [[BigBlueButton PHP API][bbbapi]]
-#### [[bbbadmin Discussion][bbbadmin_discuss]] [[Changelog][changelog]
+#### [[bbbadmin Discussion][bbbadmin_discuss]] [[Changelog][changelog]]
 
 <!-- TABLE OF CONTENTS -->
 <details open="open">
