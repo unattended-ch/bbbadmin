@@ -11,6 +11,7 @@ pushd $DST
     sudo rsync -avr ~/bigbluebutton-api-php/src/* $WWW/
     # Copy bbbadmin to /var/www
     sudo rsync --exclude="res/*" --exclude="sql/*" -avr ~/bbbadmin/* $WWW/
+    # Remove admin modules from page
     sudo rm -f $WWW/bbb_create.php
     sudo rm -f $WWW/bbb_delrec.php
     sudo rm -f $WWW/bbb_index.php
