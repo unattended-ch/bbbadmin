@@ -29,6 +29,7 @@
         <li><a href="#configuration">Configuration</a></li>
         <li><a href="#language-support">Language support</a></li>
       </ul></li>
+    <li><a href="#userurl">User URL for joining meeting</a></li>
     <li><a href="#styling">Change page style</a></li>
     <li><a href="#screenshots">Screenshots</a><ul>
         <li><a href="#bbb_index.png">bbb_index.php</a></li>
@@ -261,6 +262,7 @@
      ```
    - There is no need to specify Apache environment variables
 
+<a name="userurl"></a>
 8. User can now join the meeting with serverid and meetingID
    ```
      https://server.domain.com/bbbuser/bbb_user.php?sid=X&mID=XXXXXXXXXXXXXXXXXX&usr=Username
