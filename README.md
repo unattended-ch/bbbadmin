@@ -168,7 +168,7 @@
 
 8. Enable access security over .htpasswd file as a basic protection
 
-8.1 Add th following to the default apache configuration
+   8.1 Add th following to the default apache configuration
    ```
      <Directory "/var/www/html/yourpage">
        AllowOverride All
@@ -177,19 +177,19 @@
        Allow from all
      </Directory>
    ```
-8.2 Copy .htacces file to your webpage
+   8.2 Copy .htacces file to your webpage
    ```sh
         sudo cp -v ~/bbbadmin/res/.htaccess /var/www/youpage/
    ```
-8.3 Edit the path of password file in [.htaccess], always use document root
+   8.3 Edit the path of password file in [.htaccess], always use document root
    ```
      AuthUserFile "/var/www/html/yourpage/.htpasswd"
    ```
-8.4 Add user to [.htpasswd]
+   8.4 Add user to [.htpasswd]
    ```sh
         sudo htpasswd -c /var/www/youpage/.htpasswd support
    ```
-8.5 Restart apache server
+   8.5 Restart apache server
    ```sh
         sudo systemctl restart apache2
    ```
