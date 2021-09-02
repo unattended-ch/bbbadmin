@@ -29,7 +29,7 @@
         <li><a href="#configuration">Configuration</a></li>
         <li><a href="#language-support">Language support</a></li>
       </ul></li>
-    <li><a href="#styling">Change page style using CSS</a></li>
+    <li><a href="#styling">Change page style</a></li>
     <li><a href="#screenshots">Screenshots</a><ul>
         <li><a href="#bbb_index.png">bbb_index.php</a></li>
         <li><a href="#bbb_creat>bbb_create.php></li>
