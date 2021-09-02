@@ -309,12 +309,12 @@
 ## TODO
 
    1. Enjoy
-   2. Renaming bbb_user.php to index.php only on user page (Needed..., and like above)
-   3. Display 1st page of presentation as background on users join page (would be nice, but i am willing...)
+   2. Renaming bbb_user.php to index.php only on user page (Needed..., but i am willing...)
+   3. Display 1st page of presentation as background on users join page (would be nice, and like above)
    4. Workaround for provider servers without apache_setenv() support for bbb_user.php (Uuuhhh..., but like above)
    5. Create download location for .MP4 meeting recording files in BBB (a lot of scripts, but i need help...)
    6. Add database manipulation scripts (for now we use webmin for this...)
-   7. Create cron srcipt to start meeting in timely fashion for a specific time period (need this really ?)
+   7. Create cron srcipt to start meeting in timely fashion for a specific time period (we need this really ?)
 
 [bbbadmin_install.sh]: res/bbbadmin_install.sh
 [bbbuser_install.sh]: res/bbbuser_install.sh
