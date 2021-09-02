@@ -191,7 +191,6 @@
      ```
 <a name="htpasswd"></a>
 8. Enable access security over .htpasswd file as a basic protection
-
    8.1 Add th following to the default apache configuration
    ```
      <Directory "/var/www/html/yourpage">
