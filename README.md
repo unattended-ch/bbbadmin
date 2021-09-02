@@ -1,4 +1,4 @@
-# BigBlueButton Admin Frontend
+# BigBlueButton Admin- & User-Frontend
 
 [![PHP 7.1](https://img.shields.io/badge/php-7.1-f33.svg?style=flat-square)](https://php.net/)
 [![PHP 7.2](https://img.shields.io/badge/php-7.2-f33.svg?style=flat-square)](https://php.net/)
