@@ -1,0 +1,24 @@
+AuthType Basic
+AuthName "Protected"
+AuthUserFile "/var/www/bbb/.htpasswd"
+Require valid-user
+
+<Files .htaccess>
+ order allow,deny
+ deny from all
+</Files>
+
+<Files .htpasswd>
+ order allow,deny
+ deny from all
+</Files>
+
+<Files bbb_config.php>
+ order allow,deny
+ deny from all
+</Files>
+
+<Files bbb_load.php>
+ order allow,deny
+ deny from all
+</Files>

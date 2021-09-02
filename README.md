@@ -88,6 +88,10 @@
 
 - SQL dump [bbbadmin.sql]
 
+- Folder protection file [.htaccess]
+
+- Access password file [.htpasswd]
+
 ## LANGUAGE SUPPORT
 
 - Change [$language='en'] in [bbb_config.php] to your language shortcode
@@ -144,7 +148,7 @@
      ```
        database=""
      ```
-   - You must specify BBB_* Apache environment variables for every server
+   - You must specify BBB_* Apache environment variables for every server in apache configuration
      ```
        SetEnv BBB_SECRET1 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
        SetEnv BBB_SERVER1_BASE_URL https://server1.domain.com/bigbluebutton/
@@ -162,6 +166,33 @@
      ```
    - There is no need to specify Apache environment variables
 
+8. Enable access security over .htpasswd file as a basic protection
+
+8.1 Add th following to the default apache configuration
+   ```
+     <Directory "/var/www/html/yourpage">
+       AllowOverride All
+       Options SymLinksIfOwnerMatch IncludesNoExec
+       Order allow,deny
+       Allow from all
+     </Directory>
+   ```
+8.2 Copy .htacces file to your webpage
+   ```sh
+        sudo cp -v ~/bbbadmin/res/.htaccess /var/www/youpage/
+   ```
+8.3 Edit the path of password file in [.htaccess], always use document root
+   ```
+     AuthUserFile "/var/www/html/yourpage/.htpasswd"
+   ```
+8.4 Add user to [.htpasswd]
+   ```sh
+        sudo htpasswd -c /var/www/youpage/.htpasswd support
+   ```
+8.5 Restart apache server
+   ```sh
+        sudo systemctl restart apache2
+   ```
 
 ## INSTALLATION USER FRONTEND
 
@@ -269,3 +300,4 @@
 [bbbadmin_discuss]: https://github.com/unattended-ch/bbbadmin/discussions
 [bbb]: https://bigbluebutton.org/
 [bbbapi]: https://github.com/bigbluebutton/bigbluebutton-api-php
+[.htaccess]: res/.htaccess
