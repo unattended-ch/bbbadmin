@@ -122,6 +122,8 @@
      sudo apt install php-curl php-mbstring php-xml -y
    ```
 
+   [goto TOK](#tok)
+
 ## INSTALLATION ADMIN FRONTEND
 
 1. Clone bbbadmin to your home folder
@@ -206,6 +208,8 @@
      sudo systemctl restart apache2
    ```
 
+   [goto TOK](#tok)
+
 ## INSTALLATION USER FRONTEND
 
 1. Clone bbbadmin to your home folder
@@ -271,6 +275,8 @@
      https://server.domain.com?sid=X&mID=XXXXXXXXXXXXXXXXXX[&usr=Username][&join=1]
    ```
 
+   [goto TOK](#tok)
+
 ## STYLING
 
 - Change your page style with the CSS file [style.css]
@@ -306,6 +312,8 @@
 <a name="bbb_user.png"></a>
    - bbb_user.php
    ![Users](res/bbb_user.png)
+
+   [goto TOK](#tok)
 
 <a name="todo"></a>
 ## TODO
