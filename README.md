@@ -30,6 +30,7 @@
         <li><a href="#installation-admin-frontend">Installation Admin Frontend</a></li>
         <li><a href="#installation-user-frontend">Installation User Frontend</a></li>
         <li><a href="#configuration">Configuration</a></li>
+        <li><a href="#language-support">Language support</a></li>
       </ul>
     </li>
     <li><a href="#pages">Pages</a></li>
@@ -85,6 +86,10 @@
 - Configuration file [bbb_config.php]
 
 - SQL dump [bbbadmin.sql]
+
+## LANGUAGE SUPPORT
+
+- See [bbb_lang]
 
 ## INSTALLATION FILE
 
@@ -252,6 +257,7 @@
 [bbbuser_install.sh]: res/bbbuser_install.sh
 [bbbadmin.sql]: sql/bbbadmin.sql
 [bbb_config.php]: bbb_config.php
+[bbb_lang]: res/locale/
 [bbbadmin_discuss]: https://github.com/unattended-ch/bbbadmin/discussions
 [bbb]: https://bigbluebutton.org/
 [bbbapi]: https://github.com/bigbluebutton/bigbluebutton-api-php
