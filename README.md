@@ -189,8 +189,8 @@
    - There is no need to specify Apache environment variables
      ```
      ```
-<a name="htpasswd"></a>
 8. Enable access security over .htpasswd file as a basic protection
+   <a name="htpasswd"></a>
    8.1 Add th following to the default apache configuration
    ```
      <Directory "/var/www/html/yourpage">
@@ -299,34 +299,40 @@
 <a name="bbb_index.png"></a>
    - bbb_index.php
    ![Home page](res/bbb_index.png)
+   [goto TOK](#tok)
 
    - bbb_index.php
    ![List meetings](res/bbb_meetings.png)
+   [goto TOK](#tok)
 
 <a name="bbb_create.png"></a>
    - bbb_create.php
    ![Create meeting](res/bbb_create.png)
+   [goto TOK](#tok)
 
 <a name="bbb_join.png"></a>
    - bbb_join.php
    ![Join meeting](res/bbb_join.png)
+   [goto TOK](#tok)
 
 <a name="bbb_info.png"></a>
    - bbb_info.php
    ![Meeting info](res/bbb_info.png)
+   [goto TOK](#tok)
 
 <a name="bbb_stop.png"></a>
    - bbb_stop.php
    ![Stp meeting](res/bbb_stop.png)
+   [goto TOK](#tok)
 
 <a name="bbb_record.png"></a>
    - bbb_record.php
    ![Recordings](res/bbb_record.png)
+   [goto TOK](#tok)
 
 <a name="bbb_user.png"></a>
    - bbb_user.php
    ![Users](res/bbb_user.png)
-
    [goto TOK](#tok)
 
 <a name="todo"></a>
