@@ -112,34 +112,34 @@
 
 1. Install PHP modules php-curl php-mbstring php-xml
    ```sh
-   sudo apt install php-curl php-mbstring php-xml -y
+     sudo apt install php-curl php-mbstring php-xml -y
    ```
 
 ## INSTALLATION ADMIN FRONTEND
 
 1. Clone bbbadmin to your home folder
    ```sh
-   git clone https://github.com/unattended-ch/bbbadmin ~/bbbadmin
+     git clone https://github.com/unattended-ch/bbbadmin ~/bbbadmin
    ```
 2. Clone the BBB PHP API to your home folder
    ```sh
-   git clone https://github.com/bigbluebutton/bigbluebutton-api-php ~/bigbluebutton-api-php
+     git clone https://github.com/bigbluebutton/bigbluebutton-api-php ~/bigbluebutton-api-php
    ```
 3. Copy BBB contents of folder src/ to /var/www/yourpage
    ```sh
-   sudo rsync -avr ~/bigbluebutton-api-php/src/* /var/www/yourpage/
+     sudo rsync -avr ~/bigbluebutton-api-php/src/* /var/www/yourpage/
    ```
 4. Copy bbbadmin *.php, *.css and icons/*.ico files to /var/www/yourpage
    ```sh
-   sudo rsync --exclude="res/*" --exclude="*.sql" -avr ~/bbbadmin/* /var/www/yourpage/
+     sudo rsync --exclude="res/*" --exclude="*.sql" -avr ~/bbbadmin/* /var/www/yourpage/
    ```
 5. Create a symbolic link to the apache root folder
    ```sh
-   sudo ln -s /var/www/yourpage /var/www/html/yourpage
+     sudo ln -s /var/www/yourpage /var/www/html/yourpage
    ```
 6. Set owner of yourpage to www-data
    ```sh
-   sudo chown -R www-data.www-data /var/www/yourpage
+     sudo chown -R www-data.www-data /var/www/yourpage
    ```
 7. For configuration you can use the arrays in [bbb_config.php] as standalone configuration
    or a mySql-Database for configuration [bbbadmin.sql] to build the arrays
@@ -192,45 +192,45 @@
    ```
    8.4 Add user to .htpasswd
    ```sh
-        sudo htpasswd -c /var/www/youpage/.htpasswd [username]
+     sudo htpasswd -c /var/www/youpage/.htpasswd [username]
    ```
    8.5 Restart apache server
    ```sh
-        sudo systemctl restart apache2
+     sudo systemctl restart apache2
    ```
 
 ## INSTALLATION USER FRONTEND
 
 1. Clone bbbadmin to your home folder
    ```sh
-   git clone https://github.com/unattended-ch/bbbadmin ~/bbbadmin
+     git clone https://github.com/unattended-ch/bbbadmin ~/bbbadmin
    ```
 2. Clone the BBB PHP API to your home folder
    ```sh
-   git clone https://github.com/bigbluebutton/bigbluebutton-api-php ~/bigbluebutton-api-php
+     git clone https://github.com/bigbluebutton/bigbluebutton-api-php ~/bigbluebutton-api-php
    ```
 3. Copy BBB contents of folder src/ to /var/www/youruserpage
    ```sh
-   sudo rsync -avr ~/bigbluebutton-api-php/src/* /var/www/youruserpage/
+     sudo rsync -avr ~/bigbluebutton-api-php/src/* /var/www/youruserpage/
    ```
 4. Copy bbbadmin *.php, *.css and icons/*.ico files to /var/www/youruserpage
    ```sh
-   sudo rsync --exclude="res/*" --exclude="*.sql" -avr ~/bbbadmin/* /var/www/youruserpage/
-   sudo rm -f /var/www/youruserpage/bbb_create.php
-   sudo rm -f /var/www/youruserpage/bbb_delrec.php
-   sudo rm -f /var/www/youruserpage/bbb_index.php
-   sudo rm -f /var/www/youruserpage/bbb_info.php
-   sudo rm -f /var/www/youruserpage/bbb_join.php
-   sudo rm -f /var/www/youruserpage/bbb_record.php
-   sudo rm -f /var/www/youruserpage/bbb_stop.php
+     sudo rsync --exclude="res/*" --exclude="*.sql" -avr ~/bbbadmin/* /var/www/youruserpage/
+     sudo rm -f /var/www/youruserpage/bbb_create.php
+     sudo rm -f /var/www/youruserpage/bbb_delrec.php
+     sudo rm -f /var/www/youruserpage/bbb_index.php
+     sudo rm -f /var/www/youruserpage/bbb_info.php
+     sudo rm -f /var/www/youruserpage/bbb_join.php
+     sudo rm -f /var/www/youruserpage/bbb_record.php
+     sudo rm -f /var/www/youruserpage/bbb_stop.php
    ```
 5. Create a symbolic link to the apache root folder
    ```sh
-   sudo ln -s /var/www/yourpage /var/www/html/youruserpage
+     sudo ln -s /var/www/yourpage /var/www/html/youruserpage
    ```
 6. Set owner of youruserpage to www-data
    ```sh
-   sudo chown -R www-data.www-data /var/www/youruserpage
+     sudo chown -R www-data.www-data /var/www/youruserpage
    ```
 7. For configuration you can use the arrays in [bbb_config.php] as standalone configuration
    or a mySql-Database for configuration [bbbadmin.sql] to build the arrays
@@ -260,7 +260,7 @@
 
 8. User can now join the meeting with serverid and meetingID
    ```
-   https://server.domain.com/bbbuser/bbb_user.php?serverid=X&meetingID=XXXXXXXXXXXXXXXXXX
+     https://server.domain.com/bbbuser/bbb_user.php?sid=X&mID=XXXXXXXXXXXXXXXXXX&usr=Username
    ```
 
 ## SCREENSHOTS
