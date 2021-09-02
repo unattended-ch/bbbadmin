@@ -16,7 +16,9 @@ global $access;
 global $refresh;
 global $language;
 
-$language='de';
+// If language file is not found, defaulting to 'en'
+// See locale/ for available languages
+$language='en';
 
 $database = "";
 if ($database == "")
