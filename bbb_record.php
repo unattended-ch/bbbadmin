@@ -22,6 +22,8 @@ use BigBlueButton\BigBlueButton;
 use BigBlueButton\Parameters\GetRecordingsParameters;
 
 $server = ServerSelect($sel1, $sel2);
+$returl = 'bbb_index.php?serverid='.$serverid;
+
 $recordingParams = new GetRecordingsParameters();
 $bbb = new BigBlueButton();
 $response = $bbb->getRecordings($recordingParams);
@@ -41,7 +43,7 @@ if ($response->getReturnCode() == 'SUCCESS') {
         $recording_data = $recording_data . '<td>'.$meetingName.'</td><td>'.$createDate.'</td><td>'.$duration.'</td><td>'.$functions.'</td><tr>';
     }
     if ($recording_data == '')
-        $recording_data = '<td colspan="3" style="text-align:center;">'.lang('NORECORDING').'</td>';
+        $recording_data = '<td colspan="4" style="text-align:center;">'.lang('NORECORDING').'</td>';
 }
 else
 {
@@ -64,7 +66,7 @@ else
 			    <table class="chartHolder" border="1"><tr><th><?php echo lang('MEETINGNAME'); ?></th><th><?php echo lang('RECORDDATE'); ?></th><th><?php echo lang('DURATION'); ?></th><th><?php echo lang('FUNCTIONS'); ?></th></tr><tr>
 				<?php printf($recording_data); ?>
 			    </tr></table>
-			    <br><center><form action="javascript:history.back()"><input type="submit" value="<?php echo lang('BACK'); ?>" class="bigbutton"/></form></center>
+			    <br><center><form action="<?php echo $returl; ?>"><input type="submit" value="<?php echo lang('BACK'); ?>" class="bigbutton"/></form></center>
 			</div>
 		</div>
 	</td>
