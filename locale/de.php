@@ -21,6 +21,7 @@ function lang($phrase)
         'RECORDINGS' => 'Aufnahmen',
         'RECORDING' => 'Aufnahme',
         'RECORDDATE' => 'Aufnahmedatum',
+        'NORECORDING' => 'Keine Aufnahmen gefunden !',
         'VIEWRECORDING' => 'Aufnahme anzeigen',
         'DELETERECORDING' => 'Aufnahme löschen',
         'MEETINGNAME' => 'Raumname',

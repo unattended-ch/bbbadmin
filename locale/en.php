@@ -21,6 +21,7 @@ function lang($phrase)
         'RECORDINGS' => 'Recordings',
         'RECORDING' => 'Recording',
         'RECORDDATE' => 'Record date',
+        'NORECORDING' => 'No recordings found !',
         'VIEWRECORDING' => 'View recording',
         'DELETERECORDING' => 'Delete recording',
         'MEETINGNAME' => 'Room name',

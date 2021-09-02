@@ -33,7 +33,7 @@ if ($response->getReturnCode() == 'SUCCESS') {
         $meetingName = $recording->name;
         $internalID = $recording->recordID;
         $createDate = gmdate("Y-m-d H:i:s", (int)($recording->startTime/1000));
-        $duration = gmdate("H:i:s", (int)(($recording->endTime/1000) - ($recording->startTime/1000)));
+        $duration = gmdate("H:i:s", (int)((($recording->endTime) - ($recording->startTime)) / 1000));
         $participants = $recording->participants;
         $recurl = $recording->playback->format->url;
         $functions = '<a href="'.$recurl.'" title="'.lang('VIEWRECORDING').'"><img src="./icons/explorer.ico" width="16" height="16"></a>';
@@ -41,7 +41,7 @@ if ($response->getReturnCode() == 'SUCCESS') {
         $recording_data = $recording_data . '<td>'.$meetingName.'</td><td>'.$createDate.'</td><td>'.$duration.'</td><td>'.$functions.'</td><tr>';
     }
     if ($recording_data == '')
-        $recording_data = '<td colspan="3" style="text-align:center;">No recordings found !</td>';
+        $recording_data = '<td colspan="3" style="text-align:center;">'.lang('NORECORDING').'</td>';
 }
 else
 {

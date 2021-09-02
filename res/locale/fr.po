@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2021-09-02 00:58+0000\n"
+"POT-Creation-Date: 2021-09-02 01:35+0000\n"
 "PO-Revision-Date: 2021-09-01 23:46+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -17,7 +17,7 @@ msgstr ""
 "X-Generator: Poedit 2.3\n"
 
 #. type: Plain text
-#: ../../locale//en.php:56
+#: ../../locale//en.php:57
 #, fuzzy, no-wrap
 #| msgid ""
 #| "<?php\n"
@@ -97,6 +97,7 @@ msgid ""
 "        'RECORDINGS' => 'Recordings',\n"
 "        'RECORDING' => 'Recording',\n"
 "        'RECORDDATE' => 'Record date',\n"
+"        'NORECORDING' => 'No recordings found !',\n"
 "        'VIEWRECORDING' => 'View recording',\n"
 "        'DELETERECORDING' => 'Delete recording',\n"
 "        'MEETINGNAME' => 'Room name',\n"
