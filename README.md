@@ -6,7 +6,7 @@
 [![PHP 7.4](https://img.shields.io/badge/php-7.4-9c9.svg?style=flat-square)](https://php.net/)
 [![PHP 7.4](https://img.shields.io/badge/php-8.0-9c9.svg?style=flat-square)](https://php.net/)
 #### [[BigBlueButton Homepage][bbb]] [[BigBlueButton PHP API][bbbapi]]
-#### [[bbbadmin Discussion][bbbadmin_discuss]]
+#### [[bbbadmin Discussion][bbbadmin_discuss]] [[Changelog][changelog]
 
 <!-- TABLE OF CONTENTS -->
 <details open="open">
@@ -265,6 +265,7 @@
 [bbb_config.php]: bbb_config.php
 [bbb_lang]: res/locale/
 [bbb_locale]: locale/
+[changelog]: CHANGELOG
 [bbbadmin_discuss]: https://github.com/unattended-ch/bbbadmin/discussions
 [bbb]: https://bigbluebutton.org/
 [bbbapi]: https://github.com/bigbluebutton/bigbluebutton-api-php
