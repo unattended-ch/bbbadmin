@@ -60,6 +60,7 @@
    * 	Create webpage for users only to join BigBlueButton server
    * 	Manage all running meetings on the server
    * 	Manage all recordings on the server
+   * 	Provide central user join page for meetings
 
 ## OPTIONS
 
