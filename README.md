@@ -89,7 +89,7 @@
 
 ## LANGUAGE SUPPORT
 
-- See [bbb_lang]
+- See [res/locale][bbb_lang] for translation
 
 ## INSTALLATION FILE
 
