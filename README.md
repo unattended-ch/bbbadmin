@@ -266,6 +266,8 @@
 8. User can now join the meeting with serverid and meetingID
    ```
      https://server.domain.com/bbbuser/bbb_user.php?sid=X&mID=XXXXXXXXXXXXXXXXXX&usr=Username
+   or
+     https://server.domain.com?sid=X&mID=XXXXXXXXXXXXXXXXXX&usr=Username
    ```
 
 ## STYLING
