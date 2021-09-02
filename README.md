@@ -223,7 +223,7 @@
 
 8. User can now join the meeting with serverid and meetingID
    ```
-   https://server.domain.com/bbbuser/bbb_user.php?serverid=X&meetingID=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+   https://server.domain.com/bbbuser/bbb_user.php?serverid=X&meetingID=XXXXXXXXXXXXXXXXXX
    ```
 
 ## SCREENSHOTS
