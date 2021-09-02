@@ -277,7 +277,8 @@
        mysql -u username -p bbbadmin < ~/bbbadmin/sql/bbbadmin.sql
      ```
    - There is no need to specify Apache environment variables
-
+     ```
+     ```
 <a name="userurl"></a>
 8. User can now join the meeting with the following parameters (sid and mID is needed the rest is optional) :
    ```
