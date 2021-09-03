@@ -307,14 +307,6 @@
 
    [goto TOK](#tok)
 
-## STYLING
-
-- Change your page style with the CSS file [style.css]
-
-- You can use bootstrap.css for bbb_user.php
-
-   [goto TOK](#tok)
-
 ## SCREENSHOTS
 <a name="bbb_index.png"></a>
    - bbb_index.php
