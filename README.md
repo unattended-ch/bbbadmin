@@ -66,7 +66,7 @@
    * 	Manage all running meetings on the server
    * 	Manage all recordings on the server
    * 	Provide central user join page for meetings
-
+   * 	Send invitation email to users
    [goto TOK](#tok)
 
 ## OPTIONS
@@ -351,12 +351,9 @@
 ## TODO
 
    1. Enjoy
-   2. Create JSON files for configuration
-   3. Send invite links via email
-   4. Display 1st page of presentation as background on users join page (would be nice...and i am willing)
-   5. Create download location for .MP4 meeting recording files in BBB (a lot of scripts...but i [need help][discuss])
-   6. Add database manipulation scripts (for now we use [webmin][webmin] for this...)
-   7. Create cron srcipt to start meeting in timely fashion for a specific time period (we need this really ?)
+   2. Display 1st page of presentation as background on users join page (would be nice...and i am willing)
+   3. Create download location for .MP4 meeting recording files in BBB (a lot of scripts...but i [need help][discuss])
+   4. Create cron srcipt to start meeting in timely fashion for a specific time period (we need this really ?)
 
    - You can take part of [discussion][discuss]
    - Or you can send us [issue reports][issues]
