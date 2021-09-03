@@ -97,7 +97,6 @@
    bbb_delrec.php|Delete recordings on server
    bbb_stop.php|Stop meeting on server
    bbb_user.php|Join user to meeting
-   sql/bbbadmin.sql|SQL dump for bbbadmin database
 
    [goto TOK](#tok)
 
@@ -163,7 +162,7 @@
    ```
 4. Copy bbbadmin *.php, *.css and icons/*.ico files to /var/www/yourpage
    ```sh
-     sudo rsync --exclude="res/*" --exclude="*.sql" -avr ~/bbbadmin/* /var/www/yourpage/
+     sudo rsync --exclude="res/*" -avr ~/bbbadmin/* /var/www/yourpage/
    ```
 5. Create a symbolic link to the apache root folder
    ```sh
@@ -229,7 +228,7 @@
    ```
 4. Copy bbbadmin *.php, *.css and icons/*.ico files to /var/www/youruserpage
    ```sh
-     sudo rsync --exclude="res/*" --exclude="*.sql" -avr ~/bbbadmin/* /var/www/youruserpage/
+     sudo rsync --exclude="res/*" -avr ~/bbbadmin/* /var/www/youruserpage/
      sudo mv -v /var/www/youruserpage/bbb_user.php /var/www/youruserpage/index.php
    ```
 5. Remove not needed files
@@ -366,7 +365,6 @@
 
 [bbbadmin_install.sh]: res/bbbadmin_install.sh
 [bbbuser_install.sh]: res/bbbuser_install.sh
-[bbbadmin.sql]: sql/bbbadmin.sql
 [bbb_config.php]: bbb_config.php
 [bbb_lang]: res/locale/
 [bbb_locale]: locale/
