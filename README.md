@@ -67,6 +67,8 @@
    * 	Manage all recordings on the server
    * 	Provide central user join page for meetings
    * 	Send invitation email to users
+   * 	Use JSON as configuration file
+
    [goto TOK](#tok)
 
 ## OPTIONS
