@@ -6,3 +6,5 @@
 				bbb_user.php set $debug='0' and remove all messages
 				Link export and display functions removed (new bbb_user.php)
 				bbb_user.php will be renamed to index.php on install
+0.0.0.4		03.09.2021	Folder releases/ added because im using gitlab and github
+				bootstrap.css added for bbb_users.php
