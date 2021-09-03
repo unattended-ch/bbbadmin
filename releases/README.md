@@ -7,7 +7,7 @@
    - Default folder for users package is bbbusers
    - BBB PHP API is included.
    - You have to configure /var/www/[bbbadmin|bbbusers]bbb_config.php manually
-   - During a update bbb_config.php will be saved and restored
+   - During an update bbb_config.php will be saved and restored
    - bbb_index.php and bbb_users.php are renamed to inedx.php in the package
 
 ### FILES
