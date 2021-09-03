@@ -137,6 +137,8 @@
 
 - User Frontend installation script [bbbuser_install.sh]
 
+- Or you can use our debian packages in [releases]
+
    [goto TOK](#tok)
 
 ## PREREQUISITES
