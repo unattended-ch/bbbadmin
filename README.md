@@ -309,6 +309,8 @@
 
 - Change your page style with the CSS file [style.css]
 
+- You can use bootstrap.css for bbb_user.php
+
    [goto TOK](#tok)
 
 ## SCREENSHOTS
