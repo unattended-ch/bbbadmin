@@ -292,16 +292,16 @@
         //$this->securitySecret   = $secret ?: getenv('BBB_SECRET') ?: getenv('BBB_SECURITY_SALT');
         //$this->bbbServerBaseUrl = $baseUrl ?: getenv('BBB_SERVER_BASE_URL');
      ```
+10. User can now join the meeting with the following parameters (sid and mID is needed the rest is optional) :
+     ```
+       https://server.domain.com/bbbuser/bbb_user.php?sid=X&mID=XXXXXXXXXXXXXXXXXX[&usr=Username][&join=1]
+     or
+       https://server.domain.com?sid=X&mID=XXXXXXXXXXXXXXXXXX[&usr=Username][&join=1]
+     ```
      ```
        If the meeting is running the [a form][bbb_user.png] will be displayed
        If not, nothing will be diplayed
      ```
-10. User can now join the meeting with the following parameters (sid and mID is needed the rest is optional) :
-   ```
-     https://server.domain.com/bbbuser/bbb_user.php?sid=X&mID=XXXXXXXXXXXXXXXXXX[&usr=Username][&join=1]
-   or
-     https://server.domain.com?sid=X&mID=XXXXXXXXXXXXXXXXXX[&usr=Username][&join=1]
-   ```
 
    [goto TOK](#tok)
 
