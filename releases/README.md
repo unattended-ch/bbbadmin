@@ -15,7 +15,7 @@
    Filename|Descriprion
    --------|-----------
    bbbadmin_0.0.0.3-generic.deb|BBB Admin Frontend Debian package
-   bbbadmin_0.0.0.3-generic.deb.md5|BBB Admin Frontend MD% checksum
+   bbbadmin_0.0.0.3-generic.deb.md5|BBB Admin Frontend MD5 checksum
    bbbadmin_0.0.0.3-generic.deb.sha1|BBB Admin Frontend SHA1 checksum
    bbbadmin_0.0.0.3-generic.deb.sha256|BBB Admin Frontend SHA256 checksum
    bbbusers_0.0.0.3-generic.deb|BBB Users Frontend Debian package
