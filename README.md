@@ -121,6 +121,9 @@
 
    [goto TOK](#tok)
 
+## RELEASES
+
+- See [releases]  
 ## INSTALLATION SCRIPTS
 
 - Admin Frontend installation script [bbbadmin_install.sh]
@@ -397,6 +400,7 @@
 [bbb_config.php]: bbb_config.php
 [bbb_lang]: res/locale/
 [bbb_locale]: locale/
+[releases]: releases/
 [changelog]: CHANGELOG
 [bbbadmin_discuss]: https://github.com/unattended-ch/bbbadmin/discussions
 [bbb]: https://bigbluebutton.org/
