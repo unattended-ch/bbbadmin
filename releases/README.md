@@ -17,7 +17,7 @@
    bbbadmin_0.0.0.3-generic.deb|BBB Admin Frontend Debian package
    bbbusers_0.0.0.3-generic.deb|BBB Users Frontend Debian package
 
-### CHACKSUMS
+### CHECKSUMS
 
    Filename|Descriprion
    --------|-----------
