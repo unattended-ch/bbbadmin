@@ -97,6 +97,7 @@
    bbb_info.php|Display meeting informations
    bbb_record.php|Show recordings on server
    bbb_delrec.php|Delete recordings on server
+   bbb_send.php|Send invitation mail to user
    bbb_stop.php|Stop meeting on server
    bbb_user.php|Join user to meeting
 
