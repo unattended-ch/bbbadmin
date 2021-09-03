@@ -345,6 +345,11 @@
    ![Recordings](res/bbb_record.png)
    [goto TOK](#tok)
 
+<a name="bbb_send.png"></a>
+   - bbb_send.php
+   ![Send](res/bbb_send.png)
+   [goto TOK](#tok)
+
 <a name="bbb_user.png"></a>
    - bbb_user.php
    ![Users](res/bbb_user.png)
