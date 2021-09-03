@@ -109,8 +109,6 @@
 
 - Access password file [.htpasswd]
 
-- Use bootstrap.css for styling of bbb_user.php
-
    [goto TOK](#tok)
 
 ## LANGUAGE SUPPORT
@@ -124,9 +122,14 @@
 
    [goto TOK](#tok)
 
+## STYLING
+
+- Use bootstrap.css for styling of bbb_user.php
+
 ## RELEASES
 
-- See [releases]  
+- See [releases]
+
 ## INSTALLATION SCRIPTS
 
 - Admin Frontend installation script [bbbadmin_install.sh]
