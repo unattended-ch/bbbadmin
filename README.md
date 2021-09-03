@@ -65,7 +65,6 @@
    * 	Manage all running meetings on the server
    * 	Manage all recordings on the server
    * 	Provide central user join page for meetings
-   * 	Use bootstrap.css for styling of bbb_user.php
 
    [goto TOK](#tok)
 
@@ -109,6 +108,8 @@
 - Folder protection file [.htaccess]
 
 - Access password file [.htpasswd]
+
+- Use bootstrap.css for styling of bbb_user.php
 
    [goto TOK](#tok)
 
