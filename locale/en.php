@@ -50,6 +50,10 @@ function lang($phrase)
         'NOMEETINGS' => 'No running meetings found !',
         'NOUSER' => 'ERROR : No username specified !',
         'NOSERVER' => 'Server not found !',
+        'EMAIL' => 'Email address',
+        'SENDMAIL' => 'Send email',
+        'SEND' => 'Send',
+        'INVITE' => 'Meeting invitation',
         'CONNECTIONFAILED' => 'Connection failed: '
     );
     return $lang[$phrase];

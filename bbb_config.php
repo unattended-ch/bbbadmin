@@ -8,13 +8,6 @@
 //*
 //********************************************************************
 global $cfg;
-global $debug;
-global $copyright;
-global $server;
-global $rooms;
-global $logout;
-global $access;
-global $refresh;
 
     $cfg['debug'] = '1';
 
@@ -43,6 +36,6 @@ global $refresh;
     }
     $servername = ServerName($serverid);
 
-    error_reporting($debug);
+    error_reporting($cfg->debug);
     date_default_timezone_set('UTC');
 ?>

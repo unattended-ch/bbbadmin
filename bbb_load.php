@@ -240,13 +240,13 @@ function LinkFunctions($mode='0', $serverid, $meeting)
         $stop = './bbb_stop.php?sid='.$serverid.'&meetingID='.$meeting->meetingID.'&moderator_password='.$meeting->moderatorPW;
         $functions = '';
         if (file_exists('./bbb_join.php'))
-            $functions = $functions . '<a href="' . $join . '" title="'.lang('JOINMEETING').'"><img src="./icons/favicon.ico" width="16" height="16"></a> ';
+            $functions = $functions . ' <a href="' . $join . '" title="'.lang('JOINMEETING').'"><img src="./icons/favicon.ico" width="16" height="16"></a>';
         if (file_exists('./bbb_info.php'))
-            $functions = $functions . '<a href="' . $info . '" title="'.lang('MEETINGINFO').'"><img src="./icons/about.ico" width="16" height="16"></a> ';
+            $functions = $functions . ' <a href="' . $info . '" title="'.lang('MEETINGINFO').'"><img src="./icons/about.ico" width="16" height="16"></a>';
         if (file_exists('./bbb_send.php'))
-            $functions = $functions . '<a href="' . $send . '" title="'.lang('SENDMEETING').'"><img src="./icons/mail.ico" width="16" height="16"></a>';
+            $functions = $functions . ' <a href="' . $send . '" title="'.lang('SENDMEETING').'"><img src="./icons/mail.ico" width="16" height="16"></a>';
         if (file_exists('./bbb_stop.php'))
-            $functions = $functions . '<a href="' . $stop . '" title="'.lang('STOPMEETING').'"><img src="./icons/exit.ico" width="16" height="16"></a>';
+            $functions = $functions . ' <a href="' . $stop . '" title="'.lang('STOPMEETING').'"><img src="./icons/exit.ico" width="16" height="16"></a>';
     }
     if ($mode == '0') 
     {
