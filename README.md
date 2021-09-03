@@ -86,7 +86,8 @@
 
    Filename|Description
    --------|-----------
-   bbb_config.php|Configuration file for application
+   bbb_admin.json|Configuration file for application
+   bbb_config.php|Load configuration
    bbb_load.php|Loading needed addons and additional scripts
    bbb_index.php|Index page for application
    bbb_create.php|Create meeting on server
@@ -112,7 +113,7 @@
 
 ## LANGUAGE SUPPORT
 
-- Change [$language='en'] in [bbb_config.php] to your language shortcode
+- Change [language='en'] in [bbb_admin.json] to your language shortcode
 
 - See [res/locale/][bbb_lang] for .PO translation files
   and translation scripts
