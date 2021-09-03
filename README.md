@@ -33,6 +33,7 @@
         <li><a href="#workaround">Workaround for hostings without apache_setenv()</a></li>
         <li><a href="#configuration-files">Configuration files</a></li>
         <li><a href="#language-support">Language support</a></li>
+        <li><a href="#styling">Styling with bootstrap.css</a></li>
       </ul></li>
     <li><a href="#userurl">User URL for joining meeting</a></li>
     <li><a href="#styling">Change page style</a></li>
