@@ -102,7 +102,7 @@
 
 ## CONFIGURATION FILES
 
-- Configuration file [bbbadmin.json]
+- Configuration file [bbb_admin.json]
 
 - Folder protection file [.htaccess]
 
@@ -172,7 +172,7 @@
    ```sh
      sudo chown -R www-data.www-data /var/www/yourpage
    ```
-7. For configuration you can use [bbbadmin.json]
+7. For configuration you can use [bbb_admin.json]
    - You must specify BBB_* Apache environment variables for every server in apache configuration
      ```
        SetEnv BBB_SECRET1 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
@@ -249,7 +249,7 @@
    ```sh
      sudo chown -R www-data.www-data /var/www/youruserpage
    ```
-8. For configuration you can edit [bbbadmin.json]
+8. For configuration you can edit [bbb_admin.json]
    - You must specify BBB_* Apache environment variables for every server
      ```
        SetEnv BBB_SECRET1 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
@@ -371,7 +371,7 @@
 [bbb_locale]: locale/
 [releases]: releases/
 [changelog]: CHANGELOG
-[bbbadmin.json]: bbbadmin.json
+[bbb_admin.json]: bbb_admin.json
 [bbbadmin_discuss]: https://github.com/unattended-ch/bbbadmin/discussions
 [bbb]: https://bigbluebutton.org/
 [bbbapi]: https://github.com/bigbluebutton/bigbluebutton-api-php
