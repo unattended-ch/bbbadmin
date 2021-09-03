@@ -24,6 +24,7 @@
         <li><a href="#options">Options</a></li>
         <li><a href="#php-files">Files</a></li>
         <li><a href="#prerequisites">Prerequisites</a></li>
+        <li><a href="#releases">Releases</a></li>
         <li><a href="#installation-scripts">Installation Scripts</a></li>
         <li><a href="#installation-admin-frontend">Installation Admin Frontend</a></li>
         <li><a href="#htpasswd">Admin access security with .htpasswd</a></li>
