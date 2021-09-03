@@ -299,7 +299,7 @@
        https://server.domain.com?sid=X&mID=XXXXXXXXXXXXXXXXXX[&usr=Username][&join=1]
      ```
      ```
-       If the meeting is running the [a form][bbb_user.png] will be displayed
+       If the meeting is running the [a form][#bbb_user.png] will be displayed
        If not, nothing will be diplayed
      ```
 
