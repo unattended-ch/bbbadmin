@@ -129,7 +129,7 @@
 
 ## RELEASES
 
-- See [releases]
+- See [releases] for more informations
 
 ## INSTALLATION SCRIPTS
 
