@@ -27,6 +27,7 @@ finally
     {
         $response = $bbb->getMeetings();
     }
+Show($cfg);
 ?>
 <html>
 <head>

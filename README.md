@@ -102,9 +102,7 @@
 
 ## CONFIGURATION FILES
 
-- Configuration file [bbb_config.php]
-
-- SQL dump [bbbadmin.sql]
+- Configuration file [bbbadmin.json]
 
 - Folder protection file [.htaccess]
 
@@ -174,32 +172,13 @@
    ```sh
      sudo chown -R www-data.www-data /var/www/yourpage
    ```
-7. For configuration you can use the arrays in [bbb_config.php] as standalone configuration
-   or a mySql-Database for configuration [bbbadmin.sql] to build the arrays
-
-   7.1. For standalone use configure [bbb_config.php]
-   - Edit [bbb_config.php]
-     ```
-       database=""
-     ```
+7. For configuration you can use [bbbadmin.json]
    - You must specify BBB_* Apache environment variables for every server in apache configuration
      ```
        SetEnv BBB_SECRET1 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
        SetEnv BBB_SERVER1_BASE_URL https://server1.domain.com/bigbluebutton/
        SetEnv BBB_SECRET2 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
        SetEnv BBB_SERVER2_BASE_URL https://server2.domain.com/bigbluebutton/
-     ```
-   7.2. For database configure and import the dump from [bbbadmin.sql]
-   - Edit [bbbadmin.sql]
-     ```
-       mcedit ~/bbbadmin/sql/bbbadmin.sql
-     ```
-   - Import database to mysql
-     ```
-       mysql -u username -p bbbadmin < ~/bbbadmin/sql/bbbadmin.sql
-     ```
-   - There is no need to specify Apache environment variables
-     ```
      ```
 8. Enable access security over .htpasswd file as a basic protection
    <a name="htpasswd"></a>
@@ -270,30 +249,13 @@
    ```sh
      sudo chown -R www-data.www-data /var/www/youruserpage
    ```
-8. For configuration you can use the arrays in [bbb_config.php] as standalone configuration or a mySql-Database for configuration [bbbadmin.sql] to build the arrays
-   8.1. For standalone use configure [bbb_config.php]
-   - Edit [bbb_config.php]
-     ```
-       database=""
-     ```
+8. For configuration you can edit [bbbadmin.json]
    - You must specify BBB_* Apache environment variables for every server
      ```
        SetEnv BBB_SECRET1 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
        SetEnv BBB_SERVER1_BASE_URL https://server1.domain.com/bigbluebutton/
        SetEnv BBB_SECRET2 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
        SetEnv BBB_SERVER2_BASE_URL https://server2.domain.com/bigbluebutton/
-     ```
-   8.2. For database configure and import the dump from [bbbadmin.sql]
-   - Edit [bbbadmin.sql]
-     ```
-       mcedit ~/bbbadmin/sql/bbbadmin.sql
-     ```
-   - Import database to mysql
-     ```
-       mysql -u username -p bbbadmin < ~/bbbadmin/sql/bbbadmin.sql
-     ```
-   - There is no need to specify Apache environment variables
-     ```
      ```
 9. Workaround for servers with no apapche_set() and apache_getenv() support
    9.1 Edit users [index.php](bbb_user.php)
@@ -409,6 +371,7 @@
 [bbb_locale]: locale/
 [releases]: releases/
 [changelog]: CHANGELOG
+[bbbadmin.json]: bbbadmin.json
 [bbbadmin_discuss]: https://github.com/unattended-ch/bbbadmin/discussions
 [bbb]: https://bigbluebutton.org/
 [bbbapi]: https://github.com/bigbluebutton/bigbluebutton-api-php

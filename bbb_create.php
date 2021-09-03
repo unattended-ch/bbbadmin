@@ -12,7 +12,6 @@ $serverid = $_GET['sid'];
 require_once('./bbb_load.php');
 use BigBlueButton\BigBlueButton;
 use BigBlueButton\Parameters\CreateMeetingParameters;
-
 if(isset($_POST['Submit']))
 {
     $bbb = new BigBlueButton();
@@ -153,4 +152,5 @@ else
     </body>
     </html>
 <?php
+    Show($cfg);
 }

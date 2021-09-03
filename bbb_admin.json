@@ -1,0 +1,26 @@
+{
+    "debug": "1",
+    "refresh": "30",
+    "copyright": "© 2021 unattended.ch",
+    "server": {
+        "1": "room.digida.li",
+        "2": "btcpay.3quenz.ch"
+    },
+    "logout": {
+        "1": "http://localhost/bbb/bbb_index.php?serverid=$serverid",
+        "2": "https://room.unattended.ch"
+    },
+    "logos":  {
+        "1": "https://unattended/favicon.ico",
+        "2": "https://digida.li/favicon.ico"
+    },
+    "access": {
+        "1": "BardelliSupport1" ,
+        "2": "Support1" 
+    },
+    "rooms":  { 
+        "1": { "name": "Crypto-Bastelraum © 2021 unattended.ch", "id": "Crypto-Bastelraum" ,  "acc": "Support1" },
+        "2": { "name": "Bastelraum © 2021 unattended.ch", "id": "Bastelraum" ,  "acc": "Support1" },
+        "3": { "name": "Startraum © 2021 unattended.ch", "id": "Startraum" ,  "acc": "Support1" }
+    }
+}
