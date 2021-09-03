@@ -251,12 +251,12 @@
    ```
 8. For configuration you can edit [bbb_admin.json]
    - You must specify BBB_* Apache environment variables for every server
-     ```
-       SetEnv BBB_SECRET1 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-       SetEnv BBB_SERVER1_BASE_URL https://server1.domain.com/bigbluebutton/
-       SetEnv BBB_SECRET2 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-       SetEnv BBB_SERVER2_BASE_URL https://server2.domain.com/bigbluebutton/
-     ```
+   ```
+     SetEnv BBB_SECRET1 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+     SetEnv BBB_SERVER1_BASE_URL https://server1.domain.com/bigbluebutton/
+     SetEnv BBB_SECRET2 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+     SetEnv BBB_SERVER2_BASE_URL https://server2.domain.com/bigbluebutton/
+   ```
 9. Workaround for servers with no apapche_set() and apache_getenv() support
    9.1 Edit users [index.php](bbb_user.php)
      <a name="workaround"></a>
