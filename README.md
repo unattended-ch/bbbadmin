@@ -88,7 +88,7 @@
 
    Filename|Description
    --------|-----------
-   bbb_admin.json|Configuration file for application
+   [bbb_admin.json]|Configuration file for application
    bbb_config.php|Load configuration
    bbb_load.php|Loading needed addons and additional scripts
    bbb_index.php|Index page for application
