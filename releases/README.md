@@ -3,7 +3,7 @@
 ## NOTE
 
    - This packages including not always the latest branch
-   - There will be recompiled once a day
+   - There will be recompiled once a day after finishing work
 
 ### DESCRIPTION
 
