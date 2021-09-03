@@ -19,9 +19,8 @@ use BigBlueButton\BigBlueButton;
 use BigBlueButton\Parameters\GetRecordingsParameters;
 
 $server = ServerSelect($sel1, $sel2);
-//$returl = './bbb_index.php?sid='.$serverid;
 $returl = 'javascript:history.back();';
-
+$cfg = $GLOBALS['cfg'];
 $recordingParams = new GetRecordingsParameters();
 $bbb = new BigBlueButton();
 $response = $bbb->getRecordings($recordingParams);
@@ -52,7 +51,7 @@ else
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title><?php echo lang('RECORDINGS'); ?> [<?php echo $servername; ?>]</title>
-    <meta http-equiv="refresh" content="<?php printf($GLOBALS['refresh']); ?>">
+    <meta http-equiv="refresh" content="<?php printf($cfg->refresh); ?>">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body><center>
