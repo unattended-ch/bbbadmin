@@ -5,7 +5,8 @@
    - This packages are installing to /var/www/[bbbadmin|bbbusers]
    - Default folder for admin package is bbbadmin
    - Default folder for users package is bbbusers
-   - BBB PHP API is included.
+   - Symbolic links to /var/www/html/[bbbadmin|bbbusers] are create for apache
+   - BBB PHP API is included
    - You have to configure /var/www/[bbbadmin|bbbusers]bbb_config.php manually
    - During an update bbb_config.php will be saved and restored
    - bbb_index.php and bbb_users.php are renamed to inedx.php in the package
