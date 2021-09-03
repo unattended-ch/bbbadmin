@@ -1,7 +1,14 @@
 #!/bin/bash
 DST=../../locale/
-RED=$DST/en.php
+RED=../../README.md
 LNG="de fr"
+for VAR in $LNG; do
+    if [ -f "README.$VAR.po" ]; then
+        echo "README.$VAR.po"
+        po4a-updatepo -v -f text -m $RED -p README.$VAR.po
+    fi
+done
+RED=$DST/en.php
 for VAR in $LNG; do
     if [ -f "$VAR.po" ]; then
         echo "$VAR.po"

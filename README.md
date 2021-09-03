@@ -291,7 +291,7 @@
      ```
         $bbb = new BigBlueButton();
     replace it with
-        $bbb = new BigBlueButton($bbb_url, $bbbsalt);
+        $bbb = new BigBlueButton($bbb_url, $bbb_salt);
 
      ```
    9.2 Edit [bbb_config.php]
@@ -303,7 +303,7 @@
         //apache_setenv('BBB_SERVER_BASE_URL', apache_getenv('BBB_SERVER1_BASE_URL'));
         $bbb_url  = 'https://domain1.com/bigbluebutton/';
         $bbb_salt = 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
-      and
+      
         apache_setenv('BBB_SECRET', apache_getenv('BBB_SECRET1'));
         apache_setenv('BBB_SERVER_BASE_URL', apache_getenv('BBB_SERVER1_BASE_URL'));
       replace it with
@@ -319,8 +319,6 @@
       replace it with
         //$this->securitySecret   = $secret ?: getenv('BBB_SECRET') ?: getenv('BBB_SECURITY_SALT');
         //$this->bbbServerBaseUrl = $baseUrl ?: getenv('BBB_SERVER_BASE_URL');
-      to get parameters from command line
-
      ```
 10. User can now join the meeting with the following parameters (sid and mID is needed the rest is optional) :
    ```

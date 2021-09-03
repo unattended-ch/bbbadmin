@@ -80,20 +80,22 @@ else
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <title><?php echo lang('JOINMEETING'); ?></title>
         <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <script src="js/bootstrap.min.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     </head>
     <body>
     <div id="topUsers">
 	<center><table class="mainbig"><tr><td>
 		<div class="chartWrapper">
-			<div class="chartLabelBig"><?php echo lang('JOINMEETING'); ?></div>
-			<div class="chartHolderBig">
-			    <table class="mainbig"><tr><form action=""  method="POST"><table class="mainbig"><tr>
-		                <td><label for="meetingName" id="app_id_label"  ><?php echo lang('MEETING'); ?></label></td>
-		                <td><input class="mainbig" type="text" name="meetingName" id="meetingName" size="40" value="<?php echo $meetingName ?>"></td></tr><tr>
-		                <td><label for="userName" id="app_name_label"  ><?php echo lang('USERNAME'); ?></label></td>
-		                <td><input class="inputbig" type="text" name="userName" id="userName" size="30" value="<?php echo $userName ?>"></td></tr><tr>
-	                        </table>
-		                <br><center><input class="inputbig" type="submit" name="Submit" value="<?php echo lang('JOINMEETING'); ?>"></center><br>
+			<div class="chartLabelBig"><?php echo "&nbsp;&nbsp;&nbsp;&nbsp;$meetingName&nbsp;&nbsp;&nbsp;&nbsp;" ?></div>
+			<div class="chartHolder">
+			    <table class="mainbig"><tr><form action=""  method="POST"><center><table style="text-align:center;" width="100%"><tr><br>
+		                <td style="text-align:right;"><label for="userName" id="app_name_label" class="inputbig"><?php echo lang('USERNAME'); ?></label></td>
+		                <td><input class="inputbig" type="text" name="userName" id="userName" size="25" value="<?php echo $userName ?>"></td></tr><tr>
+	                        </table></center><br>
+		                <center><input class="inputbig btn btn-primary btn-lg" type="submit" name="Submit" value="<?php echo lang('JOINMEETING'); ?>"></center>
+				<br>
 		            </form>
 			    </tr></table>
 			</div>

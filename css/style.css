@@ -1,4 +1,4 @@
-html, button, input, select, textarea{
+html, button, input, label, select, textarea{
     font-family: 'Open Sans', sans-serif;
 }
 
@@ -56,6 +56,10 @@ table {
     font-size: 16px;
 }
 
+label {
+  text-align: right;
+}
+
 .mainbig {
     background-color: #bbc4ca;
     position: relative;
@@ -66,7 +70,7 @@ table {
 
 .inputbig
 {
-    font-size: 25px;
+    font-size: 22px;
 }
 
 td,th {
@@ -122,14 +126,14 @@ pre {
     padding: 7px;
 }
 .chartLabelBig{
-    font-size: 2.2em;
+    font-size: 1.8em;
     text-align: center;
     padding: 2px;
     box-shadow: 1px 1px 5px #555;
     border-radius:5px;
 }
 .chartHolderBig{
-    font-size: 2.2em;
+    font-size: 1.8em;
     box-shadow: 1px 1px 5px #555;
     border-radius:5px;
     padding: 7px;
