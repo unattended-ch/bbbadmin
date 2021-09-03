@@ -1,5 +1,10 @@
 # Binary releases of bbbadmin for admin and users
 
+## NOTE
+
+   - This packages including not always the latest branch
+   - There will be recompiled once a day
+
 ### DESCRIPTION
 
    - This packages are installing to /var/www/[bbbadmin|bbbusers]
