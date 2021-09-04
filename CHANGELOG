@@ -16,3 +16,5 @@
 				Mail template bbb_admin.tmpl for invitation email
 				Sending invitation mail for predefined meetings to user
 				Installation location change from /var/www/page to /opt/page
+				Configuration file moved to res/bbb_admin.json
+				Template files *.tmpl moved to res/*.tmpl

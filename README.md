@@ -71,6 +71,8 @@
    * 	Provide central user join page for meetings
    * 	Send invitation email to users
    * 	Use JSON as configuration file
+   * 	Create your own debian packages
+   *	Create your own language files
 
    [goto TOK](#tok)
 
@@ -481,14 +483,14 @@
 
 [bbbadmin_install.sh]: res/bbbadmin_install.sh
 [bbbuser_install.sh]: res/bbbuser_install.sh
+[bbb_admin.json]: res/bbb_admin.json
+[bbb_admin.tmpl]: res/bbb_admin.tmpl
 [bbb_config.php]: bbb_config.php
 [bbb_lang]: res/locale/
 [bbb_locale]: locale/
 [releases]: releases/
 [changelog]: CHANGELOG
 [bbb_build.sh]: build/bbb_build.sh
-[bbb_admin.json]: bbb_admin.json
-[bbb_admin.tmpl]: bbb_admin.tmpl
 [bbbadmin_discuss]: https://github.com/unattended-ch/bbbadmin/discussions
 [bbb]: https://bigbluebutton.org/
 [bbbapi]: https://github.com/bigbluebutton/bigbluebutton-api-php

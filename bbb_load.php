@@ -394,7 +394,7 @@ function LoadMeeting($response, $meetingid)
 //----------------------------------------------------------------------
 function LoadConfigFile()
 {
-    $json = file_get_contents('./bbb_admin.json', true);
+    $json = file_get_contents('./res/bbb_admin.json', true);
     $json = json_decode($json);
     //Show(json_last_error_msg().'<br>'.$json);
     return($json);

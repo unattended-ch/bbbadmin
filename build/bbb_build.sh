@@ -39,11 +39,12 @@ createPackage() {
     rm -rf $DST/opt/$PAK/.git
     rm -rf $DST/opt/$PAK/build
     rm -rf $DST/opt/$PAK/releases
-    rm -rf $DST/opt/$PAK/res
+    rm -rf $DST/opt/$PAK/res/*
     rm -rf $DST/opt/$PAK/sql
     rm -f  $DST/opt/$PAK/*.sh
     rm -f  $DST/opt/$PAK/.gitignore
     rm -f  $DST/opt/$PAK/*.md
+    cp $SRC/../res/*.tmpl $DST/opt/$PAK/res/
     if [ "$PAK" == "bbbadmin" ]; then
         mv -v $DST/opt/$PAK/bbb_index.php $DST/opt/$PAK/index.php
     fi

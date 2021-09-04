@@ -49,7 +49,7 @@ if (isset($_POST['Submit']))
         $header .= "Content-type: text/html; charset=utf-8\r\n";
         $header .= "From: ".$cfg->email."\r\n";
         $header .= "Reply-To: none\r\n";
-        $mailtext = file_get_contents('./bbb_invite.tmpl', true);
+        $mailtext = file_get_contents('./res/bbb_invite.tmpl', true);
         $mailtext = str_replace("<SENDER>", $cfg->email, $mailtext);
         $mailtext = str_replace("<MEETING>", $meeting->meetingName , $mailtext);
         $mailtext = str_replace("<MSG>", $info , $mailtext);
@@ -75,7 +75,7 @@ else if (isset($_POST['View']))
     $header .= "Content-type: text/html; charset=utf-8\r\n";
     $header .= "From: ".$cfg->email."\r\n";
     $header .= "Reply-To: none\r\n";
-    $mailtext = file_get_contents('./bbb_invite.tmpl', true);
+    $mailtext = file_get_contents('./res/bbb_invite.tmpl', true);
     $mailtext = str_replace("<SENDER>", $cfg->email, $mailtext);
     $mailtext = str_replace("<MEETING>", $meeting->meetingName , $mailtext);
     $mailtext = str_replace("<MSG>", $info , $mailtext);
