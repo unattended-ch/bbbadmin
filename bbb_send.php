@@ -24,27 +24,32 @@ finally
         $meeting = LoadMeeting($response, $meetingID);
     }
 
-function prepareMessage($cfg, $url, $meeting) {
+    $info = ServerRoomMsg($meeting->meetingID);
+
+function prepareMessage($cfg, $url, $meeting, $info) {
+    printf($info);
     $mailtext = file_get_contents('./bbb_invite.tmpl', true);
     $mailtext = str_replace("<SENDER>", $cfg->email, $mailtext);
     $mailtext = str_replace("<MEETING>", $meeting->meetingName , $mailtext);
+    $mailtext = str_replace("<MSG>", $info , $mailtext);
     $mailtext = str_replace("<URL>", $url , $mailtext);
     return($mailtext);
 }
 
 if (isset($_POST['Submit']))
 {
-    $srv = $cfg->invite;;
+    $info = ServerRoomMsg($meeting->meetingID);
+    $srv = $cfg->invite;
     $url = 'https://'.$srv.'?sid='.$serverid.'&mID='.$meetingID;
     $cfg = $GLOBALS['cfg'];
     $recipient = $_POST['emailAddress'];
-    $subject = "Meeting [".$meeting->meetingName."]";
+    $subject = "Meeting [".$meeting->meetingName."] ". $info;
     $header  = "MIME-Version: 1.0\r\n";
     $header .= "Content-type: text/html; charset=utf-8\r\n";
 
     $header .= "From: ".$cfg->email."\r\n";
     $header .= "Reply-To: none\r\n";
-    $text = prepareMessage($cfg, $url, $meeting);
+    $text = prepareMessage($cfg, $url, $meeting, $info);
     mail($recipient, $subject, $text, $header);
     $returl = "./bbb_index.php?sid=".$serverid;
     printf('<script type="text/javascript">location.replace("%s")</script>', $returl);

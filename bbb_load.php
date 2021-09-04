@@ -7,7 +7,7 @@
 //* Copyright (c) 2021 Automatix  All rights reserved.
 //*
 //********************************************************************
-$version = "0.0.0.4";
+$version = "0.0.0.5";
 require_once('./BigBlueButton.php');
 require_once('./Core/ApiMethod.php');
 require_once('./Exceptions/BadResponseException.php');
@@ -159,6 +159,27 @@ function ServerRoomName()
     }
     $roomselect = $roomselect . '</select>';
     return $roomselect;
+}
+
+//----------------------------------------------------------------------
+// Function    : ServerRoomMsg($meetingID)
+// Created at  : Sat Sep  4 01:18:44 UTC 2021
+// Description : Get message for server
+// Parameters  : $meetingID
+// Variables   : 
+// Return      : Message
+//----------------------------------------------------------------------
+function ServerRoomMsg($meetingID)
+{
+    $cfg = $GLOBALS['cfg'];
+    $msg = '';
+    foreach($cfg->rooms as $room) {
+        if ($room->id == $meetingID)
+        {
+            return($room->msg);
+        }
+    }
+    return $msg;
 }
 
 //----------------------------------------------------------------------

@@ -16,12 +16,35 @@ if (isset($_GET['mID']))
     $meetingID = $_GET['mID'];
 if (isset($_GET['usr']))
     $userName = $_GET['usr'];
+if (isset($_GET['ex']))
+    $exitURL = $_GET['ex'];
 if (isset($_GET['join']))
     $joinDirekt = $_GET['join'];
 require_once('./bbb_load.php');
 use BigBlueButton\BigBlueButton;
 use BigBlueButton\Parameters\JoinMeetingParameters;
 $server = ServerSelect($sel1, $sel2);
+
+if ($exitURL !== '')
+{
+?>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title><?php echo lang('SEEYOU'); ?></title>
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <script src="js/bootstrap.min.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    </head>
+    <body>
+<?php
+    printf('<div class="dim" runat="server"><span class="msg"><h1>%s</h1></span></div>', lang('SEEYOU'));
+?>
+    </body>
+</html>
+<?php
+    die();
+}
 
 try {
         $bbb = new BigBlueButton();
@@ -36,11 +59,13 @@ finally
         $meeting = LoadMeeting($response, $meetingID);
     }
 
-if ($meeting == '') {
+if ($meeting == '')
+{
     // Tell nothing and stop
     die();
 }
-if (!is_object($meeting)) {
+if (!is_object($meeting))
+{
     // Tell nothing and stop
     die();
 }

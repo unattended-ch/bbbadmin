@@ -22,7 +22,7 @@
         "2": "AttendeePasswordDefault" 
     },
     "rooms":  { 
-        "1": { "name": "Bastelraum © 2021 unattended.ch", "id": "Bastelraum" ,  "acc": "Password" },
-        "2": { "name": "Startraum © 2021 unattended.ch", "id": "Startraum" ,  "acc": "Password" }
+        "1": { "name": "Bastelraum © 2021 unattended.ch", "id": "Bastelraum" ,  "acc": "Password", "msg": "" },
+        "2": { "name": "Startraum © 2021 unattended.ch", "id": "Startraum" ,  "acc": "Password", "msg": "" }
     }
 }

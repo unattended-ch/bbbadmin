@@ -22,7 +22,6 @@ global $cfg;
     {
         apache_setenv('BBB_SECRET', apache_getenv('BBB_SECRET1'));
         apache_setenv('BBB_SERVER_BASE_URL', apache_getenv('BBB_SERVER1_BASE_URL'));
-        //$servername = $server['1'];
         $sel1 = 'selected';
         $sel2 = '';
     }
@@ -30,7 +29,6 @@ global $cfg;
     {
         apache_setenv('BBB_SECRET', apache_getenv('BBB_SECRET2'));
         apache_setenv('BBB_SERVER_BASE_URL', apache_getenv('BBB_SERVER2_BASE_URL'));
-        //$servername = $server['2'];
         $sel1 = '';
         $sel2 = 'selected';
     }

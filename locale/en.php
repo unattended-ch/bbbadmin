@@ -54,6 +54,7 @@ function lang($phrase)
         'SENDMAIL' => 'Send email',
         'SEND' => 'Send',
         'INVITE' => 'Meeting invitation',
+        'SEEYOU' => 'See you next time...',
         'CONNECTIONFAILED' => 'Connection failed: '
     );
     return $lang[$phrase];

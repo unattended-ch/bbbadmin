@@ -12,6 +12,9 @@ $serverid = $_GET['sid'];
 require_once('./bbb_load.php');
 use BigBlueButton\BigBlueButton;
 use BigBlueButton\Parameters\CreateMeetingParameters;
+$cfg = $GLOBALS['cfg'];
+$invite = "https://".$cfg->invite.'?sid='.$serverid.'&ex=1';
+
 if(isset($_POST['Submit']))
 {
     $bbb = new BigBlueButton();
@@ -77,7 +80,7 @@ else
         <title><?php echo lang('CREATEMEETING'); ?> [<?php echo $servername; ?>]</title>
         <link rel="stylesheet" href="css/style.css">
     </head>
-    <body onload="setMetName(); setMetID(); setMetLogout(); setMetLogo();">
+    <body onload="setMetName(); setMetID(); setMetLogo();">
     <script>
         function setMetName() {
             document.getElementById('meetingName').setAttribute('value', document.getElementById('meetingNameSel').value);
@@ -132,7 +135,7 @@ else
 		                <td><input type="text" name="duration" id="duration" value="0"></td></tr><tr>
 		                <td><br><label for="urlLogout" id="mod_pass_label"  ><?php echo lang('LOGOUTURL'); ?></label></td>
 		                <td><?php printf(ReturnURL())?><br>
-		                <input type="text" name="urlLogout" id="urlLogout" size="35"></td></tr><tr>
+		                <input type="text" name="urlLogout" id="urlLogout" size="35" value="<?php echo $invite?>"></td></tr><tr>
 		                <td><label for="filename"><?php echo lang('PRESENTATION'); ?></label>
 		                <td><input type="file" id="filename" name="filename" accept=".pdf"></td></tr><tr>
 		                <td><br><label for="logoname"><?php echo lang('LOGOURL'); ?></label>
