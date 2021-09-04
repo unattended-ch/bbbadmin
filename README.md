@@ -246,21 +246,21 @@
    ```sh
      git clone https://github.com/bigbluebutton/bigbluebutton-api-php ~/bigbluebutton-api-php
    ```
-3. Copy BBB contents of folder src/ to /var/www/yourpage
+3. Copy BBB contents of folder src/ to /opt/yourpage
    ```sh
-     sudo rsync -avr ~/bigbluebutton-api-php/src/* /var/www/yourpage/
+     sudo rsync -avr ~/bigbluebutton-api-php/src/* /opt/yourpage/
    ```
-4. Copy bbbadmin *.php, *.css and icons/*.ico files to /var/www/yourpage
+4. Copy bbbadmin *.php, *.css and icons/*.ico files to /opt/yourpage
    ```sh
-     sudo rsync --exclude="res/*" -avr ~/bbbadmin/* /var/www/yourpage/
+     sudo rsync --exclude="res/*" -avr ~/bbbadmin/* /opt/yourpage/
    ```
 5. Create a symbolic link to the apache root folder
    ```sh
-     sudo ln -s /var/www/yourpage /var/www/html/yourpage
+     sudo ln -s /opt/yourpage /var/www/html/yourpage
    ```
 6. Set owner of yourpage to www-data
    ```sh
-     sudo chown -R www-data.www-data /var/www/yourpage
+     sudo chown -R www-data.www-data /opt/yourpage
    ```
 7. For configuration you can use [bbb_admin.json]
    - You must specify BBB_* Apache environment variables for every server in apache configuration
@@ -283,17 +283,17 @@
    ```
    8.2 Copy .htacces file to your webpage
    ```sh
-     sudo cp -v ~/bbbadmin/res/.htaccess /var/www/youpage/
+     sudo cp -v ~/bbbadmin/res/.htaccess /opt/youpage/
    ```
    8.3 Edit the path of password file in [.htaccess], always use document root
    ```sh
-     sudo mcedit /var/www/html/yourpage/.htaccess
+     sudo mcedit /opt/yourpage/.htaccess
      
      AuthUserFile "/var/www/html/yourpage/.htpasswd"
    ```
    8.4 Add user to .htpasswd
    ```sh
-     sudo htpasswd -c /var/www/youpage/.htpasswd [username]
+     sudo htpasswd -c /opt/youpage/.htpasswd [username]
    ```
    8.5 Restart apache server
    ```sh
@@ -312,32 +312,32 @@
    ```sh
      git clone https://github.com/bigbluebutton/bigbluebutton-api-php ~/bigbluebutton-api-php
    ```
-3. Copy BBB contents of folder src/ to /var/www/youruserpage
+3. Copy BBB contents of folder src/ to /opt/youruserpage
    ```sh
-     sudo rsync -avr ~/bigbluebutton-api-php/src/* /var/www/youruserpage/
+     sudo rsync -avr ~/bigbluebutton-api-php/src/* /opt/youruserpage/
    ```
-4. Copy bbbadmin *.php, *.css and icons/*.ico files to /var/www/youruserpage
+4. Copy bbbadmin *.php, *.css and icons/*.ico files to /opt/youruserpage
    ```sh
-     sudo rsync --exclude="res/*" -avr ~/bbbadmin/* /var/www/youruserpage/
-     sudo mv -v /var/www/youruserpage/bbb_user.php /var/www/youruserpage/index.php
+     sudo rsync --exclude="res/*" -avr ~/bbbadmin/* /opt/youruserpage/
+     sudo mv -v /opt/youruserpage/bbb_user.php /opt/youruserpage/index.php
    ```
 5. Remove not needed files
    ```sh
-     sudo rm -f /var/www/youruserpage/bbb_create.php
-     sudo rm -f /var/www/youruserpage/bbb_delrec.php
-     sudo rm -f /var/www/youruserpage/bbb_index.php
-     sudo rm -f /var/www/youruserpage/bbb_info.php
-     sudo rm -f /var/www/youruserpage/bbb_join.php
-     sudo rm -f /var/www/youruserpage/bbb_record.php
-     sudo rm -f /var/www/youruserpage/bbb_stop.php
+     sudo rm -f /opt/youruserpage/bbb_create.php
+     sudo rm -f /opt/youruserpage/bbb_delrec.php
+     sudo rm -f /opt/youruserpage/bbb_index.php
+     sudo rm -f /opt/youruserpage/bbb_info.php
+     sudo rm -f /opt/youruserpage/bbb_join.php
+     sudo rm -f /opt/youruserpage/bbb_record.php
+     sudo rm -f /opt/youruserpage/bbb_stop.php
    ```
 6. Create a symbolic link to the apache root folder
    ```sh
-     sudo ln -s /var/www/yourpage /var/www/html/youruserpage
+     sudo ln -s /opt/yourpage /var/www/html/youruserpage
    ```
 7. Set owner of youruserpage to www-data
    ```sh
-     sudo chown -R www-data.www-data /var/www/youruserpage
+     sudo chown -R www-data.www-data /opt/youruserpage
    ```
 8. For configuration you can edit [bbb_admin.json]
    - You must specify BBB_* Apache environment variables for every server
