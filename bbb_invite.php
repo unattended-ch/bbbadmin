@@ -11,7 +11,6 @@ namespace BigBlueButton;
 $serverid = $_GET['sid'];
 require_once('./bbb_load.php');
 use BigBlueButton\BigBlueButton;
-
 if (isset($_POST['Submit']))
 {
     $cfg = $GLOBALS['cfg'];
