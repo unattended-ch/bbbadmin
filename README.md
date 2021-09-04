@@ -153,7 +153,7 @@
    ---------|-----------
    debug|0=Off 1=On
    refresh|Screen refresh in secords for main page
-   language|en=English or  de=German other languages are coming
+   language|en=English, de=German other languages are coming
    email|Admin email for sending invitation links
    invite|URL to users join page for invitations
    copyright|Copyright
