@@ -435,6 +435,11 @@
    ![Send](res/bbb_send.png)
    [goto TOK](#tok)
 
+<a name="bbb_email.png"></a>
+   - bbb_send.php
+   ![Send](res/bbb_email.png)
+   [goto TOK](#tok)
+
 <a name="bbb_user.png"></a>
    - bbb_user.php
    ![Users](res/bbb_user.png)
