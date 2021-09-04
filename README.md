@@ -281,7 +281,7 @@
        Allow from all
      </Directory>
    ```
-   8.2 Copy [.htacces] file to your webpage
+   8.2 Copy .htacces file to your webpage
    ```sh
      sudo cp -v ~/bbbadmin/res/.htaccess /opt/youpage/
    ```
