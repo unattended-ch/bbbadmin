@@ -119,7 +119,6 @@
 ## CONFIGURATION
 
 - Edit file [bbb_admin.json]
-
 <pre><code>
 {
     "debug": "1",
@@ -150,47 +149,46 @@
     }
 }
 </code></pre>
-     main:
-     Parameter|Description
-     ---------|-----------
-     debug|0=Off 1=On
-     refresh|Screen refresh in secords for main page
-     language|en=English de=Deutsch
-     email|Anmin email for sending invitation
-     invite|Link to users join page
-     copyright|Copyright
+   Parameter|Description
+   ---------|-----------
+   debug|0=Off 1=On
+   refresh|Screen refresh in secords for main page
+   language|en=English de=Deutsch
+   email|Anmin email for sending invitation
+   invite|Link to users join page
+   copyright|Copyright
 
-     server:
-     Parameter|Description
-     ---------|-----------
-     unique nr|Unique number for server
-     name|Name of server
+     "server":
+   Parameter|Description
+   ---------|-----------
+   unique id|Unique number for server
+   name|Name of server
 
-     logout:
-     Parameter|Description
-     ---------|-----------
-     unique nr|Unique number for logout URL
-     name|Logout URL for meeting
+     "logout":
+   Parameter|Description
+   ---------|-----------
+   unique id|Unique number for logout URL
+   name|Logout URL for meeting
 
-     logos:
-     Parameter|Description
-     ---------|-----------
-     unique nr|Unique number for Logo
-     name|Logo URL for meeting
+     "logos":
+   Parameter|Description
+   ---------|-----------
+   unique id|Unique number for Logo
+   name|Logo URL for meeting
 
-     access:
-     Parameter|Description
-     ---------|-----------
-     1|Moderator password
-     2|Attendee password
+     "access":
+   Parameter|Description
+   ---------|-----------
+   1|Moderator password
+   2|Attendee password
 
-     rooms:
-     Parameter|Description
-     ---------|-----------
-     unique nr|Unique number for rooms
-     name|Room name
-     id|Room ID
-     acc|Room password
+     "rooms":
+   Parameter|Description
+   ---------|-----------
+   unique nr|Unique number for rooms
+   name|Room name
+   id|Room ID
+   acc|Room password
 
 
    [goto TOK](#tok)
