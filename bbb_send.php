@@ -37,7 +37,7 @@ finally
 
 if (isset($_POST['Back']))
 {
-    $returl = "./bbb_invite.php?sid=".$serverid;
+    $returl = "./bbb_index.php?sid=".$serverid;
     printf('<script type="text/javascript">location.replace("%s")</script>', $returl);
 }
 else if (isset($_POST['Submit']))
