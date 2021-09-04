@@ -443,7 +443,7 @@
 
 <a name="bbb_sendview.png"></a>
    - bbb_send.php
-   ![Send](res/bbb_email.png)
+   ![Send](res/bbb_sendview.png)
    [goto TOK](#tok)
 
 <a name="bbb_user.png"></a>
