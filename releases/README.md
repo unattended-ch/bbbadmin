@@ -19,6 +19,5 @@
 ### TODO
 
    - Add parameters for packages to setup and configure
-   - Since we use JSON for configuration it would be nice to have a LAN download location
-     for this JSON files
-     Then its possible to download host specific JSON during installation
+   - Since we use JSON for configuration it would be nice to have a LAN download location for this JSON files
+   - With LAN download location it is possible to download host specific JSON during installation
