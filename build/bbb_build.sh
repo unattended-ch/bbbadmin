@@ -44,6 +44,8 @@ createPackage() {
     rm -f  $DST/opt/$PAK/*.sh
     rm -f  $DST/opt/$PAK/.gitignore
     rm -f  $DST/opt/$PAK/*.md
+    rm -f  $DST/opt/$PAK/CHANGELOG
+    cp $SRC/../res/bbb_admin.json $DST/opt/$PAK/res/
     cp $SRC/../res/*.tmpl $DST/opt/$PAK/res/
     if [ "$PAK" == "bbbadmin" ]; then
         mv -v $DST/opt/$PAK/bbb_index.php $DST/opt/$PAK/index.php
@@ -63,7 +65,7 @@ createPackage() {
     fi
     pushd $DST
         rm -f ./DEBIAN/md5sums
-        find var/ -type f -name "*" -exec md5sum {} >> ./DEBIAN/md5sums \;
+        find opt/ -type f -name "*" -exec md5sum {} >> ./DEBIAN/md5sums \;
     popd
     sudo chown root.root $DST/* -R
     dpkg-deb -b $PAK
