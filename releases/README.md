@@ -2,7 +2,7 @@
 
 ## NOTE
 
-   - This packages will be recompiled after finishing work
+   - This packages will be recompiled after finishing daily work
 
 ### DESCRIPTION
 
