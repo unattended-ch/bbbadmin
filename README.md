@@ -183,17 +183,17 @@
      "access":
    Parameter|Description
    ---------|-----------
-   1|Moderator password
-   2|Attendee password
+   1|Moderator password default
+   2|Attendee password default if no room password was specified
 
 
      "rooms":
    Parameter|Description
    ---------|-----------
-   unique nr|Unique number for room
-   name|Room name
-   id|Room ID
-   acc|Room password
+   unique id|Unique number for room
+   name|Room name fully descriptive for BigBlueButton
+   id|Room ID for BigBlueButton
+   acc|Room password for BigBlueButton
 
 
    [goto TOK](#tok)
