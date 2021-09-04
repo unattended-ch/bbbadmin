@@ -44,8 +44,9 @@
         <li><a href="#bbb_join.png">bbb_join.php</a></li>
         <li><a href="#bbb_info.png">bbb_info.php</a></li>
         <li><a href="#bbb_record.png">bbb_record.php</a></li>
+        <li><a href="#bbb_send.png">bbb_send.php</a></li>
+        <li><a href="#bbb_inite.png">bbb_invite.php</a></li>
         <li><a href="#bbb_user.png">bbb_user.php</a></li>
-        <li><a href="#bbb_index.png">bbb_index.php</a></li>
     </ul></li>
     <li><a href="#todo">Todo</a></li>
   </ol>
@@ -430,12 +431,17 @@
    ![Recordings](res/bbb_record.png)
    [goto TOK](#tok)
 
+<a name="bbb_invite.png"></a>
+   - bbb_invite.php
+   ![Send](res/bbb_invite.png)
+   [goto TOK](#tok)
+
 <a name="bbb_send.png"></a>
    - bbb_send.php
    ![Send](res/bbb_send.png)
    [goto TOK](#tok)
 
-<a name="bbb_email.png"></a>
+<a name="bbb_sendview.png"></a>
    - bbb_send.php
    ![Send](res/bbb_email.png)
    [goto TOK](#tok)
