@@ -20,14 +20,6 @@ if (isset($_GET['ex']))
     $exitURL = $_GET['ex'];
 if (isset($_GET['join']))
     $joinDirekt = $_GET['join'];
-function BrowserLanguage()
-{
-    $lang = substr($_SERVER['HTTP_ACCEPT_LANGUAGE'], 0, 2);
-    $acceptLang = ['fr', 'it', 'en']; 
-    $lang = in_array($lang, $acceptLang) ? $lang : 'en';
-    return($lang);
-}
-$language = BrowserLanguage();
 require_once('./bbb_load.php');
 use BigBlueButton\BigBlueButton;
 use BigBlueButton\Parameters\JoinMeetingParameters;

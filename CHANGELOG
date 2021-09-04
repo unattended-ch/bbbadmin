@@ -20,4 +20,4 @@
 				Template files *.tmpl moved to res/*.tmpl
 				bbb_index.php renamed index.php
 				Language file fr=French added
-0.0.0.6		05.09.2021	Detecting browser language for bbb_user.php
+0.0.0.6		05.09.2021	Detect browser language for language file loading

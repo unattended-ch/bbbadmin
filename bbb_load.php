@@ -44,6 +44,7 @@ require_once('./Responses/SetConfigXMLResponse.php');
 require_once('./Responses/UpdateRecordingsResponse.php');
 require_once('./Util/UrlBuilder.php');
 require_once('./bbb_config.php');
+$language = BrowserLanguage();
 if (!isset($language))
     $language='en';
 if (file_exists('./locale/'.$language.'.php'))
