@@ -4,12 +4,6 @@ SRC=../res/locale
 DST=../locale
 USR=$USER
 LNG="de fr"
-#for VAR in $LNG; do
-    #msgmerge $SRC/kalender.$VAR.po $DST/kalender.$VAR.po > $DST/kalender.$VAR.po.new
-    #rm -f $DST/kalender.$VAR.po
-    #mv $DST/kalender.$VAR.po.new $DST/kalender.$VAR.po
-#done
-
 SRC=.
 LCL=$SRC/../locale
 FILEVERSION=$(grep "version" ../bbb_load.php  | awk '{print $3}'| tr -dc '[:alnum:].')
