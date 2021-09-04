@@ -341,9 +341,9 @@
    ```
 5. Remove not needed files
    ```sh
+     sudo rm -f /opt/youruserpage/index.php
      sudo rm -f /opt/youruserpage/bbb_create.php
      sudo rm -f /opt/youruserpage/bbb_delrec.php
-     sudo rm -f /opt/youruserpage/bbb_index.php
      sudo rm -f /opt/youruserpage/bbb_info.php
      sudo rm -f /opt/youruserpage/bbb_join.php
      sudo rm -f /opt/youruserpage/bbb_record.php
@@ -415,11 +415,11 @@
 
 ## SCREENSHOTS
 <a name="bbb_index.png"></a>
-   - bbb_index.php
+   - index.php
    ![Home page](res/bbb_index.png)
    [goto TOK](#tok)
 
-   - bbb_index.php
+   - index.php
    ![List meetings](res/bbb_meetings.png)
    [goto TOK](#tok)
 
