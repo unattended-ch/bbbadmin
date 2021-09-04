@@ -21,3 +21,4 @@
    - Add parameters for packages to setup and configure
    - Since we use JSON for configuration it would be nice to have a LAN download location for this JSON files
    - With LAN download location it is possible to download host specific JSON during installation
+   - Change installation location from /var/www/bbbadmin to /opt/bbbadmin
