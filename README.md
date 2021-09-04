@@ -40,7 +40,7 @@
     <li><a href="#userurl">User URL for joining meeting</a></li>
     <li><a href="#styling">Change page style</a></li>
     <li><a href="#screenshots">Screenshots</a><ul>
-        <li><a href="#bbb_index.png">bbb_index.php</a></li>
+        <li><a href="#bbb_index.png">index.php</a></li>
         <li><a href="#bbb_creat>bbb_create.php></li>
         <li><a href="#bbb_join.png">bbb_join.php</a></li>
         <li><a href="#bbb_info.png">bbb_info.php</a></li>
@@ -94,9 +94,9 @@
    Filename|Description
    --------|-----------
    [bbb_admin.json]|Configuration file for application
+   index.php|Index page for application
    bbb_config.php|Load configuration
    bbb_load.php|Loading needed addons and additional scripts
-   bbb_index.php|Index page for application
    bbb_create.php|Create meeting on server
    bbb_join.php|Join meeting on server
    bbb_info.php|Display meeting informations
