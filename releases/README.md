@@ -19,3 +19,7 @@
 ### TODO
 
    - Add parameters for packages to setup and configure
+   - Since we use JSON for configuration it would be nice to have a download location
+     for this JSON files
+   - Then its possible to download JSON during installation.
+     This could be done host specific.
