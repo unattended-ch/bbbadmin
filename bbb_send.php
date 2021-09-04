@@ -35,7 +35,12 @@ finally
         }
     }
 
-if (isset($_POST['Submit']))
+if (isset($_POST['Back']))
+{
+    $returl = "./bbb_invite.php?sid=".$serverid;
+    printf('<script type="text/javascript">location.replace("%s")</script>', $returl);
+}
+else if (isset($_POST['Submit']))
 {
     if (isset($_POST['emailAddress']) && ($_POST['emailAddress'] !== ''))
     {
@@ -43,6 +48,14 @@ if (isset($_POST['Submit']))
         $srv = $cfg->invite;
         $cfg = $GLOBALS['cfg'];
         $url = 'https://'.$srv.'?sid='.$serverid.'&mID='.$meetingID;
+        $userName = '';
+        if (isset($_POST['userName']) && ($_POST['userName'] !== ''))
+        {
+            $userName = $_POST['userName'];
+            $url =  $url . '&usr='. $userName;
+        }
+        if (isset($_POST['direktLink']) && ($_POST['direktLink'] == 'yes') && ($userName !== ''))
+            $url = $url . '&join='.$_POST['direktLink'];
         $recipient = $_POST['emailAddress'];
         $subject = "Meeting [".$meeting->meetingName."] ". $info;
         $header  = "MIME-Version: 1.0\r\n";
@@ -55,7 +68,8 @@ if (isset($_POST['Submit']))
         $mailtext = str_replace("<MSG>", $info , $mailtext);
         $mailtext = str_replace("<URL>", $url , $mailtext);
         mail($recipient, $subject, $mailtext, $header);
-        $returl = "./bbb_index.php?sid=".$serverid;
+        //$returl = "./bbb_index.php?sid=".$serverid;
+        $returl = "./bbb_send.php?sid=".$serverid.'&mID='.$messageID.'&mName='.$messageName;
         printf('<script type="text/javascript">location.replace("%s")</script>', $returl);
     }
     else
@@ -69,6 +83,14 @@ else if (isset($_POST['View']))
     $srv = $cfg->invite;
     $cfg = $GLOBALS['cfg'];
     $url = 'https://'.$srv.'?sid='.$serverid.'&mID='.$meetingID;
+    $userName = '';
+    if (isset($_POST['userName']) && ($_POST['userName'] !== ''))
+    {
+        $userName = $_POST['userName'];
+        $url =  $url . '&usr='. $userName;
+    }
+    if (isset($_POST['direktLink']) && ($_POST['direktLink'] == 'yes') && ($userName !== ''))
+        $url = $url . '&join='.$_POST['direktLink'];
     $recipient = $_POST['emailAddress'];
     $subject = "Meeting [".$meeting->meetingName."] ". $info;
     $header  = "MIME-Version: 1.0\r\n";
@@ -105,19 +127,28 @@ else
         <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
+    <script>
+        function setLinkCheck() {
+            document.getElementById("direktLink").checked = true;
+        }
+    </script>
     <div id="topUsers">
 	<center><table class="mainbig"><tr><td>
 		<div class="chartWrapper">
 			<div class="chartLabelBig"><?php echo lang('SENDMAIL'); ?></div>
 			<div class="chartHolder">
 			    <table class="mainbig"><tr><form action=""  method="POST"><center><table style="text-align:center;" width="100%"><tr><br>
-		                <td style="text-align:right;"><label for="userName" id="app_name_label" class="inputbig"><?php echo lang('EMAIL'); ?></label></td>
+		                <td style="text-align:right;"><label for="emailAddress" class="inputbig"><?php echo lang('EMAIL'); ?></label></td>
 		                <td><input class="inputbig" type="text" name="emailAddress" id="emailAddress" size="25" value="<?php echo $userName ?>"></td></tr><tr>
+			        <td style="text-align:right;"><label for="userName" class="inputbig"><?php echo lang('USERNAME'); ?></label></td>
+			        <td><input class="inputbig" type="text" name="userName" id="userName" size="25" onclick="setLinkCheck()"></td></tr><tr>
+		                <td style="text-align:right;"><label class="inputbig" for="directLink"><?php echo lang('DIRECTLINK'); ?></label></td>
+		                <td style="text-align:left;"><input class="inputbig" type="checkbox" id="direktLink" name="direktLink" value="yes"></td></tr><tr>
 	                        </table></center><br>
 		                <center>
 					<input class="inputbig" type="submit" name="Submit" value="<?php echo lang('SEND'); ?>"> 
 					<input class="inputbig" type="submit" name="View" value="<?php echo lang('VIEW'); ?>"> 
-					<input class="inputbig" type="button" value="<?php echo lang('BACK'); ?>" onclick="javascript:history.back()">
+					<input class="inputbig" type="submit" name="Back" value="<?php echo lang('BACK'); ?>">
 				</center>
 				<br>
 		            </form>

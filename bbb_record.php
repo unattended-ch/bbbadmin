@@ -14,6 +14,12 @@ if (isset($_POST['sid'])) {
 if (isset($_GET['sid'])) {
     $serverid = $_GET['sid'];
 }
+if (isset($_POST['Back'])) {
+    $serverid = $_GET['sid'];
+    $url = './bbb_index.php?sid='.$serverid;
+    printf('<script type="text/javascript">location.replace("%s")</script>', $url);
+}
+
 require_once('./bbb_load.php');
 use BigBlueButton\BigBlueButton;
 use BigBlueButton\Parameters\GetRecordingsParameters;
@@ -63,7 +69,7 @@ else
 			    <table class="chartHolder" border="1"><tr><th><?php echo lang('MEETINGNAME'); ?></th><th><?php echo lang('RECORDDATE'); ?></th><th><?php echo lang('DURATION'); ?></th><th><?php echo lang('FUNCTIONS'); ?></th></tr><tr>
 				<?php printf($recording_data); ?>
 			    </tr></table>
-			    <br><center><form action="<?php echo $returl; ?>"><input type="submit" value="<?php echo lang('BACK'); ?>" class="bigbutton"/></form></center>
+			    <br><center><form action="" method="POST"><input type="submit" name="Back" value="<?php echo lang('BACK'); ?>" class="bigbutton"/></form></center>
 			</div>
 		</div>
 	</td>

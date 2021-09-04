@@ -11,7 +11,12 @@ namespace BigBlueButton;
 $serverid = $_GET['sid'];
 require_once('./bbb_load.php');
 use BigBlueButton\BigBlueButton;
-if (isset($_POST['Submit']))
+if (isset($_POST['Back']))
+{
+    $url = './bbb_index.php?sid='.$serverid;
+    printf('<script type="text/javascript">location.replace("%s")</script>', $url);
+}
+else if (isset($_POST['Submit']))
 {
     $cfg = $GLOBALS['cfg'];
     $meetingID = $_POST['meetingID'];
@@ -56,7 +61,7 @@ else
 	                        </table></center><br>
 		                <center>
 				    <input class="inputbig" type="submit" name="Submit" value="<?php echo lang('SEND'); ?>"> 
-				    <input class="inputbig" type="button" value="<?php echo lang('BACK'); ?>" onclick="javascript:history.back()">
+				    <input class="inputbig" type="submit" name="Back" value="<?php echo lang('BACK'); ?>">
 				</center>
 				<br>
 		            </form>

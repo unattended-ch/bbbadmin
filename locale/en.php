@@ -57,6 +57,7 @@ function lang($phrase)
         'INVITATION' => 'Invitation',
         'SEEYOU' => 'See you next time...',
         'VIEW' => 'View',
+        'DIRECTLINK' => 'Direct link',
         'ERRMAILADR' => 'ERROR: No email specified !',
         'CONNECTIONFAILED' => 'Connection failed: '
     );

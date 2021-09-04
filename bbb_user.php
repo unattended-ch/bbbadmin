@@ -82,6 +82,18 @@ if(isset($_GET['Submit']))
         printf(lang('NOUSER'));
     }
 }
+else if(isset($_GET['join']))
+{
+    if ($userName !== '')
+    {
+        $joinMeetingParams = new JoinMeetingParameters($meetingID, $userName, $meeting->attendeePW->__toString());
+        $joinMeetingParams->setRedirect(true);
+        $url = $bbb->getJoinMeetingURL($joinMeetingParams);
+        header( "Location: $url" );
+    } else {
+        printf(lang('NOUSER'));
+    }
+}
 else if(isset($_POST['Submit']))
 {
     $userName = $_POST['userName'];
