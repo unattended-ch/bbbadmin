@@ -73,8 +73,7 @@
    * 	Use JSON as configuration file
    * 	Create your own debian packages
    * 	Create your own language files
-   ![New](icons/new.png)
-   * 	Detect client browser language or set default to "en"
+   ![New](icons/new.png)	Detect client browser language or set default to "en"
 
    [goto TOK](#tok)
 
