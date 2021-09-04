@@ -203,6 +203,7 @@
 ## LANGUAGE SUPPORT
 
 - Change [language='en'] in [bbb_admin.json] to your language shortcode
+  en=English de=Germna fr=French
 
 - See [res/locale/][bbb_lang] for .PO translation files
   and translation scripts
