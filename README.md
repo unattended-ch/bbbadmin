@@ -27,6 +27,7 @@
         <li><a href="#configuration">Configuration</a></li>
         <li><a href="#prerequisites">Prerequisites</a></li>
         <li><a href="#releases">Releases</a></li>
+        <li><a href="#debian-packages">Create debian packages</a></li>
         <li><a href="#installation-scripts">Installation Scripts</a></li>
         <li><a href="#installation-admin-frontend">Installation Admin Frontend</a></li>
         <li><a href="#htpasswd">Admin access security with .htpasswd</a></li>
