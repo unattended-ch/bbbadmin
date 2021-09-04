@@ -202,9 +202,9 @@
 
 ## LANGUAGE SUPPORT
 
-- Change [language='en'] in [bbb_admin.json] to your language shortcode
+- Change ["language": "en",] in [bbb_admin.json] to your language shortcode
   
-  en=English de=Germna fr=French
+  en=English de=German fr=French
 
 - See [res/locale/][bbb_lang] for .PO translation files
   and translation scripts
