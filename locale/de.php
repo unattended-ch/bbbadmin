@@ -54,6 +54,7 @@ function lang($phrase)
         'SENDMAIL' => 'Sende email',
         'SEND' => 'Senden',
         'INVITE' => 'Sitzungs-Einlandung',
+        'INVITATION' => 'Einlandung',
         'SEEYOU' => 'Bis zum nächsten mal...',
         'VIEW' => 'Anzeigen',
         'ERRMAILADR' => 'FEHLER: Keine email Adresse angegeben!',
