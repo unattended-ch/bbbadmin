@@ -9,11 +9,11 @@
 //********************************************************************
 namespace BigBlueButton;
 $serverid = $_GET['sid'];
+$meetingID = $_GET['mID'];
 require_once('./bbb_load.php');
 use BigBlueButton\BigBlueButton;
 use BigBlueButton\Parameters\EndMeetingParameters;
 
-$meetingID = $_GET['meetingID'];
 $moderator_password = $_GET['moderator_password'];
 
 if(isset($_GET['Submit']))

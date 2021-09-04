@@ -155,5 +155,5 @@ else
     </body>
     </html>
 <?php
-    Show($cfg);
+    //Show($cfg);
 }

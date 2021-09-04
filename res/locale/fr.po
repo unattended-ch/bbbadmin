@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2021-09-04 00:37+0000\n"
+"POT-Creation-Date: 2021-09-04 14:12+0000\n"
 "PO-Revision-Date: 2021-09-01 23:46+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -17,7 +17,7 @@ msgstr ""
 "X-Generator: Poedit 2.3\n"
 
 #. type: Plain text
-#: ../../locale//en.php:62
+#: ../../locale//en.php:65
 #, fuzzy, no-wrap
 #| msgid ""
 #| "<?php\n"
@@ -130,7 +130,10 @@ msgid ""
 "        'SENDMAIL' => 'Send email',\n"
 "        'SEND' => 'Send',\n"
 "        'INVITE' => 'Meeting invitation',\n"
+"        'INVITATION' => 'Invitation',\n"
 "        'SEEYOU' => 'See you next time...',\n"
+"        'VIEW' => 'View',\n"
+"        'ERRMAILADR' => 'ERROR: No email specified !',\n"
 "        'CONNECTIONFAILED' => 'Connection failed: '\n"
 "    );\n"
 "    return $lang[$phrase];\n"

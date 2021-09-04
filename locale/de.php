@@ -50,6 +50,13 @@ function lang($phrase)
         'NOMEETINGS' => 'Keine laufenden Sitzungen gefunden !',
         'NOUSER' => 'FEHLER : Kein Benutzername angegeben !',
         'NOSERVER' => 'Server nicht gefunden !',
+        'EMAIL' => 'Email adresse',
+        'SENDMAIL' => 'Sende email',
+        'SEND' => 'Senden',
+        'INVITE' => 'Sitzungs-Einlandung',
+        'SEEYOU' => 'Bis zum nächsten mal...',
+        'VIEW' => 'Anzeigen',
+        'ERRMAILADR' => 'FEHLER: Keine email Adresse angegeben!',
         'CONNECTIONFAILED' => 'Verbindungsfehler: '
     );
     return $lang[$phrase];

@@ -22,7 +22,9 @@
     <li><a href="#description">Description</a></li>
     <li><a href="#synopsis">Synopsis</a><ul>
         <li><a href="#options">Options</a></li>
-        <li><a href="#php-files">Files</a></li>
+        <li><a href="#php-files">PHP files</a></li>
+        <li><a href="#configuration-files">Configuration files</a></li>
+        <li><a href="#configuration">Configuration</a></li>
         <li><a href="#prerequisites">Prerequisites</a></li>
         <li><a href="#releases">Releases</a></li>
         <li><a href="#installation-scripts">Installation Scripts</a></li>
@@ -31,7 +33,6 @@
         <li><a href="#installation-user-frontend">Installation User Frontend</a></li>
         <li><a href="#htpasswd">User access security with .htpasswd</a></li>
         <li><a href="#workaround">Workaround for hostings without apache_setenv()</a></li>
-        <li><a href="#configuration-files">Configuration files</a></li>
         <li><a href="#language-support">Language support</a></li>
         <li><a href="#styling">Styling with bootstrap.css</a></li>
       </ul></li>
@@ -107,9 +108,90 @@
 
 - Configuration file [bbb_admin.json]
 
+- Email template file [bbb_admin.tmpl]
+
 - Folder protection file [.htaccess]
 
 - Access password file [.htpasswd]
+
+   [goto TOK](#tok)
+
+## CONFIGURATION
+
+- Edit file [bbb_admin.json]
+
+   ```
+{
+    "debug": "1",
+    "refresh": "30",
+    "language": "en",
+    "email": "bbbadmin@domain.com",
+    "invite": "https://room.domain.com",
+    "copyright": "© 2021 unattended.ch",
+    "server": {
+        "1": "room1.domain.com",
+        "2": "room2.domain.com"
+    },
+    "logout": {
+        "1": "https://room1.domain.com",
+        "2": "https://room2.domain.com"
+    },
+    "logos":  {
+        "1": "https://room1.domain.com/favicon.ico",
+        "2": "https://room2.domain.com/favicon.ico"
+    },
+    "access": {
+        "1": "ModeratorPasswordDefault" ,
+        "2": "AttendeePasswordDefault" 
+    },
+    "rooms":  { 
+        "1": { "name": "Bastelraum © 2021 unattended.ch", "id": "Bastelraum" ,  "acc": "Password", "msg": "Monday 20:00 - 22:00" },
+        "2": { "name": "Startraum © 2021 unattended.ch", "id": "Startraum" ,  "acc": "Password", "msg": "" }
+    }
+}
+   ```
+     main:
+     Parameter|Description
+     ---------|-----------
+     debug|0=Off 1=On
+     refresh|Screen refresh in secords for main page
+     language|en=English de=Deutsch
+     email|Anmin email for sending invitation
+     invite|Link to users join page
+     copyright|Copyright
+
+     server:
+     Parameter|Description
+     ---------|-----------
+     unique nr|Unique number for server
+     name|Name of server
+
+     logout:
+     Parameter|Description
+     ---------|-----------
+     unique nr|Unique number for logout URL
+     name|Logout URL for meeting
+
+     logos:
+     Parameter|Description
+     ---------|-----------
+     unique nr|Unique number for Logo
+     name|Logo URL for meeting
+
+     access:
+     Parameter|Description
+     ---------|-----------
+     1|Moderator password
+     2|Attendee password
+
+     rooms:
+     Parameter|Description
+     ---------|-----------
+     unique nr|Unique number for rooms
+     name|Room name
+     id|Room ID
+     acc|Room password
+
 
    [goto TOK](#tok)
 
@@ -376,6 +458,7 @@
 [releases]: releases/
 [changelog]: CHANGELOG
 [bbb_admin.json]: bbb_admin.json
+[bbb_admin.tmpl]: bbb_admin.tmpl
 [bbbadmin_discuss]: https://github.com/unattended-ch/bbbadmin/discussions
 [bbb]: https://bigbluebutton.org/
 [bbbapi]: https://github.com/bigbluebutton/bigbluebutton-api-php

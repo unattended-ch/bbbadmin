@@ -11,5 +11,7 @@
 				bootstrap.css added for bbb_users.php
 				Configuration with bbbadmin.json
 				Database support removed
-				Sending invitation mail to user
+				Sending invitation mail for running meetings to user
 0.0.0.5		04.09.2021	Logout function "&ex=1" added for bbb_user.php
+				Mail template bbb_admin.tmpl for invitation email
+				Sending invitation mail for predefined meetings to user

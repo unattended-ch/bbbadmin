@@ -172,14 +172,13 @@ function ServerRoomName()
 function ServerRoomMsg($meetingID)
 {
     $cfg = $GLOBALS['cfg'];
-    $msg = '';
     foreach($cfg->rooms as $room) {
         if ($room->id == $meetingID)
         {
             return($room->msg);
         }
     }
-    return $msg;
+    return('');
 }
 
 //----------------------------------------------------------------------
@@ -255,10 +254,10 @@ function LinkFunctions($mode='0', $serverid, $meeting)
 {
     if ($mode == '1') 
     {
-        $join = './bbb_join.php?sid='.$serverid.'&meetingID='.$meeting->meetingID.'&meetingName='.$meeting->meetingName.'&moderator_password='.$meeting->moderatorPW.'&attendee_password='.$meeting->attendeePW;
-        $info = './bbb_info.php?sid='.$serverid.'&meetingID='.$meeting->meetingID.'&moderator_password='.$meeting->moderatorPW.'&Submit=1';
+        $join = './bbb_join.php?sid='.$serverid.'&mID='.$meeting->meetingID.'&meetingName='.$meeting->meetingName.'&moderator_password='.$meeting->moderatorPW.'&attendee_password='.$meeting->attendeePW;
+        $info = './bbb_info.php?sid='.$serverid.'&mID='.$meeting->meetingID.'&moderator_password='.$meeting->moderatorPW.'&Submit=1';
         $send = './bbb_send.php?sid='.$serverid.'&mID='.$meeting->meetingID;
-        $stop = './bbb_stop.php?sid='.$serverid.'&meetingID='.$meeting->meetingID.'&moderator_password='.$meeting->moderatorPW;
+        $stop = './bbb_stop.php?sid='.$serverid.'&mID='.$meeting->meetingID.'&moderator_password='.$meeting->moderatorPW;
         $functions = '';
         if (file_exists('./bbb_join.php'))
             $functions = $functions . ' <a href="' . $join . '" title="'.lang('JOINMEETING').'"><img src="./icons/favicon.ico" width="16" height="16"></a>';
@@ -272,9 +271,12 @@ function LinkFunctions($mode='0', $serverid, $meeting)
     if ($mode == '0') 
     {
         $create = './bbb_create.php?sid='.$serverid;
+        $invite = './bbb_invite.php?sid='.$serverid;
         $recs = './bbb_record.php?sid='.$serverid;
         if (file_exists('./bbb_create.php'))
             $functions = '<a href="'.$create.'" class="button"><button class="bigbutton">'.lang('CREATEMEETING').'</button></a>';
+        if (file_exists('./bbb_invite.php'))
+            $functions = $functions . ' <a href="'.$invite.'" class="button"><button class="bigbutton">'.lang('INVITATION').'</button></a>';
         if (file_exists('./bbb_record.php'))
             $functions = $functions . ' <a href="'.$recs.'"><button class="bigbutton">'.lang('RECORDINGS').'</button></a>';
     }
@@ -291,10 +293,63 @@ function LinkFunctions($mode='0', $serverid, $meeting)
 //----------------------------------------------------------------------
 function Show($array)
 {
-    if ($cfg['debug'] == '1')
+    $cfg = $GLOBALS['cfg'];
+    if ($cfg->debug == '1')
         printf('<pre>%s</pre>', print_r($array,true));
 }
 
+//----------------------------------------------------------------------
+// Function    : ArrayToXML($array)
+// Created at  : Sat Sep  4 12:31:37 UTC 2021
+// Description : Convert array to xml object
+// Parameters  : 
+// Variables   : 
+// Return      : 
+//----------------------------------------------------------------------
+function arrayToXML($array, $rootElement = null, $xml = null) {
+    $_xml = $xml;
+      
+    // If there is no Root Element then insert root
+    if ($_xml === null) {
+        $_xml = new SimpleXMLElement($rootElement !== null ? $rootElement : '<root/>');
+    }
+      
+    // Visit all key value pair
+    foreach ($array as $k => $v) {
+          
+        // If there is nested array then
+        if (is_array($v)) { 
+              
+            // Call function for nested array
+            arrayToXml($v, $k, $_xml->addChild($k));
+            }
+              
+        else {
+              
+            // Simply add child element. 
+            $_xml->addChild($k, $v);
+        }
+    }
+    $_xml = new SimpleXMLElement($rootElement !== null ? $rootElement : '<root/>');
+      
+    return $_xml;
+}
+
+function array_to_xml($data) {
+    $_xml = new SimpleXMLElement('<root/>');
+    foreach( $data as $key => $value ) {
+        if( is_array($value) ) {
+            if( is_numeric($key) ){
+                $key = 'item'.$key; //dealing with <0/>..<n/> issues
+            }
+            $subnode = $_xml->addChild($key);
+            array_to_xml($value, $subnode);
+        } else {
+            $_xml->addChild("$key",htmlspecialchars("$value"));
+        }
+     }
+    return($_xml);
+}
 //----------------------------------------------------------------------
 // Function    : LoadMeeting($meetingid)
 // Created at  : Wed Sep  1 19:44:55 UTC 2021
@@ -305,6 +360,7 @@ function Show($array)
 //----------------------------------------------------------------------
 function LoadMeeting($response, $meetingid)
 {
+    $empty = array();
     if (isset($response)) {
         if ($response->getReturnCode() == 'SUCCESS')
         {
@@ -320,9 +376,12 @@ function LoadMeeting($response, $meetingid)
             }
         }
         else
-            return($response->getMessage());
+        {
+            $empty['err'] = $response->getMessage();
+            return(array_to_xml($empty));
+        }
     }
-    return('');
+    return(array_to_xml($empty));
 }
 
 //----------------------------------------------------------------------
