@@ -214,9 +214,21 @@
 
 - Use bootstrap.css for styling of bbb_user.php
 
+   [goto TOK](#tok)
+
 ## RELEASES
 
 - See [releases] for more informations
+
+   [goto TOK](#tok)
+
+## DEBIAN PACKAGES
+
+- Create your own bbbadmin.deb and bbb_users.deb for delivery
+
+- Use [bbb_build.sh] for package creation
+
+   [goto TOK](#tok)
 
 ## INSTALLATION SCRIPTS
 
@@ -471,6 +483,7 @@
 [bbb_locale]: locale/
 [releases]: releases/
 [changelog]: CHANGELOG
+[bbb_build.sh]: build/bbb_build.sh
 [bbb_admin.json]: bbb_admin.json
 [bbb_admin.tmpl]: bbb_admin.tmpl
 [bbbadmin_discuss]: https://github.com/unattended-ch/bbbadmin/discussions

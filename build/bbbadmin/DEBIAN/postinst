@@ -1,0 +1,34 @@
+#!/bin/sh
+
+#DEBHELPER#
+
+set -e
+SRC=~
+NAM=bbbadmin
+DST=/opt
+DEST=$DST/$NAM
+USR=www-data
+TMPCONF=/$SUDO_USER/bbb_admin.json
+
+change_owner() {
+    if id -u $1 > /dev/null 2>&1; then
+	echo "Setting rights for [$1]"
+	chown ${1}:${1} $DEST -R
+    fi
+}
+
+# Create symbolic link if not exists
+if [ -d "$DST/html" ]; then
+    if [ -f "$DST/html/$NAM" ]; then
+        rm -f $DEST /var/www/html/$NAM
+    fi
+    ln -vs $DEST /var/www/html/$NAM
+fi
+
+# Set user rights to $USR
+change_owner $USR
+
+# Get temporary config if exists
+if [ -f "$TMPCONF" ]; then
+    cp -v $TMPCONF $DEST/
+fi

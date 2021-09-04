@@ -1,0 +1,19 @@
+#!/bin/sh
+
+#DEBHELPER#
+
+set -e
+DEST=/usr/local/share/admm/
+CONF=/opt/bbbadmin/bbb_admin.json
+# Save existing admm.conf
+if [ -f "$CONF" ]; then
+    if [ ! "$SUDO_USER" = "" ]; then
+	if [ "$SUDO_USER" = "root" ]; then
+            echo "Saving [$CONF] to [/$SUDO_USER/]"
+            cp -v $CONF /$SUDO_USER/
+	else
+            echo "Saving [$CONF] to [/home/$SUDO_USER/]"
+            cp -v $CONF /home/$SUDO_USER/
+	fi
+    fi
+fi

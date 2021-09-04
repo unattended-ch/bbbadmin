@@ -1,0 +1,9 @@
+Package: bbbusers
+Version: 0.0.0.5 
+Section: utils
+Priority: optional
+Architecture: amd64
+Depends: 
+Maintainer: © 2021 unattended.ch
+Homepage: https://unattended.ch
+Description: BBB PHP API Users Frontend

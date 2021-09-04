@@ -54,7 +54,10 @@ else
 		                <td><?php printf(ServerRoomId())?><br>
 		                <input type="text" name="meetingID" id="meetingID" size="35"></td></tr><tr>
 	                        </table></center><br>
-		                <center><input class="inputbig" type="submit" name="Submit" value="<?php echo lang('SEND'); ?>"></center>
+		                <center>
+				    <input class="inputbig" type="submit" name="Submit" value="<?php echo lang('SEND'); ?>"> 
+				    <input class="inputbig" type="button" value="<?php echo lang('BACK'); ?>" onclick="javascript:history.back()">
+				</center>
 				<br>
 		            </form>
 			    </tr></table>
