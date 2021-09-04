@@ -154,16 +154,17 @@
    debug|0=Off 1=On
    refresh|Screen refresh in secords for main page
    language|en=English or  de=Deutsch other languages are coming
-   email|Admin email for sending invitation email
-   invite|Link to users join page
+   email|Admin email for sending invitation links
+   invite|URL to users join page for invitations
    copyright|Copyright
 
-   - "server":
 
+     "server":
    Parameter|Description
    ---------|-----------
    unique id|Unique number for server
    name|Name of server (only descriptive)
+
 
      "logout":
    Parameter|Description
@@ -171,17 +172,20 @@
    unique id|Unique number for logout URL
    name|Logout URL for meeting (default invitation url &ex=1)
 
+
      "logos":
    Parameter|Description
    ---------|-----------
    unique id|Unique number for Logo
    name|Logo URL for meetings
 
+
      "access":
    Parameter|Description
    ---------|-----------
    1|Moderator password
    2|Attendee password
+
 
      "rooms":
    Parameter|Description
