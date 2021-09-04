@@ -285,7 +285,7 @@
    ```sh
      sudo cp -v ~/bbbadmin/res/.htaccess /opt/youpage/
    ```
-   8.3 Edit the path of password file in [.htaccess], always use document root
+   8.3 Edit the path of password file in [.htaccess], always use document root of apache
    ```sh
      sudo mcedit /opt/yourpage/.htaccess
      
