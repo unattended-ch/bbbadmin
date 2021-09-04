@@ -45,7 +45,7 @@
         <li><a href="#bbb_info.png">bbb_info.php</a></li>
         <li><a href="#bbb_record.png">bbb_record.php</a></li>
         <li><a href="#bbb_send.png">bbb_send.php</a></li>
-        <li><a href="#bbb_inite.png">bbb_invite.php</a></li>
+        <li><a href="#bbb_invite.png">bbb_invite.php</a></li>
         <li><a href="#bbb_user.png">bbb_user.php</a></li>
     </ul></li>
     <li><a href="#todo">Todo</a></li>
