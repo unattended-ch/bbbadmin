@@ -120,7 +120,7 @@
 
 - Edit file [bbb_admin.json]
 
-   ```
+<pre><code>
 {
     "debug": "1",
     "refresh": "30",
@@ -149,7 +149,7 @@
         "2": { "name": "Startraum © 2021 unattended.ch", "id": "Startraum" ,  "acc": "Password", "msg": "" }
     }
 }
-   ```
+</code></pre>
      main:
      Parameter|Description
      ---------|-----------
