@@ -18,3 +18,4 @@
 				Installation location change from /var/www/page to /opt/page
 				Configuration file moved to res/bbb_admin.json
 				Template files *.tmpl moved to res/*.tmpl
+				bbb_index.php renamed index.php

@@ -47,11 +47,8 @@ createPackage() {
     rm -f  $DST/opt/$PAK/CHANGELOG
     cp $SRC/../res/bbb_admin.json $DST/opt/$PAK/res/
     cp $SRC/../res/*.tmpl $DST/opt/$PAK/res/
-    if [ "$PAK" == "bbbadmin" ]; then
-        mv -v $DST/opt/$PAK/bbb_index.php $DST/opt/$PAK/index.php
-    fi
     if [ "$PAK" == "bbbusers" ]; then
-        rm -f $DST/opt/$PAK/bbb_index.php
+        rm -f $DST/opt/$PAK/index.php
         rm -f $DST/opt/$PAK/bbb_create.php
         rm -f $DST/opt/$PAK/bbb_delrec.php
         rm -f $DST/opt/$PAK/bbb_invite.php
