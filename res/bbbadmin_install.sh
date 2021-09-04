@@ -1,6 +1,6 @@
 #!/bin/bash
 WEB=bbbadmin
-WWW=/var/www/$WEB
+WWW=/opt/$WEB
 DST=~
 
 pushd $DST

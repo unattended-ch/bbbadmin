@@ -1,6 +1,6 @@
 #!/bin/bash
 WEB=bbbuser
-WWW=/var/www/$WEB
+WWW=/opt/$WEB
 DST=~
 
 pushd $DST
