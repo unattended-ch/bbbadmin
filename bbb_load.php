@@ -399,3 +399,19 @@ function LoadConfigFile()
     //Show(json_last_error_msg().'<br>'.$json);
     return($json);
 }
+
+//----------------------------------------------------------------------
+// Function    : BrowserLanguage()
+// Created at  : Sat Sep  4 21:03:34 UTC 2021
+// Description : Get browser language
+// Parameters  : none
+// Variables   : 
+// Return      : Language short code
+//----------------------------------------------------------------------
+function BrowserLanguage()
+{
+    $lang = substr($_SERVER['HTTP_ACCEPT_LANGUAGE'], 0, 2);
+    $acceptLang = ['fr', 'it', 'en']; 
+    $lang = in_array($lang, $acceptLang) ? $lang : 'en';
+    return($lang);
+}
