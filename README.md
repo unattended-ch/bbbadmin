@@ -158,7 +158,7 @@
    invite|Link to users join page
    copyright|Copyright
 
-   "server":
+   - "server":
    Parameter|Description
    ---------|-----------
    unique id|Unique number for server
