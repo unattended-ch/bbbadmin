@@ -19,3 +19,5 @@ for VAR in $LNG; do
         po4a-translate $PAR -m $RED -p $VAR.po -l $DST/$VAR.php
     fi
 done
+
+rm -f *.po~
