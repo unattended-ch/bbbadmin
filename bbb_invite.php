@@ -13,7 +13,7 @@ require_once('./bbb_load.php');
 use BigBlueButton\BigBlueButton;
 if (isset($_POST['Back']))
 {
-    $url = './bbb_index.php?sid='.$serverid;
+    $url = './index.php?sid='.$serverid;
     printf('<script type="text/javascript">location.replace("%s")</script>', $url);
 }
 else if (isset($_POST['Submit']))

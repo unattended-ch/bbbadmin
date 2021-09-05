@@ -13,7 +13,7 @@ require_once('./bbb_load.php');
 use BigBlueButton\BigBlueButton;
 use BigBlueButton\Parameters\CreateMeetingParameters;
 $cfg = $GLOBALS['cfg'];
-$invite = "https://".$cfg->invite.'?sid='.$serverid.'&ex=1';
+$invite = 'https://'.$cfg->invite.'?sid='.$serverid.'&ex=1';
 
 if(isset($_POST['Submit']))
 {

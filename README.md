@@ -251,7 +251,7 @@
 
 1. Install PHP modules php-curl php-mbstring php-xml
    ```sh
-     sudo apt install php-curl php-mbstring php-xml -y
+     sudo apt install php-curl php-mbstring php-xml php-intl -y
    ```
 
    [goto TOK](#tok)
@@ -423,6 +423,12 @@
 
    - index.php
    ![List meetings](res/bbb_meetings.png)
+   Function|Description
+   --------|-----------
+   [favicon]|Join meeting
+   [about]|Show meeting 
+   [mail]|Send invitation
+   [exit]|Stop meeting
    [goto TOK](#tok)
 
 <a name="bbb_create.png"></a>
@@ -501,3 +507,8 @@
 [discuss]: https://github.com/unattended-ch/bbbadmin/discussions
 [issues]: https://github.com/unattended-ch/bbbadmin/issues
 [webmin]: https://www.webmin.com/
+[favicon]: icons/favicon.ico
+[about]: icons/about.ico
+[mail]: icons/mail.ico
+[exit]: icons/exit.ico
+[new]: icons/new.png

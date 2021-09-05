@@ -28,7 +28,7 @@ if(isset($_GET['Submit']))
     } else {
         printf("%s<br>", $response->getMessage());
     }
-    $url = "./bbb_index.php?sid=".$serverid;
+    $url = "./index.php?sid=".$serverid;
     header('Location:' . $url);
 }
 else if(isset($_POST['Submit']))
@@ -43,7 +43,7 @@ else if(isset($_POST['Submit']))
     } else {
         printf("%s<br>", $response->getMessage());
     }
-    $url = "./bbb_index.php?sid=".$serverid;
+    $url = "./index.php?sid=".$serverid;
     header('Location:' . $url);
 }
 else

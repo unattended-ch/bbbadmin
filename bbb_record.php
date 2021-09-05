@@ -16,7 +16,7 @@ if (isset($_GET['sid'])) {
 }
 if (isset($_POST['Back'])) {
     $serverid = $_GET['sid'];
-    $url = './bbb_index.php?sid='.$serverid;
+    $url = './index.php?sid='.$serverid;
     printf('<script type="text/javascript">location.replace("%s")</script>', $url);
 }
 

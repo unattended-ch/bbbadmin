@@ -411,8 +411,9 @@ function LoadConfigFile()
 //----------------------------------------------------------------------
 function BrowserLanguage()
 {
-    $lang = substr($_SERVER['HTTP_ACCEPT_LANGUAGE'], 0, 2);
-    $acceptLang = ['fr', 'it', 'en']; 
+//    $lang = substr($_SERVER['HTTP_ACCEPT_LANGUAGE'], 0, 2);
+    $lang = $_SERVER['HTTP_ACCEPT_LANGUAGE'];
+    $acceptLang = ['fr', 'de', 'en']; 
     $lang = in_array($lang, $acceptLang) ? $lang : 'en';
     return($lang);
 }

@@ -37,7 +37,7 @@ finally
 
 if (isset($_POST['Back']))
 {
-    $returl = "./bbb_index.php?sid=".$serverid;
+    $returl = "./index.php?sid=".$serverid;
     printf('<script type="text/javascript">location.replace("%s")</script>', $returl);
 }
 else if (isset($_POST['Submit']))
@@ -68,7 +68,6 @@ else if (isset($_POST['Submit']))
         $mailtext = str_replace("<MSG>", $info , $mailtext);
         $mailtext = str_replace("<URL>", $url , $mailtext);
         mail($recipient, $subject, $mailtext, $header);
-        //$returl = "./bbb_index.php?sid=".$serverid;
         $returl = "./bbb_send.php?sid=".$serverid.'&mID='.$messageID.'&mName='.$messageName;
         printf('<script type="text/javascript">location.replace("%s")</script>', $returl);
     }
