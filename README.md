@@ -424,9 +424,9 @@
    - index.php
    ![List meetings](res/bbb_meetings.png)
       > ![favicon](icons/favicon.png) Join meeting 
-   >     ![About](icons/about.png) Show meeting 
-   >     ![Mail](icons/mail.png) Send invitation 
-   >     ![Exit](icons/exit.png) Stop meeting
+      > ![About](icons/about.png) Show meeting 
+      > ![Mail](icons/mail.png) Send invitation 
+      > ![Exit](icons/exit.png) Stop meeting
 
    [goto TOK](#tok)
 
