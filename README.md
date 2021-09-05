@@ -423,8 +423,7 @@
 
    - index.php
    ![List meetings](res/bbb_meetings.png)
-   ![Icon](icons/favicon.ico)
-    - Join meeting
+   ![favicon] - Join meeting
 
    ![About](icons/about.ico)
     - Show meeting 
@@ -514,7 +513,7 @@
 [issues]: https://github.com/unattended-ch/bbbadmin/issues
 [webmin]: https://www.webmin.com/
 [favicon]: icons/favicon.ico
-[about]: icons/about.ico
-[mail]: icons/mail.ico
-[exit]: icons/exit.ico
+[about]: icons/about.png
+[mail]: icons/mail.png
+[exit]: icons/exit.png
 [new]: icons/new.png
