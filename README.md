@@ -423,12 +423,13 @@
 
    - index.php
    ![List meetings](res/bbb_meetings.png)
-   Function|Description
-   --------|-----------
-   [favicon]|Join meeting
-   [about]|Show meeting 
-   [mail]|Send invitation
-   [exit]|Stop meeting
+
+Function|Description
+--------|-----------
+![favicon]|Join meeting
+![about]|Show meeting 
+![mail]|Send invitation
+![exit]|Stop meeting
    [goto TOK](#tok)
 
 <a name="bbb_create.png"></a>
