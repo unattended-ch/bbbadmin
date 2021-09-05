@@ -423,16 +423,10 @@
 
    - index.php
    ![List meetings](res/bbb_meetings.png)
-   ![favicon] - Join meeting
-
-   ![About](icons/about.ico)
-    - Show meeting 
-
-   ![Mail](icons/mail.ico)
-    - Send invitation
-
-   ![Exit](icons/exit.ico)
-    - Stop meeting
+   ![favicon](res/favicon.png) - Join meeting
+   ![About](icons/about.png) - Show meeting 
+   ![Mail](icons/mail.png) - Send invitation
+   ![Exit](icons/exit.png) - Stop meeting
 
    [goto TOK](#tok)
 
