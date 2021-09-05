@@ -427,6 +427,7 @@
       > ![About](icons/about.png) Show meeting 
       > ![Mail](icons/mail.png) Send invitation 
       > ![Exit](icons/exit.png) Stop meeting
+
    [goto TOK](#tok)
 
 <a name="bbb_create.png"></a>
@@ -454,6 +455,7 @@
    ![Recordings](res/bbb_record.png)
       > ![Explorer](icons/explorer.png) View recorded meeting 
       > ![Exit](icons/exit.png) Delete recording 
+
    [goto TOK](#tok)
 
 <a name="bbb_invite.png"></a>
