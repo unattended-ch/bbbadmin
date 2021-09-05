@@ -423,8 +423,8 @@
 
    - index.php
    ![List meetings](res/bbb_meetings.png)
-   ![Favicon](icons/favicon.png) - Join meeting
-
+   ![favicon](icons/favicon.png) - Join meeting
+   ![favicon]
    ![About](icons/about.png) - Show meeting 
 
    ![Mail](icons/mail.png) - Send invitation
@@ -513,4 +513,6 @@
 [about]: icons/about.png
 [mail]: icons/mail.png
 [exit]: icons/exit.png
+[save]: icons/save.png
+
 [new]: icons/new.png
