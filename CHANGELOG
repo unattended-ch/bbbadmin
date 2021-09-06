@@ -29,3 +29,4 @@
 				bbb_invite.php meetingID selection list set to hidden
 				bbb_join.php with displayonly history.back() removed
 				README.md links added some minor fixes
+				Installation shell scripts fixed

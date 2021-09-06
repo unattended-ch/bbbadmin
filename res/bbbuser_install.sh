@@ -8,9 +8,10 @@ pushd $DST
     git clone https://github.com/unattended-ch/bbbadmin $DST/bbbadmin
     git clone https://github.com/bigbluebutton/bigbluebutton-api-php $DST/bigbluebutton-api-php
     # Copy BBB-API to /var/www
-    sudo rsync -avr ~/bigbluebutton-api-php/src/* $WWW/
+    sudo rsync -avr $DST/bigbluebutton-api-php/src/* $WWW/
     # Copy bbbadmin to /var/www
-    sudo rsync --exclude="res/*" --exclude="sql/*" -avr ~/bbbadmin/* $WWW/
+    sudo rsync --exclude="res/*" --exclude="sql/*"  --exclude="releases/*" -avr $DST/bbbadmin/* $WWW/
+    cp $DST/bbbadmin/res/* $WWW/res/
     # Rename bbb_user.php to index.php
     sudo mv -v $WWW/bbb_user.php $WWW/index.php
     # Remove admin modules from page
