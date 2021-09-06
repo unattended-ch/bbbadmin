@@ -34,7 +34,7 @@ pushd $DST
     if [ -f "$APACHE/$WEB" }; then
         sudo rm -f $APACHE
     fi
-    sudo ln -s $WWW /var/www/html/$WEB
+    sudo ln -s $WWW $APACHE
     # Change owner of your page
     sudo chown -R www-data.www-data $WWW
     # Install needed PHP modules for BBB-API
