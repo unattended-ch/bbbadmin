@@ -21,6 +21,7 @@ pushd $DST
     sudo rm -f $WWW/CNAME
     sudo rm -f $WWW/CHANGELOG
     sudo rm -f $WWW/LICENSE
+    sudo rm -f $WWW/icons/*.png
     # Create symbolic link in apache root folder
     if [ -f "$APACHE/$WEB" ]; then
         sudo rm -f $APACHE/$WEB

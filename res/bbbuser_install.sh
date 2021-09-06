@@ -13,7 +13,7 @@ pushd $DST
     if [ ! -d "$WWW/res" ]; then
         sudo mkdir -p $WWW/res
     fi
-    cp $DST/bbbadmin/res/*.json $WWW/res/
+    sudo cp $DST/bbbadmin/res/*.json $WWW/res/
     # Rename bbb_user.php to index.php
     sudo mv -v $WWW/bbb_user.php $WWW/index.php
     # Remove admin modules from page
@@ -30,6 +30,7 @@ pushd $DST
     sudo rm -f $WWW/CNAME
     sudo rm -f $WWW/CHANGELOG
     sudo rm -f $WWW/LICENSE
+    sudo rm -f $WWW/icons/*.png
     # Create symbolic link in apache root folder
     if [ -f "$APACHE/$WEB" ]; then
         sudo rm -f $APACHE
