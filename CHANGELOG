@@ -25,3 +25,4 @@
 0.0.0.7		06.09.2021	bbb_user.php error message for empty username added and style changes
 				bbb_create.php fix DefaultPassword for Moderator button
 				bbb_invite.php meetingID selection list set to hidden
+				README.md links added

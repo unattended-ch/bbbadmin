@@ -97,17 +97,17 @@
    Filename|Description
    --------|-----------
    [bbb_admin.json]|Configuration file for application
-   index.php|Index page for application
-   bbb_config.php|Load configuration
-   bbb_load.php|Loading needed addons and additional scripts
-   bbb_create.php|Create meeting on server
-   bbb_join.php|Join meeting on server
-   bbb_info.php|Display meeting informations
-   bbb_record.php|Show recordings on server
-   bbb_delrec.php|Delete recordings on server
-   bbb_send.php|Send invitation mail to user
-   bbb_stop.php|Stop meeting on server
-   bbb_user.php|Join user to meeting
+   [index.php]|Index page for application
+   [bbb_config.php]|Load configuration
+   [bbb_load.php]|Loading needed addons and additional scripts
+   [bbb_create.php]|Create meeting on server
+   [bbb_join.php]|Join meeting on server
+   [bbb_info.php]|Display meeting informations
+   [bbb_record.php]|Show recordings on server
+   [bbb_delrec.php]|Delete recordings on server
+   [bbb_send.php]|Send invitation mail to user
+   [bbb_stop.php]|Stop meeting on server
+   [bbb_user.php]|Join user to meeting
 
    [goto TOK](#tok)
 
@@ -498,7 +498,17 @@
 [bbbuser_install.sh]: res/bbbuser_install.sh
 [bbb_admin.json]: res/bbb_admin.json
 [bbb_admin.tmpl]: res/bbb_admin.tmpl
+[index.php]: index.php
 [bbb_config.php]: bbb_config.php
+[bbb_load.php]: bbb_load.php
+[bbb_create.php]: bbb_create.php
+[bbb_join.php]: bbb_join.php
+[bbb_info.php]: bbb_info.php
+[bbb_record.php]: bbb_record.php
+[bbb_delrec.php]: bbb_delrec.php
+[bbb_send.php]: bbb_send.php
+[bbb_stop.php]: bbb_stop.php
+[bbb_user.php]: bbb_user.php
 [bbb_lang]: res/locale/
 [bbb_locale]: locale/
 [releases]: releases/
