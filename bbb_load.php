@@ -128,11 +128,14 @@ function ServerSelect($sel1='', $sel2='')
 // Variables   : 
 // Return      : Select list
 //----------------------------------------------------------------------
-function ServerRoomId()
+function ServerRoomId($vis=true)
 {
     $cfg = $GLOBALS['cfg'];
     $UIDD = md5(uniqid(rand(), true));
-    $roomselect = '<select name="meetingIDSel" id="meetingIDSel" class="meeting" onchange="setMetID()">';
+    $visible = '';
+    if ($vis == false)
+        $visible = 'style="visibility: hidden" ';
+    $roomselect = '<select '.$visible.'name="meetingIDSel" id="meetingIDSel" class="meeting" onchange="setMetID()">';
     $sel = 'selected';
     foreach($cfg->rooms as $room) {
         $roomselect = $roomselect . '<option value="'.$room->id.'" '.$sel.'>'.$room->id.'</option>';

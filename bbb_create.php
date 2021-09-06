@@ -14,7 +14,11 @@ use BigBlueButton\BigBlueButton;
 use BigBlueButton\Parameters\CreateMeetingParameters;
 $cfg = $GLOBALS['cfg'];
 $invite = 'https://'.$cfg->invite.'?sid='.$serverid.'&ex=1';
-
+foreach($cfg->access as $val)
+{
+    $moderatorPW = $val;
+    break;
+}
 if(isset($_POST['Submit']))
 {
     $bbb = new BigBlueButton();
@@ -101,7 +105,7 @@ else
             document.getElementById('logoname').setAttribute('value', document.getElementById('logonameSel').value);
         }
         function setModPass() {
-            document.getElementById('moderator_password').setAttribute('value', '<?php echo $GLOBALS["access"][1] ?>');
+            document.getElementById('moderator_password').setAttribute('value', '<?php echo $moderatorPW ?>');
         }
         function setAttPass() {
             var acc = document.getElementById('meetingAccSel').value;

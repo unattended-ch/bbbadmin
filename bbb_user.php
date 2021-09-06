@@ -17,8 +17,8 @@ if (isset($_GET['mID']))
     $meetingID = $_GET['mID'];
 if (isset($_GET['usr']))
     $userName = $_GET['usr'];
-if (isset($_GET['ex']))
-    $exitURL = $_GET['ex'];
+if (isset($_GET['exit']))
+    $exitURL = $_GET['exit'];
 if (isset($_GET['join']))
     $joinDirekt = $_GET['join'];
 require_once('./bbb_load.php');

@@ -360,8 +360,9 @@
    ```sh
      sudo chown -R www-data.www-data /opt/youruserpage
    ```
-8. For configuration you can edit [bbb_admin.json]
-   - You must specify BBB_* Apache environment variables for every server
+8. For configuration you must edit [bbb_admin.json]
+   - Remove all sub sections except server from bbb_admin.son
+   - And you MUST specify BBB_* Apache environment variables for every server
    ```
      SetEnv BBB_SECRET1 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
      SetEnv BBB_SERVER1_BASE_URL https://server1.domain.com/bigbluebutton/

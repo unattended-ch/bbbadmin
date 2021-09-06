@@ -101,6 +101,11 @@ else if (isset($_POST['View']))
     $mailtext = str_replace("<MEETING>", $meeting->meetingName , $mailtext);
     $mailtext = str_replace("<MSG>", $info , $mailtext);
     $mailtext = str_replace("<URL>", $url , $mailtext);
+    $usermail = '<a href="mailto:'.$recipient.'?subject=Meeting ['.$meeting->meetingName.']">'.$recipient.'</a>';
+    if ($userName !== '')
+        $usermail = $usermail . '<br>Direkt link as ['.$userName.']';
+    else
+        $usermail = $usermail . '<br>Link over ['.$srv.']';
 ?>
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
@@ -111,9 +116,11 @@ else if (isset($_POST['View']))
     <body>
     <div id="topChart"><br><br>
     <?php printf('<center><input class="inputbig" type=button value="%s" onclick="javascript:history.back()"></center><br>', lang('BACK')); ?>
-    <center><table border="1" padding="5"><tr><td style="padding: 30px;">
-    <?php Show($mailtext); ?>
-    </td></tr></table><center</div></body></html>
+    <center><table border="1" padding="5">
+
+        <tr><td style="text-align: center;"><?php echo $usermail; ?></td></tr>
+        <tr><td style="padding: 30px;"><?php Show($mailtext); ?></td></tr>
+    </table><center</div></body></html>
 <?php
 }
 else

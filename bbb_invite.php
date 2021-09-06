@@ -55,9 +55,9 @@ else
 		                <td><br><label for="meetingName" id="app_name_label"><?php echo lang('MEETINGNAME'); ?></label></td>
 		                <td><?php printf(ServerRoomName())?><br>
 		                <input type="text" name="meetingName" id="meetingName" size="35"></td></tr><tr>
-		                <td><br><label for="meetingID" id="app_id_label"><?php echo lang('MEETINGID'); ?></label></td>
-		                <td><?php printf(ServerRoomId())?><br>
-		                <input type="text" name="meetingID" id="meetingID" size="35"></td></tr><tr>
+		                <td><label for="meetingID" id="app_id_label"><?php echo lang('MEETINGID'); ?></label></td>
+		                <td><input type="text" name="meetingID" id="meetingID" size="35"></td></tr><tr>
+		                <td colspan="2"><?php printf(ServerRoomId(false))?></td></tr>
 	                        </table></center><br>
 		                <center>
 				    <input class="inputbig" type="submit" name="Submit" value="<?php echo lang('SEND'); ?>"> 
