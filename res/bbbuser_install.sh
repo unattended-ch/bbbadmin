@@ -11,7 +11,10 @@ pushd $DST
     sudo rsync -avr $DST/bigbluebutton-api-php/src/* $WWW/
     # Copy bbbadmin to /var/www
     sudo rsync --exclude="res/*" --exclude="sql/*"  --exclude="releases/*" -avr $DST/bbbadmin/* $WWW/
-    cp $DST/bbbadmin/res/* $WWW/res/
+    if [ ! -d "$WWW/res" }; then
+        sudo mkdir -p $WWW/res
+    fi
+    cp $DST/bbbadmin/res/*.json $WWW/res/
     # Rename bbb_user.php to index.php
     sudo mv -v $WWW/bbb_user.php $WWW/index.php
     # Remove admin modules from page
@@ -23,6 +26,9 @@ pushd $DST
     sudo rm -f $WWW/bbb_record.php
     sudo rm -f $WWW/bbb_stop.php
     # Create symbolic link in apache root folder
+    if [ -f "$APACHE/$WEB" }; then
+        sudo rm -f $APACHE/$WEB
+    fi
     sudo ln -s $WWW /var/www/html/$WEB
     # Change owner of your page
     sudo chown -R www-data.www-data $WWW
