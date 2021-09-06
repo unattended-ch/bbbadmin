@@ -356,7 +356,7 @@
    ```sh
      sudo ln -s /opt/yourpage /var/www/html/
    ```
-7. Set owner of youruserpage to www-data
+7. Set owner of your user page to www-data
    ```sh
      sudo chown -R www-data.www-data /opt/youruserpage
    ```
