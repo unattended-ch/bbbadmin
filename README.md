@@ -159,8 +159,8 @@
    Parameter|Description
    ---------|-----------
    debug|0=Off 1=On
-   refresh|Screen refresh in secords for main page
-   language|en=English, de=German, fr=French other languages are coming
+   refresh|Screen refresh in secords for main and recording page
+   language|en=English, de=German, fr=French other languages are wanted
    email|Admin email for sending invitation links
    invite|URL to users join page for invitations
    copyright|Copyright
@@ -277,7 +277,7 @@
    ```
 5. Create a symbolic link to the apache root folder
    ```sh
-     sudo ln -s /opt/yourpage /var/www/html/yourpage
+     sudo ln -s /opt/yourpage /var/www/html/
    ```
 6. Set owner of yourpage to www-data
    ```sh
@@ -354,7 +354,7 @@
    ```
 6. Create a symbolic link to the apache root folder
    ```sh
-     sudo ln -s /opt/yourpage /var/www/html/youruserpage
+     sudo ln -s /opt/yourpage /var/www/html/
    ```
 7. Set owner of youruserpage to www-data
    ```sh
