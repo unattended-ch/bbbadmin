@@ -407,7 +407,7 @@
        https://server.domain.com?sid=X&mID=XXXXXXXXXXXXXXXXXX[&usr=Username][&join=1]
      ```
      ```
-       If the meeting is running the mask will be displayed
+       If the meeting is running the [index.php](res/bbb_admin.png) will be displayed
        If not, nothing will be diplayed
      ```
 
