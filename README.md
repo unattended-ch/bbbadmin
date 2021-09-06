@@ -402,7 +402,7 @@
      ```
 10. User can now join the meeting with the following parameters (sid and mID is needed the rest is optional) :
      ```
-       https://server.domain.com/bbbuser/index.php?sid=X&mID=XXXXXXXXXXXXXXXXXX[&usr=Username][&join=1]
+       https://server.domain.com/bbbuser/?sid=X&mID=XXXXXXXXXXXXXXXXXX[&usr=Username][&join=1]
      or
        https://server.domain.com?sid=X&mID=XXXXXXXXXXXXXXXXXX[&usr=Username][&join=1]
      ```
