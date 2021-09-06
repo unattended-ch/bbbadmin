@@ -12,7 +12,7 @@ pushd $DST
     sudo rsync -avr $DST/bigbluebutton-api-php/src/* $WWW/
     # Copy bbbadmin to /var/www
     sudo rsync --exclude="res" --exclude="sql"  --exclude="releases" --exclude="build" -avr $DST/bbbadmin/* $WWW/
-    if [ ! -d "$WWW/res" }; then
+    if [ ! -d "$WWW/res" ]; then
         sudo mkdir -p $WWW/res
     fi
     sudo cp $DST/bbbadmin/res/*.json $WWW/res/
@@ -22,7 +22,7 @@ pushd $DST
     sudo rm -f $WWW/CHANGELOG
     sudo rm -f $WWW/LICENSE
     # Create symbolic link in apache root folder
-    if [ -f "$APACHE/$WEB" }; then
+    if [ -f "$APACHE/$WEB" ]; then
         sudo rm -f $APACHE/$WEB
     fi
     sudo ln -s $WWW $APACHE
