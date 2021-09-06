@@ -60,9 +60,9 @@ else if(isset($_POST['Submit']))
         } else {
             printf("Join meeting [%s] [%s]<br>", $userName, $meetingID);
             printf('<script type="text/javascript">window.open( "%s" )</script>', $url);
+            $returl = "./index.php?sid=".$serverid;
+            printf('<script type="text/javascript">location.replace("%s")</script>', $returl);
         }
-        $returl = "./index.php?sid=".$serverid;
-        printf('<script type="text/javascript">location.replace("%s")</script>', $returl);
     } else {
         printf('ERROR : No username specified !');
     }
