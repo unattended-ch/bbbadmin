@@ -177,7 +177,7 @@
    Parameter|Description
    ---------|-----------
    unique id|Unique number for logout URL
-   name|Logout URL for meeting (default invitation url &ex=1)
+   name|Logout URL for meeting (default invitation url &exit=1)
 
 
      "logos":
