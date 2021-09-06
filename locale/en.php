@@ -52,6 +52,7 @@ function lang($phrase)
         'NOSERVER' => 'Server not found !',
         'EMAIL' => 'Email address',
         'SENDMAIL' => 'Send email',
+        'SENDMEETING' => 'Send invitation',
         'SEND' => 'Send',
         'INVITE' => 'Meeting invitation',
         'INVITATION' => 'Invitation',

@@ -22,3 +22,4 @@
 				Language file fr=French added
 0.0.0.6		05.09.2021	Detect browser language during language file loading
 				.htaccess deny *.json files
+0.0.0.7		06.09.2021	bbb_user.php error message for empty username added

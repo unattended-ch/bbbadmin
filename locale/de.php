@@ -52,11 +52,13 @@ function lang($phrase)
         'NOSERVER' => 'Server nicht gefunden !',
         'EMAIL' => 'Email adresse',
         'SENDMAIL' => 'Sende email',
+        'SENDMEETING' => 'Einladung senden',
         'SEND' => 'Senden',
         'INVITE' => 'Sitzungs-Einlandung',
         'INVITATION' => 'Einlandung',
         'SEEYOU' => 'Bis zum nächsten mal...',
         'VIEW' => 'Anzeigen',
+        'DIRECTLINK' => 'Direktverbinden',
         'ERRMAILADR' => 'FEHLER: Keine email Adresse angegeben!',
         'CONNECTIONFAILED' => 'Verbindungsfehler: '
     );

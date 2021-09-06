@@ -48,12 +48,14 @@ function lang($phrase)
         'NOUSER' => 'ERREUR : Aucun nom d`utilisateur spécifié !',
         'EMAIL' => 'Adresse e-mail',
         'SENDMAIL' => 'Envoyer un e-mail',
+        'SENDMEETING' => 'Envoyer une invitation',
         'SEND' => 'Envoyer',
         'INVITE' => 'Invitation de réunion',
         'INVITATION' => 'Invitation',
         'SEEYOU' => 'À la prochaine...',
         'VIEW' => 'Vue',
-        'ERRMAILADR' => 'ERREUR : aucun e-mail spécifié !',
+        'DIRECTLINK' => 'Lien direct',
+        'ERRMAILADR' => 'ERREUR : Aucun e-mail spécifié !',
         'CONNECTIONFAILED' => 'La connexion a échoué: '
     );
     return $lang[$phrase];

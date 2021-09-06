@@ -10,6 +10,7 @@
 //*
 //********************************************************************
 namespace BigBlueButton;
+$exitURL = '';
 if (isset($_GET['sid']))
     $serverid = $_GET['sid'];
 if (isset($_GET['mID']))
@@ -25,24 +26,28 @@ use BigBlueButton\BigBlueButton;
 use BigBlueButton\Parameters\JoinMeetingParameters;
 $server = ServerSelect($sel1, $sel2);
 
+function printMessage($msg)
+{
+    $ret = '<html>';
+    $ret = $ret . '    <head>';
+    $ret = $ret . '        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />';
+    $ret = $ret . '        <title>'.$msg.'</title>';
+    $ret = $ret . '        <link rel="stylesheet" href="css/style.css">';
+    $ret = $ret . '        <link rel="stylesheet" href="css/bootstrap.min.css">';
+    $ret = $ret . '        <script src="js/bootstrap.min.js"></script>';
+    $ret = $ret . '        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">';
+    $ret = $ret . '    </head>';
+    $ret = $ret . '    <body>';
+    $ret = $ret . '<div class="dim" runat="server"><span class="msg"><h1>'.$msg.'</h1></span><br></div>';
+    $ret = $ret . '<center><form action="" method="POST"><br><br><input type="submit" name="Back" value="'.lang('BACK').'" class="bigbutton"/></form></center>';
+    $ret = $ret . '    </body>';
+    $ret = $ret . '</html>';
+    printf($ret);
+}
+
 if ($exitURL !== '')
 {
-?>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <title><?php echo lang('SEEYOU'); ?></title>
-        <link rel="stylesheet" href="css/style.css">
-        <link rel="stylesheet" href="css/bootstrap.min.css">
-        <script src="js/bootstrap.min.js"></script>
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    </head>
-    <body>
-<?php
-    printf('<div class="dim" runat="server"><span class="msg"><h1>%s</h1></span></div>', lang('SEEYOU'));
-?>
-    </body>
-</html>
-<?php
+    printMessage(lang('SEEYOU'));
     die();
 }
 
@@ -79,7 +84,7 @@ if(isset($_GET['Submit']))
         $url = $bbb->getJoinMeetingURL($joinMeetingParams);
         header( "Location: $url" );
     } else {
-        printf(lang('NOUSER'));
+        printMessage(lang('NOUSER'));
     }
 }
 else if(isset($_GET['join']))
@@ -91,7 +96,7 @@ else if(isset($_GET['join']))
         $url = $bbb->getJoinMeetingURL($joinMeetingParams);
         header( "Location: $url" );
     } else {
-        printf(lang('NOUSER'));
+        printMessage(lang('NOUSER'));
     }
 }
 else if(isset($_POST['Submit']))
@@ -104,7 +109,7 @@ else if(isset($_POST['Submit']))
         $url = $bbb->getJoinMeetingURL($joinMeetingParams);
         header( "Location: $url" );
     } else {
-        printf(lang('NOUSER'));
+        printMessage(lang('NOUSER'));
     }
 }
 else

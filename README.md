@@ -429,7 +429,6 @@
       > ![Mail](icons/mail.png) Send invitation 
       > ![Exit](icons/exit.png) Stop meeting
 
-
    [goto TOK](#tok)
 
 <a name="bbb_create.png"></a>

@@ -1,6 +1,7 @@
 #!/bin/bash
 DST=../../locale
 RED=../../README.md
+WWW=/var/www/bbb/locale
 LNG="de fr"
 
 po_trasnlate_readme() {
@@ -24,6 +25,17 @@ po_translate_lang() {
     done
 }
 
+update_www() {
+    if [ -d "$WWW" ]; then
+        for VAR in $LNG; do
+            if [ -f "$VAR.po" ]; then
+                cp -v $DST/$VAR.php $WWW/
+            fi
+        done
+    fi
+}
+
 #po_translate_readme "$LNG"
 po_translate_lang
+update_www
 rm -f *.po~
