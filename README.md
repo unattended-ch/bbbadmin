@@ -383,16 +383,12 @@
         apache_setenv('BBB_SECRET', apache_getenv('BBB_SECRET1'));
         apache_setenv('BBB_SERVER_BASE_URL', apache_getenv('BBB_SERVER1_BASE_URL'));
       replace it with
-        //apache_setenv('BBB_SECRET', apache_getenv('BBB_SECRET1'));
-        //apache_setenv('BBB_SERVER_BASE_URL', apache_getenv('BBB_SERVER1_BASE_URL'));
         $bbb_url  = 'https://domain1.com/bigbluebutton/';
         $bbb_salt = 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
       
         apache_setenv('BBB_SECRET', apache_getenv('BBB_SECRET1'));
         apache_setenv('BBB_SERVER_BASE_URL', apache_getenv('BBB_SERVER1_BASE_URL'));
       replace it with
-        //apache_setenv('BBB_SECRET', apache_getenv('BBB_SECRET2'));
-        //apache_setenv('BBB_SERVER_BASE_URL', apache_getenv('BBB_SERVER2_BASE_URL'));
         $bbb_url  = 'https://domain2.com/bigbluebutton/';
         $bbb_salt = 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
      ```
