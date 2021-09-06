@@ -5,12 +5,11 @@ DST=~
 
 pushd $DST
     # Clone needed repositorys
-    git clone https://github.com/unattended-ch/bbbadmin $DST/bbbadmin
     git clone https://github.com/bigbluebutton/bigbluebutton-api-php $DST/bigbluebutton-api-php
     # Copy BBB-API to /var/www
     sudo rsync -avr $DST/bigbluebutton-api-php/src/* $WWW/
     # Copy bbbadmin to /var/www
-    sudo rsync --exclude="res/*" --exclude="sql/*"  --exclude="releases/*" -avr $DST/bbbadmin/* $WWW/
+    sudo rsync --exclude="res" --exclude="sql" --exclude="releases" --exclude="build" -avr $DST/bbbadmin/* $WWW/
     if [ ! -d "$WWW/res" }; then
         sudo mkdir -p $WWW/res
     fi
@@ -33,7 +32,7 @@ pushd $DST
     sudo rm -f $WWW/LICENSE
     # Create symbolic link in apache root folder
     if [ -f "$APACHE/$WEB" }; then
-        sudo rm -f $APACHE/$WEB
+        sudo rm -f $APACHE
     fi
     sudo ln -s $WWW /var/www/html/$WEB
     # Change owner of your page

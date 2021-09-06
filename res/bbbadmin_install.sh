@@ -11,7 +11,7 @@ pushd $DST
     # Copy BBB-API to /var/www
     sudo rsync -avr $DST/bigbluebutton-api-php/src/* $WWW/
     # Copy bbbadmin to /var/www
-    sudo rsync --exclude="res/*" --exclude="sql/*"  --exclude="releases/*"-avr $DST/bbbadmin/* $WWW/
+    sudo rsync --exclude="res" --exclude="sql"  --exclude="releases" --exclude="build" -avr $DST/bbbadmin/* $WWW/
     if [ ! -d "$WWW/res" }; then
         sudo mkdir -p $WWW/res
     fi
@@ -25,7 +25,7 @@ pushd $DST
     if [ -f "$APACHE/$WEB" }; then
         sudo rm -f $APACHE/$WEB
     fi
-    sudo ln -s $WWW $APACHE/$WEB
+    sudo ln -s $WWW $APACHE
     # Change owner of your page
     sudo chown -R www-data.www-data $WWW
     # Install needed PHP modules for BBB-API
