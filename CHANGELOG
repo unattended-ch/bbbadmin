@@ -27,5 +27,5 @@
 				bbb_user.php center error messsages on line
 				bbb_create.php fix DefaultPassword for Moderator button
 				bbb_invite.php meetingID selection list set to hidden
-				bbb_join.php with displayonly set return link removed
+				bbb_join.php with displayonly history.back() removed
 				README.md links added some minor fixes
