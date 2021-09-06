@@ -21,10 +21,16 @@ pushd $DST
     sudo rm -f $WWW/bbb_create.php
     sudo rm -f $WWW/bbb_delrec.php
     sudo rm -f $WWW/bbb_index.php
+    sudo rm -f $WWW/bbb_invite.php
     sudo rm -f $WWW/bbb_info.php
     sudo rm -f $WWW/bbb_join.php
     sudo rm -f $WWW/bbb_record.php
+    sudo rm -f $WWW/bbb_send.php
     sudo rm -f $WWW/bbb_stop.php
+    sudo rm -f $WWW/*.md
+    sudo rm -f $WWW/CNAME
+    sudo rm -f $WWW/CHANGELOG
+    sudo rm -f $WWW/LICENSE
     # Create symbolic link in apache root folder
     if [ -f "$APACHE/$WEB" }; then
         sudo rm -f $APACHE/$WEB
