@@ -9,7 +9,8 @@
 //********************************************************************
 namespace BigBlueButton;
 $serverid = $_GET['sid'];
-$meetingID = $_GET['mID'];
+//if (isset($_GET['mID']))
+    $meetingID = $_GET['mID'];
 require_once('./bbb_load.php');
 use BigBlueButton\BigBlueButton;
 use BigBlueButton\Parameters\JoinMeetingParameters;
@@ -17,34 +18,24 @@ $userName = $_GET['userName'];
 $meetingName = $_GET['meetingName'];
 $moderator_password = $_GET['moderator_password'];
 $attendee_password = $_GET['attendee_password'];
+$bbb = new BigBlueButton();
 if(isset($_GET['Submit']))
 {
-    $bbb = new BigBlueButton();
-
-    $userName = $_GET['userName'];
-    $meetingID = $_GET['meetingID'];
-    $moderator_password = $_GET['moderator_password'];
-    $attendee_password = $_GET['attendee_password'];
-
     if ($userName !== '') {
         $joinMeetingParams = new JoinMeetingParameters($meetingID, $userName, $moderator_password);
         $joinMeetingParams->setRedirect(true);
         $url = $bbb->getJoinMeetingURL($joinMeetingParams);
         printf("Join meeting [%s] [%s]<br>", $meetingName, $meetingID);
         printf('<br><a href="'.$url.'" target="_blank">'.$url.'</a>');
-        printf('<script type="text/javascript">window.open( "%s" )</script>', $url);
+        //printf('<script type="text/javascript">window.open( "%s" )</script>', $url);
         $returl = "./index.php?sid=".$serverid;
-        printf('<script type="text/javascript">location.replace("%s")</script>', $returl);
+        //printf('<script type="text/javascript">location.replace("%s")</script>', $returl);
     } else {
         printf('ERROR : No username specified !');
     }
 }
 else if(isset($_POST['Submit']))
 {
-    $bbb = new BigBlueButton();
-
-    $userName = $_POST['userName'];
-    $meetingID = $_POST['meetingID'];
     $asmoderator = $_POST['asmoderator'];
     $displayonly = $_POST['displayonly'];
     $join_password = $attendee_password;
