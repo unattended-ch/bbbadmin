@@ -417,7 +417,7 @@
    [goto TOK](#tok)
 
 ## CURL TIMEOUT
-     If get a lot curl errrors change the following settings in [BigBlueButton.php]
+     If get a lot curl errrors, change the following lines in [BigBlueButton.php]
    ```
             $data = curl_exec($ch);
             if ($data === false) {
