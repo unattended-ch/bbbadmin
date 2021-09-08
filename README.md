@@ -76,7 +76,7 @@
    * 	Detect client browser language or set default to "en"
 
    ![New](icons/new.png)
-   * 	Now it's on you to make [issues] or participate on [discussion]
+   * 	Final release, now it's on you to make [issues] or participate on [discussion] 
 
    [goto TOK](#tok)
 
