@@ -6,7 +6,7 @@
 [![PHP 7.4](https://img.shields.io/badge/php-7.4-9c9.svg?style=flat-square)](https://php.net/)
 [![PHP 7.4](https://img.shields.io/badge/php-8.0-9c9.svg?style=flat-square)](https://php.net/)
 #### [[BigBlueButton Homepage][bbb]] [[BigBlueButton PHP API][bbbapi]]
-#### [[Discussion][discuss]] [[Changelog][changelog]]
+#### [[Discussion][discussion]] [[Changelog][changelog]]
 
 <a name="tok"></a>
 
@@ -76,7 +76,7 @@
    * 	Detect client browser language or set default to "en"
 
    ![New](icons/new.png)
-   * 	Now it's on you to make [issues] or participate on [discuss]
+   * 	Now it's on you to make [issues] or participate on [discussion]
 
    [goto TOK](#tok)
 
@@ -484,10 +484,10 @@
 
    1. Enjoy
    2. Display 1st page of presentation as background on users join page (would be nice...and i am willing)
-   3. Create download location for .MP4 meeting recording files in BBB (a lot of scripts...but i [need help][discuss])
+   3. Create download location for .MP4 meeting recording files in BBB (a lot of scripts...but i [need help][discussion])
    4. Create cron srcipt to start meeting in timely fashion for a specific time period (we need this really ?)
 
-   - You can take part of [discussion][discuss]
+   - You can take part of [discussion][discussiom]
    - Or you can send us [issue reports][issues]
 
    [goto TOK](#tok)
@@ -516,7 +516,7 @@
 [bbbapi]: https://github.com/bigbluebutton/bigbluebutton-api-php
 [.htaccess]: res/.htaccess
 [style.css]: css/style.css
-[discuss]: https://github.com/unattended-ch/bbbadmin/discussions
+[discussion]: https://github.com/unattended-ch/bbbadmin/discussions
 [issues]: https://github.com/unattended-ch/bbbadmin/issues
 [webmin]: https://www.webmin.com/
 [favicon]: icons/favicon.ico
