@@ -34,6 +34,7 @@
         <li><a href="#installation-user-frontend">Installation User Frontend</a></li>
         <li><a href="#htpasswd">User access security with .htpasswd</a></li>
         <li><a href="#workaround">Workaround for hostings without apache_setenv()</a></li>
+        <li><a href="#curl-timeout">Workaround curl timeout url not reached</a></li>
         <li><a href="#language-support">Language support</a></li>
         <li><a href="#styling">Styling with bootstrap.css</a></li>
       </ul></li>
@@ -412,6 +413,38 @@
        If the meeting is running the mask for username will be displayed
        If not, nothing will be diplayed
      ```
+
+   [goto TOK](#tok)
+
+## CURL TIMEOUT
+     If get a lot curl errrors change the following settings in [BigBlueButton.php]
+   ```
+            $data = curl_exec($ch);
+            if ($data === false) {
+                throw new \RuntimeException('Unhandled curl error: ' . curl_error($ch));
+            }
+   ```
+     Replace with
+   ```
+            $retry = 3;
+            $attempts = 0;
+            do {
+                try
+                    {
+                        $data = curl_exec($ch);
+                    }
+                catch (Exception $e)
+                    {
+                        $attempts++;
+                        sleep(1);
+                        continue;
+                    }
+                } while(($attempts < $retry) || (($data === true)));
+                if ($data === false) {
+                    throw new \RuntimeException('Unhandled curl error: ' . curl_error($ch));
+                }
+            }
+   ```
 
    [goto TOK](#tok)
 
