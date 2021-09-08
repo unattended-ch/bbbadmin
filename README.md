@@ -6,7 +6,7 @@
 [![PHP 7.4](https://img.shields.io/badge/php-7.4-9c9.svg?style=flat-square)](https://php.net/)
 [![PHP 7.4](https://img.shields.io/badge/php-8.0-9c9.svg?style=flat-square)](https://php.net/)
 #### [[BigBlueButton Homepage][bbb]] [[BigBlueButton PHP API][bbbapi]]
-#### [[Discussion][bbbadmin_discuss]] [[Changelog][changelog]]
+#### [[Discussion][discuss]] [[Changelog][changelog]]
 
 <a name="tok"></a>
 
@@ -73,9 +73,10 @@
    * 	Use JSON as configuration file
    * 	Create your own debian packages
    * 	Create your own language files
+   * 	Detect client browser language or set default to "en"
 
    ![New](icons/new.png)
-   * 	Detect client browser language or set default to "en"
+   * 	Now it's on you to make [issues] or participate on [discuss]
 
    [goto TOK](#tok)
 
@@ -511,7 +512,6 @@
 [releases]: releases/
 [changelog]: CHANGELOG
 [bbb_build.sh]: build/bbb_build.sh
-[bbbadmin_discuss]: https://github.com/unattended-ch/bbbadmin/discussions
 [bbb]: https://bigbluebutton.org/
 [bbbapi]: https://github.com/bigbluebutton/bigbluebutton-api-php
 [.htaccess]: res/.htaccess
