@@ -36,6 +36,7 @@ if(isset($_GET['Submit']))
 }
 else if(isset($_POST['Submit']))
 {
+    $userName = $_POST['userName'];
     $asmoderator = $_POST['asmoderator'];
     $displayonly = $_POST['displayonly'];
     $join_password = $attendee_password;
