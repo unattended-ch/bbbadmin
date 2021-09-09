@@ -415,6 +415,8 @@
      ```
      ```
        If the meeting is running the mask for username will be displayed
+     ```
+     ```
        If not, nothing will be diplayed
      ```
 
