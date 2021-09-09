@@ -413,12 +413,8 @@
      or
        https://server.domain.com?sid=X&mID=XXXXXXXXXXXXXXXXXX[&usr=Username][&join=1]
      ```
-     ```
-       If the meeting is running the mask for username will be displayed
-     ```
-     ```
-       If not, nothing will be diplayed
-     ```
+   - If the meeting is running the mask for username will be displayed
+   - If not, nothing will be diplayed
 
    [goto TOK](#tok)
 
