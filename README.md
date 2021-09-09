@@ -31,6 +31,7 @@
         <li><a href="#installation-scripts">Installation Scripts</a></li>
         <li><a href="#installation-admin-frontend">Installation Admin Frontend</a></li>
         <li><a href="#htpasswd">Admin access security with .htpasswd</a></li>
+        <li><a href="#popups">Allow popup winows for bbbadmin</a></li>
         <li><a href="#installation-user-frontend">Installation User Frontend</a></li>
         <li><a href="#htpasswd">User access security with .htpasswd</a></li>
         <li><a href="#workaround">Workaround for hostings without apache_setenv()</a></li>
@@ -322,6 +323,9 @@
    ```sh
      sudo systemctl restart apache2
    ```
+9. Firefox allow bbbadmin for popup windows
+   <a name="popups"></a>
+   - Enable popup windows for bbbadmin (see Popup blocker[][popupblocker]
 
    [goto TOK](#tok)
 
@@ -557,5 +561,5 @@
 [mail]: icons/mail.png
 [exit]: icons/exit.png
 [save]: icons/save.png
-
+[popupblocker]: https://support.mozilla.org/en-US/kb/pop-blocker-settings-exceptions-troubleshooting
 [new]: icons/new.png
