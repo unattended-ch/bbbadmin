@@ -410,7 +410,7 @@
 10. User can now join the meeting with the following parameters (sid and mID is needed the rest is optional) :
      ```
        https://server.domain.com/bbbuser/?sid=X&mID=XXXXXXXXXXXXXXXXXX[&usr=Username][&join=1]
-     or
+   or
        https://server.domain.com?sid=X&mID=XXXXXXXXXXXXXXXXXX[&usr=Username][&join=1]
      ```
    - If the meeting is running the mask for username will be displayed
