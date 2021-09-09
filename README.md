@@ -325,7 +325,7 @@
    ```
 9. Firefox allow bbbadmin for popup windows
    <a name="popups"></a>
-   - Enable popup windows for bbbadmin (see Popup blocker][popupblocker]
+   - Enable popup windows for bbbadmin (see [popupblocker])
 
    [goto TOK](#tok)
 
