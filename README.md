@@ -323,7 +323,7 @@
    ```sh
      sudo systemctl restart apache2
    ```
-9. Firefox allow bbbadmin for popup windows
+9. Firefox allow bbbadmin for popup windows to join meeting in new window
    <a name="popups"></a>
    - Enable popup windows for bbbadmin (see [popupblocker])
 
