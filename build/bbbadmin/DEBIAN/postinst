@@ -7,6 +7,7 @@ SRC=~
 NAM=bbbadmin
 DST=/opt
 DEST=$DST/$NAM
+WWW=/var/www/html
 USR=www-data
 TMPCONF=/$SUDO_USER/bbb_admin.json
 
@@ -18,11 +19,12 @@ change_owner() {
 }
 
 # Create symbolic link if not exists
-if [ -d "$DST/html" ]; then
-    if [ -f "$DST/html/$NAM" ]; then
-        rm -f $DEST /var/www/html/$NAM
+if [ -d "$WWW" ]; then
+    echo "Setting symbolic link [$WWW/$NAM]"
+    if [ -f "$WWW/$NAM" ]; then
+        rm -f $WWW/$NAM
     fi
-    ln -vs $DEST /var/www/html/$NAM
+    ln -s $DEST $WWW/
 fi
 
 # Set user rights to $USR

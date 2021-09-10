@@ -57,7 +57,7 @@ if(isset($_POST['Submit']))
         $createMeetingParams->setAllowStartStopRecording(true);
         $createMeetingParams->setAutoStartRecording(false);
     }
-    $createMeetingParams->setCopyright($GLOBALS['copyright']);
+    $createMeetingParams->setCopyright($cfg->copyright);
 
     $response = $bbb->createMeeting($createMeetingParams);
     if ($response->getReturnCode() == 'FAILED') {

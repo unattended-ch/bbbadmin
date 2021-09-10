@@ -2,6 +2,8 @@
 DT=$(date +%Y%m%d_%H%M)
 SRC=../res/locale
 DST=../locale
+REPO=/media/master/repo
+RASPI=/media/master/raspi
 USR=$USER
 LNG="de fr"
 SRC=.
@@ -13,6 +15,15 @@ cleanup() {
     DST=$SRC/$PAK
     rm -rf $DST/opt
     rm -f $DST/DEBIAN/md5sums
+}
+
+copy_repository() {
+    if [ -d "$REPO" ]; then
+        sudo cp -v $1 $REPO/
+    fi
+    if [ -d "$RASPI" ]; then
+        sudo cp -v $1 $RASPI/
+    fi
 }
 
 createPackage() {
@@ -45,9 +56,9 @@ createPackage() {
     rm -f  $DST/opt/$PAK/.gitignore
     rm -f  $DST/opt/$PAK/*.md
     rm -f  $DST/opt/$PAK/CHANGELOG
-    cp $SRC/../res/bbb_admin.json $DST/opt/$PAK/res/
     cp $SRC/../res/*.tmpl $DST/opt/$PAK/res/
     if [ "$PAK" == "bbbusers" ]; then
+        cp $SRC/../res/bbb_users.json $DST/opt/$PAK/res/bbb_admin.json
         rm -f $DST/opt/$PAK/index.php
         rm -f $DST/opt/$PAK/bbb_create.php
         rm -f $DST/opt/$PAK/bbb_delrec.php
@@ -59,6 +70,8 @@ createPackage() {
         rm -f $DST/opt/$PAK/bbb_send.php
         rm -f $DST/opt/$PAK/bbb_stop.php
         mv -v $DST/opt/$PAK/bbb_user.php $DST/opt/$PAK/index.php
+    else
+        cp $SRC/../res/bbb_admin.json $DST/opt/$PAK/res/
     fi
     pushd $DST
         rm -f ./DEBIAN/md5sums
@@ -73,6 +86,7 @@ createPackage() {
         sha256sum ${PAK}_$FILEVERSION-generic.deb > ${PAK}_$FILEVERSION-generic.deb.sha256
     popd
     sudo chown $USR.$USR $DST/* -R
+    copy_repository "$SRC/../releases/${PAK}_$FILEVERSION-generic.deb"
     cleanup "$PAK"
 }
 
