@@ -50,7 +50,7 @@ if ($response->getReturnCode() == 'SUCCESS') {
 }
 else
 {
-    printf("%s<br>", $response->getMessage());
+    die(sprintf("%s<br>", $response->getMessage()));
 }
 ?>
 <html xmlns="http://www.w3.org/1999/xhtml">

@@ -32,3 +32,4 @@
 				Installation shell scripts fixed
 0.0.0.8		08.09.2021	Final release
 		09.09.2021	README.md minor changes
+		10.09.2021	PHP API getReturnCode()=FAILED show message and die

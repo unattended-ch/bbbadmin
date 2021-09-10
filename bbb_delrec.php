@@ -24,7 +24,7 @@ if ($response->getReturnCode() == 'SUCCESS') {
 }
 else
 {
-    printf("%s<br>", $response->getMessage());
+    die(sprintf("%s<br>", $response->getMessage()));
 }
 header('Location: ' . $_SERVER['HTTP_REFERER']);
 ?>

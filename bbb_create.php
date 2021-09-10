@@ -61,7 +61,7 @@ if(isset($_POST['Submit']))
 
     $response = $bbb->createMeeting($createMeetingParams);
     if ($response->getReturnCode() == 'FAILED') {
-        printf("%s<br>", $response->getMessage());
+        die(sprintf("%s<br>", $response->getMessage()));
     } else {
         printf("%s<br>", $response->getMessage());
     }

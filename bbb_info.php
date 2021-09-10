@@ -24,7 +24,7 @@ if(isset($_GET['Submit']))
     $response = $bbb->getMeetingInfo($getMeetingInfoParams);
     if ($response->getReturnCode() == 'FAILED') {
         // meeting not found or already closed
-        printf("%s<br>", $response->getMessage());
+        die(sprintf("%s<br>", $response->getMessage()));
     } else {
         // process $response->getRawXml();
         $meeting = $response->getRawXml();
