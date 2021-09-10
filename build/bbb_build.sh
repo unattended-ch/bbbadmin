@@ -26,6 +26,13 @@ copy_repository() {
     fi
 }
 
+sign_package() {
+    DEFAULTKEY=$(gpg --list-secret-key | sed -n 4p | tr -d '[:space:]')
+    dpkg-sig --batch --gpg-options "--pinentry-mode loopback" -k "$DEFAULTKEY" --sign builder $1
+    dpkg-sig --verify $1
+    gpg --list-secret-keys
+}
+
 createPackage() {
     PAK=$1
     DST=$SRC/$PAK
@@ -86,6 +93,7 @@ createPackage() {
         sha256sum ${PAK}_$FILEVERSION-generic.deb > ${PAK}_$FILEVERSION-generic.deb.sha256
     popd
     sudo chown $USR.$USR $DST/* -R
+    #sign_package "$SRC/../releases/${PAK}_$FILEVERSION-generic.deb"
     copy_repository "$SRC/../releases/${PAK}_$FILEVERSION-generic.deb"
     cleanup "$PAK"
 }
