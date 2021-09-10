@@ -68,7 +68,7 @@ if(isset($_POST['Submit']))
 
     $url = './bbb_join.php?sid='.$serverid;
     $url = $url . '&mID='.$meetingID;
-    $url = $url . '&userName=Automatix';
+    $url = $url . '&userName='.$cfg->moderator;
     $url = $url . '&moderator_password='.$moderator_password;
     $url = $url . '&attendee_password='.$attendee_password;
     $url = $url . '&Submit=send';

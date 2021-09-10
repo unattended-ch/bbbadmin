@@ -7,7 +7,7 @@
 //* Copyright (c) 2021 Automatix  All rights reserved.
 //*
 //********************************************************************
-$version = "0.0.0.8";
+$version = "0.0.0.9";
 require_once('./BigBlueButton.php');
 require_once('./Core/ApiMethod.php');
 require_once('./Exceptions/BadResponseException.php');
@@ -44,7 +44,8 @@ require_once('./Responses/SetConfigXMLResponse.php');
 require_once('./Responses/UpdateRecordingsResponse.php');
 require_once('./Util/UrlBuilder.php');
 require_once('./bbb_config.php');
-$language = BrowserLanguage();
+if ($cfg->browserlang == '1')
+    $language = BrowserLanguage();
 if (!isset($language))
     $language='en';
 if (file_exists('./locale/'.$language.'.php'))

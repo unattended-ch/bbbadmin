@@ -2,6 +2,8 @@
     "debug": "1",
     "refresh": "60",
     "language": "en",
+    "browserlang": "1",
+    "moderator": "Username",
     "email": "bbbadmin@domain.com",
     "invite": "https://room.domain.com",
     "copyright": "© 2021 unattended.ch",
