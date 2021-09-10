@@ -89,7 +89,10 @@ else if (isset($_POST['View']))
         $url =  $url . '&usr='. $userName;
     }
     if (isset($_POST['direktLink']) && ($_POST['direktLink'] == 'yes') && ($userName !== ''))
+    {
         $url = $url . '&join='.$_POST['direktLink'];
+        $direkt = true;
+    }
     $recipient = $_POST['emailAddress'];
     $subject = "Meeting [".$meeting->meetingName."] ". $info;
     $header  = "MIME-Version: 1.0\r\n";
@@ -102,10 +105,10 @@ else if (isset($_POST['View']))
     $mailtext = str_replace("<MSG>", $info , $mailtext);
     $mailtext = str_replace("<URL>", $url , $mailtext);
     $usermail = '<a href="mailto:'.$recipient.'?subject=Meeting ['.$meeting->meetingName.']">'.$recipient.'</a>';
-    if ($userName !== '')
-        $usermail = $usermail . '<br>Direkt link as ['.$userName.']';
+    if ($direkt)
+        $usermail = $usermail . '<br>Join meeting as ['.$userName.']';
     else
-        $usermail = $usermail . '<br>Link over ['.$srv.']';
+        $usermail = $usermail . '<br>Join over ['.$srv.']';
 ?>
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>

@@ -17,6 +17,11 @@ if (!isset($serverid))
 require_once('./bbb_load.php');
 $server = ServerSelect($sel1, $sel2);
 $cfg = $GLOBALS['cfg'];
+$refresh = $cfg->refresh;
+if ($refresh == '' )
+    $refresh = '360';
+if ((int)$refresh < 30)
+    $refresh = '30';
 
 try {
         $bbb = new BigBlueButton();
@@ -33,7 +38,7 @@ finally
 <head>
     <title>BBB Admin <?php printf($copyright); ?></title>
     <link rel="stylesheet" href="css/style.css">
-    <meta http-equiv="refresh" content="<?php printf($cfg->refresh); ?>">
+    <meta http-equiv="refresh" content="<?php printf($refresh); ?>">
 </head>
 <body>
 <div id="topStats">
