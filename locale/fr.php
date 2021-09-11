@@ -56,6 +56,7 @@ function lang($phrase)
         'VIEW' => 'Vue',
         'DIRECTLINK' => 'Lien direct',
         'ERRMAILADR' => 'ERREUR : Aucun e-mail spécifié !',
+        'REFRESH' => 'Rafraîchir',
         'CONNECTIONFAILED' => 'La connexion a échoué: '
     );
     return $lang[$phrase];

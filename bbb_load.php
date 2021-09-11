@@ -278,12 +278,14 @@ function LinkFunctions($mode='0', $serverid, $meeting)
         $create = './bbb_create.php?sid='.$serverid;
         $invite = './bbb_invite.php?sid='.$serverid;
         $recs = './bbb_record.php?sid='.$serverid;
+        $refresh = './index.php?sid='.$serverid;
         if (file_exists('./bbb_create.php'))
             $functions = '<a href="'.$create.'" class="button"><button class="bigbutton">'.lang('CREATEMEETING').'</button></a>';
         if (file_exists('./bbb_invite.php'))
             $functions = $functions . ' <a href="'.$invite.'" class="button"><button class="bigbutton">'.lang('INVITATION').'</button></a>';
         if (file_exists('./bbb_record.php'))
             $functions = $functions . ' <a href="'.$recs.'"><button class="bigbutton">'.lang('RECORDINGS').'</button></a>';
+        $functions = $functions . ' <a href="'.$refresh.'"><button class="bigbutton">'.lang('REFRESH').'</button></a>';
     }
     return $functions;
 }

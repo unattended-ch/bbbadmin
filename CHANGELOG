@@ -37,3 +37,4 @@
 				bbb_admin.json "moderator": "Username", for bbb_create.php added
 				bbb_admin.json "browserlang": "0|1", for bbb_load.php added
 				bbb_build.sh postint symbolic link creation fixed
+0.0.0.10	11.09.2021	index.php html refresh removed and refresh button added

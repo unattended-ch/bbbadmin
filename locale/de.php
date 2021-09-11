@@ -60,6 +60,7 @@ function lang($phrase)
         'VIEW' => 'Anzeigen',
         'DIRECTLINK' => 'Direktverbinden',
         'ERRMAILADR' => 'FEHLER: Keine email Adresse angegeben!',
+        'REFRESH' => 'Aktualisieren',
         'CONNECTIONFAILED' => 'Verbindungsfehler: '
     );
     return $lang[$phrase];

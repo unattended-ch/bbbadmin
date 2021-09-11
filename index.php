@@ -38,7 +38,7 @@ finally
 <head>
     <title>BBB Admin <?php printf($copyright); ?></title>
     <link rel="stylesheet" href="css/style.css">
-    <meta http-equiv="refresh" content="<?php printf($refresh); ?>">
+    <!-- <meta http-equiv="refresh" content="<?php printf($refresh); ?>"> -->
 </head>
 <body>
 <div id="topStats">

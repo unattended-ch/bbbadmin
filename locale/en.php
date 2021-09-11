@@ -60,6 +60,7 @@ function lang($phrase)
         'VIEW' => 'View',
         'DIRECTLINK' => 'Direct link',
         'ERRMAILADR' => 'ERROR: No email specified !',
+        'REFRESH' => 'Refresh',
         'CONNECTIONFAILED' => 'Connection failed: '
     );
     return $lang[$phrase];
