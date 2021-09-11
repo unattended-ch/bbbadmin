@@ -523,7 +523,7 @@
    3. Create download location for .MP4 meeting recording files in BBB (a lot of scripts...but i [need help][discussion])
    4. Create cron srcipt to start meeting in timely fashion for a specific time period (we need this really ?)
 
-   - You can take part of [discussion][discussiom]
+   - You can take part of [discussion][discussion]
    - Or you can send us [issue reports][issues]
 
    [goto TOK](#tok)
