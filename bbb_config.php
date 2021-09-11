@@ -7,10 +7,7 @@
 //* Copyright (c) 2021 Automatix  All rights reserved.
 //*
 //********************************************************************
-global $cfg;
-    $debug = '1';
-    $cfg['debug'] = '1';
-
+    global $cfg;
     $cfg = LoadConfigFile();
     $language = $cfg->language;
     //

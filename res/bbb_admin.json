@@ -1,8 +1,7 @@
 {
     "debug": "1",
-    "refresh": "60",
     "language": "en",
-    "browserlang": "1",
+    "browserlang": "0",
     "moderator": "Username",
     "email": "bbbadmin@domain.com",
     "invite": "https://room.domain.com",
