@@ -398,16 +398,8 @@
         $bbb_url  = 'https://domain2.com/bigbluebutton/';
         $bbb_salt = 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
      ```
-   9.3 Edit [BigBlueButton.php]
-     ```
-        $this->securitySecret   = $secret ?: getenv('BBB_SECRET') ?: getenv('BBB_SECURITY_SALT');
-        $this->bbbServerBaseUrl = $baseUrl ?: getenv('BBB_SERVER_BASE_URL');
-      replace it with
-        //$this->securitySecret   = $secret ?: getenv('BBB_SECRET') ?: getenv('BBB_SECURITY_SALT');
-        //$this->bbbServerBaseUrl = $baseUrl ?: getenv('BBB_SERVER_BASE_URL');
-     ```
 <a name="userurl"></a>
-10. User can now join the meeting with the following parameters (sid and mID is needed the rest is optional) :
+   10. User can now join the meeting with the following parameters (sid and mID is needed the rest is optional) :
      ```
        https://server.domain.com/bbbuser/?sid=X&mID=XXXXXXXXXXXXXXXXXX[&usr=Username][&join=1]
      ```
