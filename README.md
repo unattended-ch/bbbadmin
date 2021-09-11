@@ -367,7 +367,7 @@
      sudo chown -R www-data.www-data /opt/youruserpage
    ```
 8. For configuration you must edit [bbb_admin.json]
-   - Remove all sub sections except "server": from bbb_admin.son
+   - Remove all sub sections except "server": from bbb_admin.json
    - And you MUST specify BBB_* Apache environment variables for every server
    ```
      SetEnv BBB_SECRET1 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
@@ -376,12 +376,12 @@
      SetEnv BBB_SERVER2_BASE_URL https://server2.domain.com/bigbluebutton/
    ```
 <a name="workaround"></a>
-9. Workaround for servers with no apache_setenv() and apache_getenv() support
+9. Servers with no apache_setenv() and apache_getenv() support edit [bbb_admin.json]
 
     - Edit section "bbb":
 
-<a name="userurl"></a>
 10. User can now join the meeting with the following parameters (sid and mID is needed the rest is optional) :
+<a name="userurl"></a>
      ```
        https://server.domain.com/bbbuser/?sid=X&mID=XXXXXXXXXXXXXXXXXX[&usr=Username][&join=1]
      ```
