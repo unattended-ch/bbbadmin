@@ -8,7 +8,7 @@
 #### [[BigBlueButton Homepage][bbb]] [[BigBlueButton PHP API][bbbapi]]
 #### [[Discussion][discussion]] [[Issues][issues]] [[Changelog][changelog]]
 
-<a name="tok"></a>
+<a name="toc"></a>
 
 <!-- TABLE OF CONTENTS -->
 <details open="open">
@@ -80,7 +80,7 @@
    ![New](icons/new.png)
    * 	Final release, now it's on you to make [issues] or participate on [discussion] 
 
-   [goto TOC](#tok)
+   [goto TOC](#toc)
 
 ## OPTIONS
 
@@ -93,7 +93,7 @@
    * Show recordings
    * Delete recordings
 
-   [goto TOC](#tok)
+   [goto TOC](#toc)
 
 ## PHP FILES
 
@@ -112,7 +112,7 @@
    [bbb_stop.php]|Stop meeting on server
    [bbb_user.php]|Join user to meeting
 
-   [goto TOC](#tok)
+   [goto TOC](#toc)
 
 ## CONFIGURATION FILES
 
@@ -124,7 +124,7 @@
 
 - Access password file [.htpasswd]
 
-   [goto TOC](#tok)
+   [goto TOC](#toc)
 
 ## CONFIGURATION
 
@@ -206,7 +206,7 @@
    acc|Room password for BigBlueButton
 
 
-   [goto TOC](#tok)
+   [goto TOC](#toc)
 
 ## LANGUAGE SUPPORT
 
@@ -219,19 +219,19 @@
 
 - See [locale/][bbb_locale] for translated .PHP files
 
-   [goto TOC](#tok)
+   [goto TOC](#toc)
 
 ## STYLING
 
 - Use bootstrap.css for styling of bbb_user.php
 
-   [goto TOC](#tok)
+   [goto TOC](#toc)
 
 ## RELEASES
 
 - See [releases] for more informations
 
-   [goto TOC](#tok)
+   [goto TOC](#toc)
 
 ## DEBIAN PACKAGES
 
@@ -239,7 +239,7 @@
 
 - Use [bbb_build.sh] for package creation
 
-   [goto TOC](#tok)
+   [goto TOC](#toc)
 
 ## INSTALLATION SCRIPTS
 
@@ -249,7 +249,7 @@
 
 - Or you can use our debian packages in [releases]
 
-   [goto TOC](#tok)
+   [goto TOC](#toc)
 
 ## PREREQUISITES
 
@@ -258,7 +258,7 @@
      sudo apt install php-curl php-mbstring php-xml php-intl -y
    ```
 
-   [goto TOC](#tok)
+   [goto TOC](#toc)
 
 ## INSTALLATION ADMIN FRONTEND
 
@@ -327,7 +327,7 @@
    <a name="popups"></a>
    - Enable popup windows for bbbadmin (see [popupblocker])
 
-   [goto TOC](#tok)
+   [goto TOC](#toc)
 
 ## INSTALLATION USER FRONTEND
 
@@ -417,7 +417,7 @@
    - If the meeting is running the mask for username will be displayed
    - If not, nothing will be diplayed
 
-   [goto TOC](#tok)
+   [goto TOC](#toc)
 
 ## CURL TIMEOUT
      If you get a lot curl errrors, change the following lines in [BigBlueButton.php]
@@ -449,13 +449,13 @@
             }
    ```
 
-   [goto TOC](#tok)
+   [goto TOC](#toc)
 
 ## SCREENSHOTS
 <a name="bbb_index.png"></a>
    - index.php
    ![Home page](res/bbb_index.png)
-   [goto TOC](#tok)
+   [goto TOC](#toc)
 
    - index.php
    ![List meetings](res/bbb_meetings.png)
@@ -464,27 +464,27 @@
       > ![Mail](icons/mail.png) Send invitation 
       > ![Exit](icons/exit.png) Stop meeting
 
-   [goto TOC](#tok)
+   [goto TOC](#toc)
 
 <a name="bbb_create.png"></a>
    - bbb_create.php
    ![Create meeting](res/bbb_create.png)
-   [goto TOC](#tok)
+   [goto TOC](#toc)
 
 <a name="bbb_join.png"></a>
    - bbb_join.php
    ![Join meeting](res/bbb_join.png)
-   [goto TOC](#tok)
+   [goto TOC](#toc)
 
 <a name="bbb_info.png"></a>
    - bbb_info.php
    ![Meeting info](res/bbb_info.png)
-   [goto TOC](#tok)
+   [goto TOC](#toc)
 
 <a name="bbb_stop.png"></a>
    - bbb_stop.php
    ![Stp meeting](res/bbb_stop.png)
-   [goto TOC](#tok)
+   [goto TOC](#toc)
 
 <a name="bbb_record.png"></a>
    - bbb_record.php
@@ -493,27 +493,27 @@
       > ![Exit](icons/exit.png) Delete recording 
 
 
-   [goto TOC](#tok)
+   [goto TOC](#toc)
 
 <a name="bbb_invite.png"></a>
    - bbb_invite.php
    ![Send](res/bbb_invite.png)
-   [goto TOC](#tok)
+   [goto TOC](#toc)
 
 <a name="bbb_send.png"></a>
    - bbb_send.php
    ![Send](res/bbb_send.png)
-   [goto TOC](#tok)
+   [goto TOC](#toc)
 
 <a name="bbb_sendview.png"></a>
    - bbb_send.php
    ![Send](res/bbb_sendview.png)
-   [goto TOC](#tok)
+   [goto TOC](#toc)
 
 <a name="bbb_user.png"></a>
    - bbb_user.php
    ![Users](res/bbb_user.png)
-   [goto TOC](#tok)
+   [goto TOC](#toc)
 
 <a name="todo"></a>
 ## TODO
@@ -526,7 +526,7 @@
    - You can take part of [discussion][discussion]
    - Or you can send us [issue reports][issues]
 
-   [goto TOC](#tok)
+   [goto TOC](#toc)
 
 [bbbadmin_install.sh]: res/bbbadmin_install.sh
 [bbbuser_install.sh]: res/bbbuser_install.sh
