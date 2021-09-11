@@ -375,31 +375,13 @@
      SetEnv BBB_SECRET2 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
      SetEnv BBB_SERVER2_BASE_URL https://server2.domain.com/bigbluebutton/
    ```
-9. Workaround for servers with no apapche_set() and apache_getenv() support
-   9.1 Edit users [index.php](bbb_user.php)
-     <a name="workaround"></a>
-     ```
-        $bbb = new BigBlueButton();
-    replace it with
-        $bbb = new BigBlueButton($bbb_url, $bbb_salt);
+<a name="workaround"></a>
+9. Workaround for servers with no apache_setenv() and apache_getenv() support
 
-     ```
-   9.2 Edit [bbb_config.php]
-     ```
-        apache_setenv('BBB_SECRET', apache_getenv('BBB_SECRET1'));
-        apache_setenv('BBB_SERVER_BASE_URL', apache_getenv('BBB_SERVER1_BASE_URL'));
-      replace it with
-        $bbb_url  = 'https://domain1.com/bigbluebutton/';
-        $bbb_salt = 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
-      
-        apache_setenv('BBB_SECRET', apache_getenv('BBB_SECRET1'));
-        apache_setenv('BBB_SERVER_BASE_URL', apache_getenv('BBB_SERVER1_BASE_URL'));
-      replace it with
-        $bbb_url  = 'https://domain2.com/bigbluebutton/';
-        $bbb_salt = 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
-     ```
+    - Edit section "bbb":
+
 <a name="userurl"></a>
-   10. User can now join the meeting with the following parameters (sid and mID is needed the rest is optional) :
+10. User can now join the meeting with the following parameters (sid and mID is needed the rest is optional) :
      ```
        https://server.domain.com/bbbuser/?sid=X&mID=XXXXXXXXXXXXXXXXXX[&usr=Username][&join=1]
      ```

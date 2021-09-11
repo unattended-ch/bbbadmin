@@ -52,7 +52,7 @@ if ($exitURL !== '')
 }
 
 try {
-        $bbb = new BigBlueButton();
+        $bbb = new BigBlueButton($bbburl, $bbbsalt);
     }
 catch (Exception $e) {
         // Tell nothing and stop

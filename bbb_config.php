@@ -17,15 +17,31 @@
     //
     if ($serverid == '1')
     {
-        apache_setenv('BBB_SECRET', apache_getenv('BBB_SECRET1'));
-        apache_setenv('BBB_SERVER_BASE_URL', apache_getenv('BBB_SERVER1_BASE_URL'));
+        if ($cfg->setenv == '1')
+        {
+            apache_setenv('BBB_SECRET', apache_getenv('BBB_SECRET1'));
+            apache_setenv('BBB_SERVER_BASE_URL', apache_getenv('BBB_SERVER1_BASE_URL'));
+        }
+        else
+        {
+            $bbburl = ServerUrl($serverid);
+            $bbbsalt = ServerSalt($serverid);
+        }
         $sel1 = 'selected';
         $sel2 = '';
     }
     else
     {
-        apache_setenv('BBB_SECRET', apache_getenv('BBB_SECRET2'));
-        apache_setenv('BBB_SERVER_BASE_URL', apache_getenv('BBB_SERVER2_BASE_URL'));
+        if ($cfg->setenv == '1')
+        {
+            apache_setenv('BBB_SECRET', apache_getenv('BBB_SECRET2'));
+            apache_setenv('BBB_SERVER_BASE_URL', apache_getenv('BBB_SERVER2_BASE_URL'));
+        }
+        else
+        {
+            $bbburl = ServerUrl($serverid);
+            $bbbsalt = ServerSalt($serverid);
+        }
         $sel1 = '';
         $sel2 = 'selected';
     }

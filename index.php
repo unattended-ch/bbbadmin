@@ -19,7 +19,7 @@ $server = ServerSelect($sel1, $sel2);
 $cfg = $GLOBALS['cfg'];
 
 try {
-        $bbb = new BigBlueButton();
+        $bbb = new BigBlueButton($bbburl, $bbbsalt);
     }
 catch (Exception $e) {
         die('ERROR: %s'.$e->getMessage());

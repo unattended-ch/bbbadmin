@@ -1,5 +1,6 @@
 {
     "debug": "1",
+    "setenv": "1",
     "language": "en",
     "browserlang": "0",
     "moderator": "Username",
@@ -9,6 +10,10 @@
     "server": {
         "1": "room1.domain.com",
         "2": "room2.domain.com"
+    },
+    "bbb": {
+        "1": { "url": "", "salt": "" },
+        "2": { "url": "", "salt": "" }
     },
     "logout": {
         "1": "https://room1.domain.com",

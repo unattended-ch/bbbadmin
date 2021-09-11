@@ -75,7 +75,7 @@ function RandomString($len='25')
 // Function    : ServerName($id)
 // Created at  : Fri Sep  3 20:23:21 UTC 2021
 // Description : Get selected servername
-// Parameters  : $sid = ID of selected server
+// Parameters  : $id = ID of selected server
 // Variables   : 
 // Return      : Servername
 //----------------------------------------------------------------------
@@ -87,11 +87,63 @@ function ServerName($id)
     foreach($cfg->server as $serv)
     {
         if ($id == $i)
+        {
             $servername = $serv;
+            break;
+        }
         $i++;
     }
-    //$servername = $cfg->server->${$serverid};
     return($servername);
+}
+
+//----------------------------------------------------------------------
+// Function    : ServerUrl($id)
+// Created at  : Sat Sep 11 14:11:27 UTC 2021
+// Description : Get server url
+// Parameters  : $id = ID of selected server
+// Variables   : 
+// Return      : $serverurl
+//----------------------------------------------------------------------
+function ServerUrl($id)
+{
+    $cfg = $GLOBALS['cfg'];
+    $i = 1;
+    $serverurl = '';
+    foreach($cfg->bbb as $serv)
+    {
+        if ($id == $i)
+        {
+            $serverurl = $serv->url;
+            break;
+        }
+        $i++;
+    }
+    return($serverurl);
+}
+
+//----------------------------------------------------------------------
+// Function    : ServerSalt($id)
+// Created at  : Sat Sep 11 14:13:14 UTC 2021
+// Description : Get server salt
+// Parameters  : $id = ID of selected server
+// Variables   : 
+// Return      : $serversalt
+//----------------------------------------------------------------------
+function ServerSalt($id)
+{
+    $cfg = $GLOBALS['cfg'];
+    $i = 1;
+    $serversalt = '';
+    foreach($cfg->bbb as $serv)
+    {
+        if ($id == $i)
+        {
+            $serversalt = $serv->salt;
+            break;
+        }
+        $i++;
+    }
+    return($serversalt);
 }
 
 //----------------------------------------------------------------------
