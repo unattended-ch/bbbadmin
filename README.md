@@ -80,7 +80,7 @@
    ![New](icons/new.png)
    * 	Final release, now it's on you to make [issues] or participate on [discussion] 
 
-   [goto TOK](#tok)
+   [goto TOC](#tok)
 
 ## OPTIONS
 
@@ -93,7 +93,7 @@
    * Show recordings
    * Delete recordings
 
-   [goto TOK](#tok)
+   [goto TOC](#tok)
 
 ## PHP FILES
 
@@ -112,7 +112,7 @@
    [bbb_stop.php]|Stop meeting on server
    [bbb_user.php]|Join user to meeting
 
-   [goto TOK](#tok)
+   [goto TOC](#tok)
 
 ## CONFIGURATION FILES
 
@@ -124,7 +124,7 @@
 
 - Access password file [.htpasswd]
 
-   [goto TOK](#tok)
+   [goto TOC](#tok)
 
 ## CONFIGURATION
 
@@ -206,7 +206,7 @@
    acc|Room password for BigBlueButton
 
 
-   [goto TOK](#tok)
+   [goto TOC](#tok)
 
 ## LANGUAGE SUPPORT
 
@@ -219,19 +219,19 @@
 
 - See [locale/][bbb_locale] for translated .PHP files
 
-   [goto TOK](#tok)
+   [goto TOC](#tok)
 
 ## STYLING
 
 - Use bootstrap.css for styling of bbb_user.php
 
-   [goto TOK](#tok)
+   [goto TOC](#tok)
 
 ## RELEASES
 
 - See [releases] for more informations
 
-   [goto TOK](#tok)
+   [goto TOC](#tok)
 
 ## DEBIAN PACKAGES
 
@@ -239,7 +239,7 @@
 
 - Use [bbb_build.sh] for package creation
 
-   [goto TOK](#tok)
+   [goto TOC](#tok)
 
 ## INSTALLATION SCRIPTS
 
@@ -249,7 +249,7 @@
 
 - Or you can use our debian packages in [releases]
 
-   [goto TOK](#tok)
+   [goto TOC](#tok)
 
 ## PREREQUISITES
 
@@ -258,7 +258,7 @@
      sudo apt install php-curl php-mbstring php-xml php-intl -y
    ```
 
-   [goto TOK](#tok)
+   [goto TOC](#tok)
 
 ## INSTALLATION ADMIN FRONTEND
 
@@ -327,7 +327,7 @@
    <a name="popups"></a>
    - Enable popup windows for bbbadmin (see [popupblocker])
 
-   [goto TOK](#tok)
+   [goto TOC](#tok)
 
 ## INSTALLATION USER FRONTEND
 
@@ -417,7 +417,7 @@
    - If the meeting is running the mask for username will be displayed
    - If not, nothing will be diplayed
 
-   [goto TOK](#tok)
+   [goto TOC](#tok)
 
 ## CURL TIMEOUT
      If you get a lot curl errrors, change the following lines in [BigBlueButton.php]
@@ -449,13 +449,13 @@
             }
    ```
 
-   [goto TOK](#tok)
+   [goto TOC](#tok)
 
 ## SCREENSHOTS
 <a name="bbb_index.png"></a>
    - index.php
    ![Home page](res/bbb_index.png)
-   [goto TOK](#tok)
+   [goto TOC](#tok)
 
    - index.php
    ![List meetings](res/bbb_meetings.png)
@@ -464,27 +464,27 @@
       > ![Mail](icons/mail.png) Send invitation 
       > ![Exit](icons/exit.png) Stop meeting
 
-   [goto TOK](#tok)
+   [goto TOC](#tok)
 
 <a name="bbb_create.png"></a>
    - bbb_create.php
    ![Create meeting](res/bbb_create.png)
-   [goto TOK](#tok)
+   [goto TOC](#tok)
 
 <a name="bbb_join.png"></a>
    - bbb_join.php
    ![Join meeting](res/bbb_join.png)
-   [goto TOK](#tok)
+   [goto TOC](#tok)
 
 <a name="bbb_info.png"></a>
    - bbb_info.php
    ![Meeting info](res/bbb_info.png)
-   [goto TOK](#tok)
+   [goto TOC](#tok)
 
 <a name="bbb_stop.png"></a>
    - bbb_stop.php
    ![Stp meeting](res/bbb_stop.png)
-   [goto TOK](#tok)
+   [goto TOC](#tok)
 
 <a name="bbb_record.png"></a>
    - bbb_record.php
@@ -493,27 +493,27 @@
       > ![Exit](icons/exit.png) Delete recording 
 
 
-   [goto TOK](#tok)
+   [goto TOC](#tok)
 
 <a name="bbb_invite.png"></a>
    - bbb_invite.php
    ![Send](res/bbb_invite.png)
-   [goto TOK](#tok)
+   [goto TOC](#tok)
 
 <a name="bbb_send.png"></a>
    - bbb_send.php
    ![Send](res/bbb_send.png)
-   [goto TOK](#tok)
+   [goto TOC](#tok)
 
 <a name="bbb_sendview.png"></a>
    - bbb_send.php
    ![Send](res/bbb_sendview.png)
-   [goto TOK](#tok)
+   [goto TOC](#tok)
 
 <a name="bbb_user.png"></a>
    - bbb_user.php
    ![Users](res/bbb_user.png)
-   [goto TOK](#tok)
+   [goto TOC](#tok)
 
 <a name="todo"></a>
 ## TODO
@@ -526,7 +526,7 @@
    - You can take part of [discussion][discussion]
    - Or you can send us [issue reports][issues]
 
-   [goto TOK](#tok)
+   [goto TOC](#tok)
 
 [bbbadmin_install.sh]: res/bbbadmin_install.sh
 [bbbuser_install.sh]: res/bbbuser_install.sh
