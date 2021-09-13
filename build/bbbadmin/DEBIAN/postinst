@@ -13,17 +13,18 @@ TMPCONF=/$SUDO_USER/bbb_admin.json
 
 change_owner() {
     if id -u $1 > /dev/null 2>&1; then
-	echo "Setting rights for [$1]"
-	chown ${1}:${1} $DEST -R
+        echo "Setting rights for [$1]"
+        chown ${1}:${1} $DEST -R
     fi
 }
 
 # Create symbolic link if not exists
 if [ -d "$WWW" ]; then
-    echo "Setting symbolic link [$WWW/$NAM]"
-    if [ -f "$WWW/$NAM" ]; then
+    if [ -L "$WWW/$NAM" ]; then
+        echo "Remove old symbolic link [$WWW/$NAM]"
         rm -f $WWW/$NAM
     fi
+    echo "Setting symbolic link [$WWW/$NAM]"
     ln -s $DEST $WWW/
 fi
 

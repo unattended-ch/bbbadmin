@@ -51,8 +51,8 @@ createPackage() {
     if [ ! -f "$DST/DEBIAN/control" ]; then
         cp -v $SRC/../res/control.$PAK $DST/DEBIAN/control
     fi
-    REPL='s/Version:.*/Version: '$FILEVERSION' /g'
-    sed -i 's/Version:.*/Version: '$FILEVERSION' /g' $DST/DEBIAN/control
+    REPL='s/Version:.*/Version: '$FILEVERSION'/g'
+    sed -i 's/Version:.*/Version: '$FILEVERSION'/g' $DST/DEBIAN/control
     rsync --exclude=".git/*" --exclude="build/*"  --exclude="releases/*" --exclude="res/*" --exclude="sql/*" -ar $SRC/.. $DST/opt/$PAK/
     rm -rf $DST/opt/$PAK/.git
     rm -rf $DST/opt/$PAK/build
