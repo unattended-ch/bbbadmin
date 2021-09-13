@@ -7,7 +7,7 @@
 //* Copyright (c) 2021 Automatix  All rights reserved.
 //*
 //********************************************************************
-$version = "0.0.0.9";
+$version = "0.0.0.11";
 require_once('./BigBlueButton.php');
 require_once('./Core/ApiMethod.php');
 require_once('./Exceptions/BadResponseException.php');
@@ -63,10 +63,12 @@ else
 //----------------------------------------------------------------------
 function RandomString($len='25')
 {
+    $cfg = $GLOBALS['cfg'];
+    $len = $cfg->passwordlen;
     $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
     $randstring = '';
     for ($i = 0; $i < $len; $i++) {
-        $randstring = $randstring . $characters[rand(0, strlen($characters))];
+        $randstring = $randstring . $characters[rand(0, strlen($characters)-1)];
     }
     return $randstring;
 }
@@ -221,7 +223,7 @@ function ServerRoomName()
 //----------------------------------------------------------------------
 // Function    : ServerRoomMsg($meetingID)
 // Created at  : Sat Sep  4 01:18:44 UTC 2021
-// Description : Get message for server
+// Description : Get message for meeting
 // Parameters  : $meetingID
 // Variables   : 
 // Return      : Message
@@ -236,6 +238,25 @@ function ServerRoomMsg($meetingID)
         }
     }
     return('');
+}
+
+//----------------------------------------------------------------------
+// Function    : ServerRoomPdf($meetingID)
+// Created at  : Mon Sep 13 10:52:40 UTC 2021
+// Description : Get presentation filename for meeting
+// Parameters  : $meetingID
+// Variables   : 
+// Return      : 
+//----------------------------------------------------------------------
+function ServerRoomPdf()
+{
+    $cfg = $GLOBALS['cfg'];
+    $pdfselect = '<select name="meetingPdfSel" id="meetingPdfSel" class="meeting" onchange="setMetPdf()">';
+    foreach($cfg->rooms as $room) {
+        $pdfselect = $pdfselect . '<option value="'.$room->pdf.'">'.$room->pdf.'</option>';
+    }
+    $pdfselect = $pdfselect . '</select>';
+    return $pdfselect;
 }
 
 //----------------------------------------------------------------------
@@ -289,7 +310,7 @@ function RoomLogos()
 {
     $cfg = $GLOBALS['cfg'];
     $urlselect = '<select name="logonameSel" id="logonameSel" class="meeting" onchange="setMetLogo()">';
-    $urlselect = $urlselect . '<option value="" selected></option>';
+    //$urlselect = $urlselect . '<option value="" selected></option>';
     foreach($cfg->logos as $logo) {
         $urlselect = $urlselect . '<option value="'.$logo.'">'.$logo.'</option>';
     }
@@ -358,42 +379,13 @@ function Show($array)
 }
 
 //----------------------------------------------------------------------
-// Function    : ArrayToXML($array)
+// Function    : array_to_xml($array)
 // Created at  : Sat Sep  4 12:31:37 UTC 2021
 // Description : Convert array to xml object
 // Parameters  : 
 // Variables   : 
 // Return      : 
 //----------------------------------------------------------------------
-function arrayToXML($array, $rootElement = null, $xml = null) {
-    $_xml = $xml;
-      
-    // If there is no Root Element then insert root
-    if ($_xml === null) {
-        $_xml = new SimpleXMLElement($rootElement !== null ? $rootElement : '<root/>');
-    }
-      
-    // Visit all key value pair
-    foreach ($array as $k => $v) {
-          
-        // If there is nested array then
-        if (is_array($v)) { 
-              
-            // Call function for nested array
-            arrayToXml($v, $k, $_xml->addChild($k));
-            }
-              
-        else {
-              
-            // Simply add child element. 
-            $_xml->addChild($k, $v);
-        }
-    }
-    $_xml = new SimpleXMLElement($rootElement !== null ? $rootElement : '<root/>');
-      
-    return $_xml;
-}
-
 function array_to_xml($data) {
     $_xml = new SimpleXMLElement('<root/>');
     foreach( $data as $key => $value ) {
@@ -409,6 +401,7 @@ function array_to_xml($data) {
      }
     return($_xml);
 }
+
 //----------------------------------------------------------------------
 // Function    : LoadMeeting($meetingid)
 // Created at  : Wed Sep  1 19:44:55 UTC 2021

@@ -19,6 +19,10 @@ foreach($cfg->access as $val)
     $moderatorPW = $val;
     break;
 }
+foreach($cfg->access as $pw)
+    $acc = $pw;
+$mpw = RandomString();
+$apw = RandomString();
 if(isset($_POST['Submit']))
 {
     $bbb = new BigBlueButton();
@@ -31,6 +35,7 @@ if(isset($_POST['Submit']))
     $duration = $_POST['duration'];
     $pdffile = $_FILES['filename'];
     $logofile = $_POST['logoname'];
+    $pdffile0 = $_POST['meetingPdfSel'];
     printf("Create meeting [%s] [%s]<br>", $meetingName, $meetingID);
     $createMeetingParams = new CreateMeetingParameters($meetingID, $meetingName);
     $createMeetingParams->setAttendeePassword($attendee_password);
@@ -38,6 +43,8 @@ if(isset($_POST['Submit']))
     $createMeetingParams->setDuration($duration);
     $createMeetingParams->setLogoutUrl($urlLogout);
     $createMeetingParams->setLogo($logofile);
+    $createMeetingParams->setWelcomeMessage($$meetingName);
+    $createMeetingParams->setModeratorOnlyMessage($$meetingName);
 
     $createMeetingParams->setMuteOnStart(false);
     if ($_POST['muteonstart'] == 'yes') {
@@ -46,6 +53,8 @@ if(isset($_POST['Submit']))
 
     if ($pdffile['name'] !== '') {
         $createMeetingParams->addPresentation($pdffile['name'], file_get_contents($pdffile['tmp_name']));
+    } elseif ($pdffile0 !== '') {
+        $createMeetingParams->addPresentation(basename($pdffile0), file_get_contents($pdffile0));
     }
 
     $isRecordingTrue = false;
@@ -96,7 +105,7 @@ else
             document.getElementById('meetingID').setAttribute('value', document.getElementById('meetingIDSel').value);
         }
         function setMetAcc() {
-            //document.getElementById('meetingAccSel').setAttribute('selectedIndex', document.getElementById('meetingNameSel').selectedIndex);
+            document.getElementById('meetingAccSel').setAttribute('selectedIndex', document.getElementById('meetingNameSel').selectedIndex);
         }
         function setMetLogout() {
             document.getElementById('urlLogout').setAttribute('value', document.getElementById('urlLogoutSel').value);
@@ -109,11 +118,9 @@ else
         }
         function setAttPass() {
             var acc = document.getElementById('meetingAccSel').value;
-            if (acc === '') {
-                document.getElementById('attendee_password').setAttribute('value', '<?php echo $GLOBALS["access"][2] ?>');
-            } else {
-                document.getElementById('attendee_password').setAttribute('value', acc);
-            }
+            if (acc === '')
+                acc = '<?php echo $acc ?>';
+            document.getElementById('attendee_password').setAttribute('value', acc);
         }
     </script>
     <div id="topStats">
@@ -131,17 +138,18 @@ else
 		                <td><?php printf(ServerRoomId())?><br>
 		                <input type="text" name="meetingID" id="meetingID" size="35"></td></tr><tr>
 		                <td><label for="moderator_password" id="mod_pass_label"><?php echo lang('MODERATORPW'); ?></label></td>
-		                <td><input type="text" name="moderator_password" id="moderator_password" value="<?php echo RandomString()?>" size="30"><input type="button" value="Default password" onclick="setModPass()"></td></tr><tr>
+		                <td><input type="text" name="moderator_password" id="moderator_password" value="<?php echo $mpw; ?>" size="30"><input type="button" value="Default password" onclick="setModPass()"></td></tr><tr>
 		                <td><br><label for="attendee_password" id="mod_pass_label"><?php echo lang('ATTENDEEPW'); ?></label></td>
 		                <td><?php printf(ServerRoomAccess())?><br>
-		                <input type="text" name="attendee_password" id="attendee_password" value="<?php echo RandomString()?>" size="30"><input type="button" value="Default password" onclick="setAttPass()"></td></tr><tr>
+		                <input type="text" name="attendee_password" id="attendee_password" value="<?php echo $apw; ?>" size="30"><input type="button" value="Default password" onclick="setAttPass()"></td></tr><tr>
 		                <td><label for="duration" id="mod_dur_label" ><?php echo lang('DURATIONMIN'); ?></label></td>
 		                <td><input type="text" name="duration" id="duration" value="0"></td></tr><tr>
 		                <td><br><label for="urlLogout" id="mod_pass_label"  ><?php echo lang('LOGOUTURL'); ?></label></td>
 		                <td><?php printf(ReturnURL())?><br>
 		                <input type="text" name="urlLogout" id="urlLogout" size="35" value="<?php echo $invite?>"></td></tr><tr>
 		                <td><label for="filename"><?php echo lang('PRESENTATION'); ?></label>
-		                <td><input type="file" id="filename" name="filename" accept=".pdf"></td></tr><tr>
+		                <td><?php printf(ServerRoomPdf())?><br>
+				<input type="file" id="filename" name="filename" accept=".pdf"></td></tr><tr>
 		                <td><br><label for="logoname"><?php echo lang('LOGOURL'); ?></label>
 		                <td><?php printf(RoomLogos())?><br>
 		                <input type="text" id="logoname" name="logoname" size="35"></td></tr><tr>

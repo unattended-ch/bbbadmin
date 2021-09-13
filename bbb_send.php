@@ -83,6 +83,7 @@ else if (isset($_POST['View']))
     $cfg = $GLOBALS['cfg'];
     $url = 'https://'.$srv.'?sid='.$serverid.'&mID='.$meetingID;
     $userName = '';
+    $direkt = false;
     if (isset($_POST['userName']) && ($_POST['userName'] !== ''))
     {
         $userName = $_POST['userName'];
@@ -148,7 +149,7 @@ else
 			<div class="chartHolder">
 			    <table class="mainbig"><tr><form action=""  method="POST"><center><table style="text-align:center;" width="100%"><tr><br>
 		                <td style="text-align:right;"><label for="emailAddress" class="inputbig"><?php echo lang('EMAIL'); ?></label></td>
-		                <td><input class="inputbig" type="text" name="emailAddress" id="emailAddress" size="25" value="<?php echo $userName ?>"></td></tr><tr>
+		                <td><input class="inputbig" type="text" name="emailAddress" id="emailAddress" size="25"></td></tr><tr>
 			        <td style="text-align:right;"><label for="userName" class="inputbig"><?php echo lang('USERNAME'); ?></label></td>
 			        <td><input class="inputbig" type="text" name="userName" id="userName" size="25" onclick="setLinkCheck()"></td></tr><tr>
 		                <td style="text-align:right;"><label class="inputbig" for="directLink"><?php echo lang('DIRECTLINK'); ?></label></td>

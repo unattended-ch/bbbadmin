@@ -14,7 +14,9 @@ $serverid = $_GET['sid'];
 require_once('./bbb_load.php');
 use BigBlueButton\BigBlueButton;
 use BigBlueButton\Parameters\JoinMeetingParameters;
-$userName = $_GET['userName'];
+$userName = '';
+if (isset($_GET['userName']))
+    $userName = $_GET['userName'];
 $meetingName = $_GET['meetingName'];
 $moderator_password = $_GET['moderator_password'];
 $attendee_password = $_GET['attendee_password'];
@@ -37,8 +39,12 @@ if(isset($_GET['Submit']))
 else if(isset($_POST['Submit']))
 {
     $userName = $_POST['userName'];
-    $asmoderator = $_POST['asmoderator'];
-    $displayonly = $_POST['displayonly'];
+    $asmoderator = '';
+    $displayonly = '';
+    if (isset($_POST['asmoderator']))
+        $asmoderator = $_POST['asmoderator'];
+    if (isset($_POST['displayonly']))
+        $displayonly = $_POST['displayonly'];
     $join_password = $attendee_password;
     if ($asmoderator == 'yes') {
         $join_password = $moderator_password;

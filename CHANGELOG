@@ -38,3 +38,5 @@
 				bbb_admin.json "browserlang": "0|1", for bbb_load.php added
 				bbb_build.sh postint symbolic link creation fixed
 0.0.0.10	11.09.2021	index.php html refresh removed and refresh button added
+0.0.0.11	13.09.2021	Minor code fixes in .php files
+				bbb_admin.json "passwordlen": added

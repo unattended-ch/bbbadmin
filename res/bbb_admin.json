@@ -3,6 +3,7 @@
     "setenv": "1",
     "language": "en",
     "browserlang": "0",
+    "passwordlen": "32",
     "moderator": "Username",
     "email": "bbbadmin@domain.com",
     "invite": "https://room.domain.com",

@@ -60,8 +60,8 @@ else
 		                <td colspan="2"><?php printf(ServerRoomId(false))?></td></tr>
 	                        </table></center><br>
 		                <center>
-				    <input class="inputbig" type="submit" name="Submit" value="<?php echo lang('SEND'); ?>"> 
-				    <input class="inputbig" type="submit" name="Back" value="<?php echo lang('BACK'); ?>">
+				    <input class="bigbutton" type="submit" name="Submit" value="<?php echo lang('SEND'); ?>"> 
+				    <input class="bigbutton" type="submit" name="Back" value="<?php echo lang('BACK'); ?>">
 				</center>
 				<br>
 		            </form>

@@ -397,9 +397,6 @@
      If you get a lot curl errrors, change the following lines in [BigBlueButton.php]
    ```
             $data = curl_exec($ch);
-            if ($data === false) {
-                throw new \RuntimeException('Unhandled curl error: ' . curl_error($ch));
-            }
    ```
      Replace with
    ```
@@ -413,14 +410,10 @@
                 catch (Exception $e)
                     {
                         $attempts++;
-                        sleep(1);
                         continue;
                     }
-                } while(($attempts < $retry) || (($data === true)));
-                if ($data === false) {
-                    throw new \RuntimeException('Unhandled curl error: ' . curl_error($ch));
                 }
-            }
+            while(($data === false) && ($attempts < $retry));
    ```
 
    [goto TOC](#toc)

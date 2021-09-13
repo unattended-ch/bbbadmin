@@ -39,7 +39,7 @@ finally
 ?>
 <html>
 <head>
-    <title>BBB Admin <?php printf($copyright); ?></title>
+    <title>BBB Admin <?php printf($cfg->copyright); ?></title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -61,7 +61,7 @@ finally
 				printf('<tr><td colspan="6" style="text-align:center;">'.lang('NOMEETINGS').'</td></tr>');
 ?>
 			    </tr></table class="chartHolder">
-			    <?php printf("<br><center>%s</center><br>", LinkFunctions('0', $serverid, $meeting)); ?>
+			    <?php printf("<br><center>%s</center><br>", LinkFunctions('0', $serverid, '')); ?>
 			</div>
 		</div>
 	</td>

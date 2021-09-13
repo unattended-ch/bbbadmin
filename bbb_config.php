@@ -10,6 +10,9 @@
     global $cfg;
     $cfg = LoadConfigFile();
     $language = $cfg->language;
+    $debug = $cfg->debug;
+    $bbburl = '';
+    $bbbsalt = '';
     //
     // Load BBB values from Apache environment variable
     // For every server you must define Apache environment variable BBB_SECRET1 and BBB_SERVER1_BASE_URL
@@ -46,7 +49,10 @@
         $sel2 = 'selected';
     }
     $servername = ServerName($serverid);
-
-    error_reporting($cfg->debug);
+    if ($cfg->debug !== '0')
+    {
+        error_reporting(E_ERROR | E_WARNING | E_PARSE | E_NOTICE);
+        ini_set("display_errors", 1);
+    }
     date_default_timezone_set('UTC');
 ?>
