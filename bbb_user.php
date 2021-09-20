@@ -11,6 +11,7 @@
 //********************************************************************
 namespace BigBlueButton;
 $exitURL = '';
+$userName = '';
 if (isset($_GET['sid']))
     $serverid = $_GET['sid'];
 if (isset($_GET['mID']))
@@ -39,7 +40,6 @@ function printMessage($msg)
     $ret = $ret . '    </head>';
     $ret = $ret . '    <body>';
     $ret = $ret . '<div class="dim" runat="server"><span class="msg"><h1>'.$msg.'</h1></span><br></div>';
-    //$ret = $ret . '<center><form action="" method="POST"><br><br><input type="submit" name="Back" value="'.lang('BACK').'" class="bigbutton"/></form></center>';
     $ret = $ret . '    </body>';
     $ret = $ret . '</html>';
     printf($ret);
