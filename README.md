@@ -31,7 +31,7 @@
         <li><a href="#installation-scripts">Installation Scripts</a></li>
         <li><a href="#installation-admin-frontend">Installation Admin Frontend</a></li>
         <li><a href="#htpasswd">Admin access security with .htpasswd</a></li>
-        <li><a href="#popups">Allow popup winows for bbbadmin</a></li>
+        <li><a href="#popups">Allow popup windows for bbbadmin</a></li>
         <li><a href="#installation-user-frontend">Installation User Frontend</a></li>
         <li><a href="#htpasswd">User access security with .htpasswd</a></li>
         <li><a href="#workaround">Workaround for hostings without apache_setenv()</a></li>
@@ -76,8 +76,6 @@
    * 	Create your own debian packages
    * 	Create your own language files
    * 	Detect client browser language or set default to "en"
-
-   ![New](icons/new.png)
    * 	Final release, now it's on you to make [issues] or participate on [discussion] 
 
    [goto TOC](#toc)
