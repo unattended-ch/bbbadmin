@@ -1,3 +1,5 @@
+<div align="center">
+
 # BigBlueButton Admin- & User-Frontend
 
 [![PHP 7.1](https://img.shields.io/badge/php-7.1-f33.svg?style=flat-square)](https://php.net/)
@@ -7,6 +9,8 @@
 [![PHP 7.4](https://img.shields.io/badge/php-8.0-9c9.svg?style=flat-square)](https://php.net/)
 #### [[BigBlueButton Homepage][bbb]] [[BigBlueButton PHP API][bbbapi]]
 #### [[Discussion][discussion]] [[Issues][issues]] [[Changelog][changelog]]
+
+</div>
 
 <a name="toc"></a>
 
